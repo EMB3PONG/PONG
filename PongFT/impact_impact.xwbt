@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\XilinxWorkSpace\PongFT\impact.xsl
+OUTFILE=C:\XilinxWorkSpace\PongFT\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=C:\XilinxWorkSpace\PongFT
+LICENSE=iMPACT
+USER_INFO=iMPACT

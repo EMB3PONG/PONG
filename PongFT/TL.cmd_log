@@ -1,0 +1,176 @@
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+netgen -intstyle ise -ar Structure -tm TL -w -dir netgen/synthesis -ofmt vhdl -sim TL.ngc TL_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+netgen -intstyle ise -ar Structure -tm TL -w -dir netgen/synthesis -ofmt vhdl -sim TL.ngc TL_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+netgen -intstyle ise -ar Structure -tm TL -w -dir netgen/synthesis -ofmt vhdl -sim TL.ngc TL_synthesis.vhd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+netgen -intstyle ise -ar Structure -tm TL -w -dir netgen/synthesis -ofmt vhdl -sim TL.ngc TL_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/PongFT/TL.xst" -ofn "C:/XilinxWorkSpace/PongFT/TL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong_contoller_nexys_II.ucf -p xc3s500e-fg320-5 TL.ngc TL.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TL_map.ncd TL.ngd TL.pcf 
+par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TL.twx TL.ncd -o TL.twr TL.pcf -ucf pong_contoller_nexys_II.ucf 
+bitgen -intstyle ise -f TL.ut TL.ncd 
