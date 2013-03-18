@@ -37,188 +37,582 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 Timing constraint: TS_CLK_50M_I = PERIOD TIMEGRP "CLK_50M_I" 20 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 9 paths analyzed, 9 endpoints analyzed, 0 failing endpoints
+ 5327 paths analyzed, 326 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   3.138ns.
+ Minimum period is   5.988ns.
 --------------------------------------------------------------------------------
 
-Paths for end point vga_1_o_r_1 (SLICE_X30Y67.CE), 1 path
+Paths for end point Blue_sum_13 (SLICE_X43Y87.CIN), 239 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     16.862ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cnt_r_0 (FF)
-  Destination:          vga_1_o_r_1 (FF)
+Slack (setup path):     14.012ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Blue_0_0 (FF)
+  Destination:          Blue_sum_13 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      3.138ns (Levels of Logic = 1)
+  Data Path Delay:      5.988ns (Levels of Logic = 8)
   Clock Path Skew:      0.000ns
   Source Clock:         ADC_1_CLK_O_OBUF rising at 0.000ns
   Destination Clock:    ADC_1_CLK_O_OBUF rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: cnt_r_0 to vga_1_o_r_1
+  Maximum Data Path: Blue_0_0 to Blue_sum_13
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X43Y65.YQ      Tcko                  0.511   cnt_r<0>
-                                                       cnt_r_0
-    SLICE_X42Y64.G4      net (fanout=2)        0.413   cnt_r<0>
-    SLICE_X42Y64.Y       Tilo                  0.660   vga_1_o_r_or0000
-                                                       vga_1_o_r_or00001
-    SLICE_X30Y67.CE      net (fanout=5)        1.071   vga_1_o_r_or0000
-    SLICE_X30Y67.CLK     Tceck                 0.483   vga_1_o_r<1>
-                                                       vga_1_o_r_1
+    SLICE_X42Y86.YQ      Tcko                  0.567   Blue_0_1
+                                                       Blue_0_0
+    SLICE_X45Y81.F2      net (fanout=2)        0.909   Blue_0_0
+    SLICE_X45Y81.COUT    Topcyf                1.011   Blue_sum_sub0000<0>
+                                                       Msub_Blue_sum_sub0000_lut<0>
+                                                       Msub_Blue_sum_sub0000_cy<0>
+                                                       Msub_Blue_sum_sub0000_cy<1>
+    SLICE_X45Y82.CIN     net (fanout=1)        0.000   Msub_Blue_sum_sub0000_cy<1>
+    SLICE_X45Y82.COUT    Tbyp                  0.103   Blue_sum_sub0000<2>
+                                                       Msub_Blue_sum_sub0000_cy<2>
+                                                       Msub_Blue_sum_sub0000_cy<3>
+    SLICE_X45Y83.CIN     net (fanout=1)        0.000   Msub_Blue_sum_sub0000_cy<3>
+    SLICE_X45Y83.Y       Tciny                 0.756   Blue_sum_sub0000<4>
+                                                       Msub_Blue_sum_sub0000_cy<4>
+                                                       Msub_Blue_sum_sub0000_xor<5>
+    SLICE_X43Y83.G2      net (fanout=1)        0.590   Blue_sum_sub0000<5>
+    SLICE_X43Y83.COUT    Topcyg                0.871   Blue_sum<4>
+                                                       Maccum_Blue_sum_lut<5>
+                                                       Maccum_Blue_sum_cy<5>
+    SLICE_X43Y84.CIN     net (fanout=1)        0.000   Maccum_Blue_sum_cy<5>
+    SLICE_X43Y84.COUT    Tbyp                  0.103   Blue_sum<6>
+                                                       Maccum_Blue_sum_cy<6>
+                                                       Maccum_Blue_sum_cy<7>
+    SLICE_X43Y85.CIN     net (fanout=1)        0.000   Maccum_Blue_sum_cy<7>
+    SLICE_X43Y85.COUT    Tbyp                  0.103   Blue_sum<8>
+                                                       Maccum_Blue_sum_cy<8>
+                                                       Maccum_Blue_sum_cy<9>
+    SLICE_X43Y86.CIN     net (fanout=1)        0.000   Maccum_Blue_sum_cy<9>
+    SLICE_X43Y86.COUT    Tbyp                  0.103   Blue_sum<10>
+                                                       Maccum_Blue_sum_cy<10>
+                                                       Maccum_Blue_sum_cy<11>
+    SLICE_X43Y87.CIN     net (fanout=1)        0.000   Maccum_Blue_sum_cy<11>
+    SLICE_X43Y87.CLK     Tcinck                0.872   Blue_sum<12>
+                                                       Maccum_Blue_sum_cy<12>
+                                                       Maccum_Blue_sum_xor<13>
+                                                       Blue_sum_13
     -------------------------------------------------  ---------------------------
-    Total                                      3.138ns (1.654ns logic, 1.484ns route)
-                                                       (52.7% logic, 47.3% route)
+    Total                                      5.988ns (4.489ns logic, 1.499ns route)
+                                                       (75.0% logic, 25.0% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point vga_1_o_r_0 (SLICE_X30Y67.CE), 1 path
---------------------------------------------------------------------------------
-Slack (setup path):     16.862ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cnt_r_0 (FF)
-  Destination:          vga_1_o_r_0 (FF)
+Slack (setup path):     14.151ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Blue_0_0 (FF)
+  Destination:          Blue_sum_13 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      3.138ns (Levels of Logic = 1)
+  Data Path Delay:      5.849ns (Levels of Logic = 8)
   Clock Path Skew:      0.000ns
   Source Clock:         ADC_1_CLK_O_OBUF rising at 0.000ns
   Destination Clock:    ADC_1_CLK_O_OBUF rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: cnt_r_0 to vga_1_o_r_0
+  Maximum Data Path: Blue_0_0 to Blue_sum_13
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X43Y65.YQ      Tcko                  0.511   cnt_r<0>
-                                                       cnt_r_0
-    SLICE_X42Y64.G4      net (fanout=2)        0.413   cnt_r<0>
-    SLICE_X42Y64.Y       Tilo                  0.660   vga_1_o_r_or0000
-                                                       vga_1_o_r_or00001
-    SLICE_X30Y67.CE      net (fanout=5)        1.071   vga_1_o_r_or0000
-    SLICE_X30Y67.CLK     Tceck                 0.483   vga_1_o_r<1>
-                                                       vga_1_o_r_0
+    SLICE_X42Y86.YQ      Tcko                  0.567   Blue_0_1
+                                                       Blue_0_0
+    SLICE_X45Y81.F2      net (fanout=2)        0.909   Blue_0_0
+    SLICE_X45Y81.COUT    Topcyf                1.011   Blue_sum_sub0000<0>
+                                                       Msub_Blue_sum_sub0000_lut<0>
+                                                       Msub_Blue_sum_sub0000_cy<0>
+                                                       Msub_Blue_sum_sub0000_cy<1>
+    SLICE_X45Y82.CIN     net (fanout=1)        0.000   Msub_Blue_sum_sub0000_cy<1>
+    SLICE_X45Y82.COUT    Tbyp                  0.103   Blue_sum_sub0000<2>
+                                                       Msub_Blue_sum_sub0000_cy<2>
+                                                       Msub_Blue_sum_sub0000_cy<3>
+    SLICE_X45Y83.CIN     net (fanout=1)        0.000   Msub_Blue_sum_sub0000_cy<3>
+    SLICE_X45Y83.COUT    Tbyp                  0.103   Blue_sum_sub0000<4>
+                                                       Msub_Blue_sum_sub0000_cy<4>
+                                                       Msub_Blue_sum_sub0000_cy<5>
+    SLICE_X45Y84.CIN     net (fanout=1)        0.000   Msub_Blue_sum_sub0000_cy<5>
+    SLICE_X45Y84.COUT    Tbyp                  0.103   Blue_sum_sub0000<6>
+                                                       Msub_Blue_sum_sub0000_cy<6>
+                                                       Msub_Blue_sum_sub0000_cy<7>
+    SLICE_X45Y85.CIN     net (fanout=1)        0.000   Msub_Blue_sum_sub0000_cy<7>
+    SLICE_X45Y85.Y       Tciny                 0.756   Blue_sum_sub0000<8>
+                                                       Msub_Blue_sum_sub0000_cy<8>
+                                                       Msub_Blue_sum_sub0000_xor<9>
+    SLICE_X43Y85.G1      net (fanout=1)        0.451   Blue_sum_sub0000<9>
+    SLICE_X43Y85.COUT    Topcyg                0.871   Blue_sum<8>
+                                                       Maccum_Blue_sum_lut<9>
+                                                       Maccum_Blue_sum_cy<9>
+    SLICE_X43Y86.CIN     net (fanout=1)        0.000   Maccum_Blue_sum_cy<9>
+    SLICE_X43Y86.COUT    Tbyp                  0.103   Blue_sum<10>
+                                                       Maccum_Blue_sum_cy<10>
+                                                       Maccum_Blue_sum_cy<11>
+    SLICE_X43Y87.CIN     net (fanout=1)        0.000   Maccum_Blue_sum_cy<11>
+    SLICE_X43Y87.CLK     Tcinck                0.872   Blue_sum<12>
+                                                       Maccum_Blue_sum_cy<12>
+                                                       Maccum_Blue_sum_xor<13>
+                                                       Blue_sum_13
     -------------------------------------------------  ---------------------------
-    Total                                      3.138ns (1.654ns logic, 1.484ns route)
-                                                       (52.7% logic, 47.3% route)
+    Total                                      5.849ns (4.489ns logic, 1.360ns route)
+                                                       (76.7% logic, 23.3% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point vga_1_o_r_2 (SLICE_X30Y66.CE), 1 path
---------------------------------------------------------------------------------
-Slack (setup path):     16.862ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cnt_r_0 (FF)
-  Destination:          vga_1_o_r_2 (FF)
+Slack (setup path):     14.162ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Blue_0_0 (FF)
+  Destination:          Blue_sum_13 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      3.138ns (Levels of Logic = 1)
+  Data Path Delay:      5.838ns (Levels of Logic = 8)
   Clock Path Skew:      0.000ns
   Source Clock:         ADC_1_CLK_O_OBUF rising at 0.000ns
   Destination Clock:    ADC_1_CLK_O_OBUF rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: cnt_r_0 to vga_1_o_r_2
+  Maximum Data Path: Blue_0_0 to Blue_sum_13
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X43Y65.YQ      Tcko                  0.511   cnt_r<0>
-                                                       cnt_r_0
-    SLICE_X42Y64.G4      net (fanout=2)        0.413   cnt_r<0>
-    SLICE_X42Y64.Y       Tilo                  0.660   vga_1_o_r_or0000
-                                                       vga_1_o_r_or00001
-    SLICE_X30Y66.CE      net (fanout=5)        1.071   vga_1_o_r_or0000
-    SLICE_X30Y66.CLK     Tceck                 0.483   vga_1_o_r<2>
-                                                       vga_1_o_r_2
+    SLICE_X42Y86.YQ      Tcko                  0.567   Blue_0_1
+                                                       Blue_0_0
+    SLICE_X45Y81.F2      net (fanout=2)        0.909   Blue_0_0
+    SLICE_X45Y81.COUT    Topcyf                1.011   Blue_sum_sub0000<0>
+                                                       Msub_Blue_sum_sub0000_lut<0>
+                                                       Msub_Blue_sum_sub0000_cy<0>
+                                                       Msub_Blue_sum_sub0000_cy<1>
+    SLICE_X45Y82.CIN     net (fanout=1)        0.000   Msub_Blue_sum_sub0000_cy<1>
+    SLICE_X45Y82.COUT    Tbyp                  0.103   Blue_sum_sub0000<2>
+                                                       Msub_Blue_sum_sub0000_cy<2>
+                                                       Msub_Blue_sum_sub0000_cy<3>
+    SLICE_X45Y83.CIN     net (fanout=1)        0.000   Msub_Blue_sum_sub0000_cy<3>
+    SLICE_X45Y83.COUT    Tbyp                  0.103   Blue_sum_sub0000<4>
+                                                       Msub_Blue_sum_sub0000_cy<4>
+                                                       Msub_Blue_sum_sub0000_cy<5>
+    SLICE_X45Y84.CIN     net (fanout=1)        0.000   Msub_Blue_sum_sub0000_cy<5>
+    SLICE_X45Y84.COUT    Tbyp                  0.103   Blue_sum_sub0000<6>
+                                                       Msub_Blue_sum_sub0000_cy<6>
+                                                       Msub_Blue_sum_sub0000_cy<7>
+    SLICE_X45Y85.CIN     net (fanout=1)        0.000   Msub_Blue_sum_sub0000_cy<7>
+    SLICE_X45Y85.COUT    Tbyp                  0.103   Blue_sum_sub0000<8>
+                                                       Msub_Blue_sum_sub0000_cy<8>
+                                                       Msub_Blue_sum_sub0000_cy<9>
+    SLICE_X45Y86.CIN     net (fanout=1)        0.000   Msub_Blue_sum_sub0000_cy<9>
+    SLICE_X45Y86.Y       Tciny                 0.756   Blue_sum_sub0000<10>
+                                                       Msub_Blue_sum_sub0000_cy<10>
+                                                       Msub_Blue_sum_sub0000_xor<11>
+    SLICE_X43Y86.G3      net (fanout=3)        0.440   Blue_sum_sub0000<11>
+    SLICE_X43Y86.COUT    Topcyg                0.871   Blue_sum<10>
+                                                       Maccum_Blue_sum_lut<11>
+                                                       Maccum_Blue_sum_cy<11>
+    SLICE_X43Y87.CIN     net (fanout=1)        0.000   Maccum_Blue_sum_cy<11>
+    SLICE_X43Y87.CLK     Tcinck                0.872   Blue_sum<12>
+                                                       Maccum_Blue_sum_cy<12>
+                                                       Maccum_Blue_sum_xor<13>
+                                                       Blue_sum_13
     -------------------------------------------------  ---------------------------
-    Total                                      3.138ns (1.654ns logic, 1.484ns route)
-                                                       (52.7% logic, 47.3% route)
+    Total                                      5.838ns (4.489ns logic, 1.349ns route)
+                                                       (76.9% logic, 23.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Green_sum_13 (SLICE_X31Y83.CIN), 239 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.023ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Green_0_0 (FF)
+  Destination:          Green_sum_13 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.977ns (Levels of Logic = 8)
+  Clock Path Skew:      0.000ns
+  Source Clock:         ADC_1_CLK_O_OBUF rising at 0.000ns
+  Destination Clock:    ADC_1_CLK_O_OBUF rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Green_0_0 to Green_sum_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y84.YQ      Tcko                  0.511   Green_0_1
+                                                       Green_0_0
+    SLICE_X29Y78.F1      net (fanout=2)        0.887   Green_0_0
+    SLICE_X29Y78.COUT    Topcyf                1.011   Green_sum_sub0000<0>
+                                                       Msub_Green_sum_sub0000_lut<0>
+                                                       Msub_Green_sum_sub0000_cy<0>
+                                                       Msub_Green_sum_sub0000_cy<1>
+    SLICE_X29Y79.CIN     net (fanout=1)        0.000   Msub_Green_sum_sub0000_cy<1>
+    SLICE_X29Y79.Y       Tciny                 0.756   Green_sum_sub0000<2>
+                                                       Msub_Green_sum_sub0000_cy<2>
+                                                       Msub_Green_sum_sub0000_xor<3>
+    SLICE_X31Y78.G1      net (fanout=1)        0.657   Green_sum_sub0000<3>
+    SLICE_X31Y78.COUT    Topcyg                0.871   Green_sum<2>
+                                                       Maccum_Green_sum_lut<3>
+                                                       Maccum_Green_sum_cy<3>
+    SLICE_X31Y79.CIN     net (fanout=1)        0.000   Maccum_Green_sum_cy<3>
+    SLICE_X31Y79.COUT    Tbyp                  0.103   Green_sum<4>
+                                                       Maccum_Green_sum_cy<4>
+                                                       Maccum_Green_sum_cy<5>
+    SLICE_X31Y80.CIN     net (fanout=1)        0.000   Maccum_Green_sum_cy<5>
+    SLICE_X31Y80.COUT    Tbyp                  0.103   Green_sum<6>
+                                                       Maccum_Green_sum_cy<6>
+                                                       Maccum_Green_sum_cy<7>
+    SLICE_X31Y81.CIN     net (fanout=1)        0.000   Maccum_Green_sum_cy<7>
+    SLICE_X31Y81.COUT    Tbyp                  0.103   Green_sum<8>
+                                                       Maccum_Green_sum_cy<8>
+                                                       Maccum_Green_sum_cy<9>
+    SLICE_X31Y82.CIN     net (fanout=1)        0.000   Maccum_Green_sum_cy<9>
+    SLICE_X31Y82.COUT    Tbyp                  0.103   Green_sum<10>
+                                                       Maccum_Green_sum_cy<10>
+                                                       Maccum_Green_sum_cy<11>
+    SLICE_X31Y83.CIN     net (fanout=1)        0.000   Maccum_Green_sum_cy<11>
+    SLICE_X31Y83.CLK     Tcinck                0.872   Green_sum<12>
+                                                       Maccum_Green_sum_cy<12>
+                                                       Maccum_Green_sum_xor<13>
+                                                       Green_sum_13
+    -------------------------------------------------  ---------------------------
+    Total                                      5.977ns (4.433ns logic, 1.544ns route)
+                                                       (74.2% logic, 25.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.023ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Green_0_0 (FF)
+  Destination:          Green_sum_13 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.977ns (Levels of Logic = 8)
+  Clock Path Skew:      0.000ns
+  Source Clock:         ADC_1_CLK_O_OBUF rising at 0.000ns
+  Destination Clock:    ADC_1_CLK_O_OBUF rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Green_0_0 to Green_sum_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y84.YQ      Tcko                  0.511   Green_0_1
+                                                       Green_0_0
+    SLICE_X29Y78.F1      net (fanout=2)        0.887   Green_0_0
+    SLICE_X29Y78.COUT    Topcyf                1.011   Green_sum_sub0000<0>
+                                                       Msub_Green_sum_sub0000_lut<0>
+                                                       Msub_Green_sum_sub0000_cy<0>
+                                                       Msub_Green_sum_sub0000_cy<1>
+    SLICE_X29Y79.CIN     net (fanout=1)        0.000   Msub_Green_sum_sub0000_cy<1>
+    SLICE_X29Y79.COUT    Tbyp                  0.103   Green_sum_sub0000<2>
+                                                       Msub_Green_sum_sub0000_cy<2>
+                                                       Msub_Green_sum_sub0000_cy<3>
+    SLICE_X29Y80.CIN     net (fanout=1)        0.000   Msub_Green_sum_sub0000_cy<3>
+    SLICE_X29Y80.COUT    Tbyp                  0.103   Green_sum_sub0000<4>
+                                                       Msub_Green_sum_sub0000_cy<4>
+                                                       Msub_Green_sum_sub0000_cy<5>
+    SLICE_X29Y81.CIN     net (fanout=1)        0.000   Msub_Green_sum_sub0000_cy<5>
+    SLICE_X29Y81.Y       Tciny                 0.756   Green_sum_sub0000<6>
+                                                       Msub_Green_sum_sub0000_cy<6>
+                                                       Msub_Green_sum_sub0000_xor<7>
+    SLICE_X31Y80.G1      net (fanout=1)        0.657   Green_sum_sub0000<7>
+    SLICE_X31Y80.COUT    Topcyg                0.871   Green_sum<6>
+                                                       Maccum_Green_sum_lut<7>
+                                                       Maccum_Green_sum_cy<7>
+    SLICE_X31Y81.CIN     net (fanout=1)        0.000   Maccum_Green_sum_cy<7>
+    SLICE_X31Y81.COUT    Tbyp                  0.103   Green_sum<8>
+                                                       Maccum_Green_sum_cy<8>
+                                                       Maccum_Green_sum_cy<9>
+    SLICE_X31Y82.CIN     net (fanout=1)        0.000   Maccum_Green_sum_cy<9>
+    SLICE_X31Y82.COUT    Tbyp                  0.103   Green_sum<10>
+                                                       Maccum_Green_sum_cy<10>
+                                                       Maccum_Green_sum_cy<11>
+    SLICE_X31Y83.CIN     net (fanout=1)        0.000   Maccum_Green_sum_cy<11>
+    SLICE_X31Y83.CLK     Tcinck                0.872   Green_sum<12>
+                                                       Maccum_Green_sum_cy<12>
+                                                       Maccum_Green_sum_xor<13>
+                                                       Green_sum_13
+    -------------------------------------------------  ---------------------------
+    Total                                      5.977ns (4.433ns logic, 1.544ns route)
+                                                       (74.2% logic, 25.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.192ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Green_0_1 (FF)
+  Destination:          Green_sum_13 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.808ns (Levels of Logic = 8)
+  Clock Path Skew:      0.000ns
+  Source Clock:         ADC_1_CLK_O_OBUF rising at 0.000ns
+  Destination Clock:    ADC_1_CLK_O_OBUF rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Green_0_1 to Green_sum_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y84.XQ      Tcko                  0.514   Green_0_1
+                                                       Green_0_1
+    SLICE_X29Y78.G2      net (fanout=2)        0.855   Green_0_1
+    SLICE_X29Y78.COUT    Topcyg                0.871   Green_sum_sub0000<0>
+                                                       Msub_Green_sum_sub0000_lut<1>
+                                                       Msub_Green_sum_sub0000_cy<1>
+    SLICE_X29Y79.CIN     net (fanout=1)        0.000   Msub_Green_sum_sub0000_cy<1>
+    SLICE_X29Y79.COUT    Tbyp                  0.103   Green_sum_sub0000<2>
+                                                       Msub_Green_sum_sub0000_cy<2>
+                                                       Msub_Green_sum_sub0000_cy<3>
+    SLICE_X29Y80.CIN     net (fanout=1)        0.000   Msub_Green_sum_sub0000_cy<3>
+    SLICE_X29Y80.COUT    Tbyp                  0.103   Green_sum_sub0000<4>
+                                                       Msub_Green_sum_sub0000_cy<4>
+                                                       Msub_Green_sum_sub0000_cy<5>
+    SLICE_X29Y81.CIN     net (fanout=1)        0.000   Msub_Green_sum_sub0000_cy<5>
+    SLICE_X29Y81.Y       Tciny                 0.756   Green_sum_sub0000<6>
+                                                       Msub_Green_sum_sub0000_cy<6>
+                                                       Msub_Green_sum_sub0000_xor<7>
+    SLICE_X31Y80.G1      net (fanout=1)        0.657   Green_sum_sub0000<7>
+    SLICE_X31Y80.COUT    Topcyg                0.871   Green_sum<6>
+                                                       Maccum_Green_sum_lut<7>
+                                                       Maccum_Green_sum_cy<7>
+    SLICE_X31Y81.CIN     net (fanout=1)        0.000   Maccum_Green_sum_cy<7>
+    SLICE_X31Y81.COUT    Tbyp                  0.103   Green_sum<8>
+                                                       Maccum_Green_sum_cy<8>
+                                                       Maccum_Green_sum_cy<9>
+    SLICE_X31Y82.CIN     net (fanout=1)        0.000   Maccum_Green_sum_cy<9>
+    SLICE_X31Y82.COUT    Tbyp                  0.103   Green_sum<10>
+                                                       Maccum_Green_sum_cy<10>
+                                                       Maccum_Green_sum_cy<11>
+    SLICE_X31Y83.CIN     net (fanout=1)        0.000   Maccum_Green_sum_cy<11>
+    SLICE_X31Y83.CLK     Tcinck                0.872   Green_sum<12>
+                                                       Maccum_Green_sum_cy<12>
+                                                       Maccum_Green_sum_xor<13>
+                                                       Green_sum_13
+    -------------------------------------------------  ---------------------------
+    Total                                      5.808ns (4.296ns logic, 1.512ns route)
+                                                       (74.0% logic, 26.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Red_sum_13 (SLICE_X21Y82.CIN), 239 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.058ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Red_0_2 (FF)
+  Destination:          Red_sum_13 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.937ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.005ns (0.073 - 0.078)
+  Source Clock:         ADC_1_CLK_O_OBUF rising at 0.000ns
+  Destination Clock:    ADC_1_CLK_O_OBUF rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Red_0_2 to Red_sum_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y85.YQ      Tcko                  0.567   Red_0_3
+                                                       Red_0_2
+    SLICE_X19Y79.F1      net (fanout=2)        0.887   Red_0_2
+    SLICE_X19Y79.COUT    Topcyf                1.011   Red_sum_sub0000<2>
+                                                       Msub_Red_sum_sub0000_lut<2>
+                                                       Msub_Red_sum_sub0000_cy<2>
+                                                       Msub_Red_sum_sub0000_cy<3>
+    SLICE_X19Y80.CIN     net (fanout=1)        0.000   Msub_Red_sum_sub0000_cy<3>
+    SLICE_X19Y80.Y       Tciny                 0.756   Red_sum_sub0000<4>
+                                                       Msub_Red_sum_sub0000_cy<4>
+                                                       Msub_Red_sum_sub0000_xor<5>
+    SLICE_X21Y78.G1      net (fanout=1)        0.664   Red_sum_sub0000<5>
+    SLICE_X21Y78.COUT    Topcyg                0.871   Red_sum<4>
+                                                       Maccum_Red_sum_lut<5>
+                                                       Maccum_Red_sum_cy<5>
+    SLICE_X21Y79.CIN     net (fanout=1)        0.000   Maccum_Red_sum_cy<5>
+    SLICE_X21Y79.COUT    Tbyp                  0.103   Red_sum<6>
+                                                       Maccum_Red_sum_cy<6>
+                                                       Maccum_Red_sum_cy<7>
+    SLICE_X21Y80.CIN     net (fanout=1)        0.000   Maccum_Red_sum_cy<7>
+    SLICE_X21Y80.COUT    Tbyp                  0.103   Red_sum<8>
+                                                       Maccum_Red_sum_cy<8>
+                                                       Maccum_Red_sum_cy<9>
+    SLICE_X21Y81.CIN     net (fanout=1)        0.000   Maccum_Red_sum_cy<9>
+    SLICE_X21Y81.COUT    Tbyp                  0.103   Red_sum<10>
+                                                       Maccum_Red_sum_cy<10>
+                                                       Maccum_Red_sum_cy<11>
+    SLICE_X21Y82.CIN     net (fanout=1)        0.000   Maccum_Red_sum_cy<11>
+    SLICE_X21Y82.CLK     Tcinck                0.872   Red_sum<12>
+                                                       Maccum_Red_sum_cy<12>
+                                                       Maccum_Red_sum_xor<13>
+                                                       Red_sum_13
+    -------------------------------------------------  ---------------------------
+    Total                                      5.937ns (4.386ns logic, 1.551ns route)
+                                                       (73.9% logic, 26.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.147ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Red_0_3 (FF)
+  Destination:          Red_sum_13 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.848ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.005ns (0.073 - 0.078)
+  Source Clock:         ADC_1_CLK_O_OBUF rising at 0.000ns
+  Destination Clock:    ADC_1_CLK_O_OBUF rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Red_0_3 to Red_sum_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y85.XQ      Tcko                  0.515   Red_0_3
+                                                       Red_0_3
+    SLICE_X19Y79.G1      net (fanout=2)        0.990   Red_0_3
+    SLICE_X19Y79.COUT    Topcyg                0.871   Red_sum_sub0000<2>
+                                                       Msub_Red_sum_sub0000_lut<3>
+                                                       Msub_Red_sum_sub0000_cy<3>
+    SLICE_X19Y80.CIN     net (fanout=1)        0.000   Msub_Red_sum_sub0000_cy<3>
+    SLICE_X19Y80.Y       Tciny                 0.756   Red_sum_sub0000<4>
+                                                       Msub_Red_sum_sub0000_cy<4>
+                                                       Msub_Red_sum_sub0000_xor<5>
+    SLICE_X21Y78.G1      net (fanout=1)        0.664   Red_sum_sub0000<5>
+    SLICE_X21Y78.COUT    Topcyg                0.871   Red_sum<4>
+                                                       Maccum_Red_sum_lut<5>
+                                                       Maccum_Red_sum_cy<5>
+    SLICE_X21Y79.CIN     net (fanout=1)        0.000   Maccum_Red_sum_cy<5>
+    SLICE_X21Y79.COUT    Tbyp                  0.103   Red_sum<6>
+                                                       Maccum_Red_sum_cy<6>
+                                                       Maccum_Red_sum_cy<7>
+    SLICE_X21Y80.CIN     net (fanout=1)        0.000   Maccum_Red_sum_cy<7>
+    SLICE_X21Y80.COUT    Tbyp                  0.103   Red_sum<8>
+                                                       Maccum_Red_sum_cy<8>
+                                                       Maccum_Red_sum_cy<9>
+    SLICE_X21Y81.CIN     net (fanout=1)        0.000   Maccum_Red_sum_cy<9>
+    SLICE_X21Y81.COUT    Tbyp                  0.103   Red_sum<10>
+                                                       Maccum_Red_sum_cy<10>
+                                                       Maccum_Red_sum_cy<11>
+    SLICE_X21Y82.CIN     net (fanout=1)        0.000   Maccum_Red_sum_cy<11>
+    SLICE_X21Y82.CLK     Tcinck                0.872   Red_sum<12>
+                                                       Maccum_Red_sum_cy<12>
+                                                       Maccum_Red_sum_xor<13>
+                                                       Red_sum_13
+    -------------------------------------------------  ---------------------------
+    Total                                      5.848ns (4.194ns logic, 1.654ns route)
+                                                       (71.7% logic, 28.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.177ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Red_0_2 (FF)
+  Destination:          Red_sum_13 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.818ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.005ns (0.073 - 0.078)
+  Source Clock:         ADC_1_CLK_O_OBUF rising at 0.000ns
+  Destination Clock:    ADC_1_CLK_O_OBUF rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Red_0_2 to Red_sum_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y85.YQ      Tcko                  0.567   Red_0_3
+                                                       Red_0_2
+    SLICE_X19Y79.F1      net (fanout=2)        0.887   Red_0_2
+    SLICE_X19Y79.COUT    Topcyf                1.011   Red_sum_sub0000<2>
+                                                       Msub_Red_sum_sub0000_lut<2>
+                                                       Msub_Red_sum_sub0000_cy<2>
+                                                       Msub_Red_sum_sub0000_cy<3>
+    SLICE_X19Y80.CIN     net (fanout=1)        0.000   Msub_Red_sum_sub0000_cy<3>
+    SLICE_X19Y80.COUT    Tbyp                  0.103   Red_sum_sub0000<4>
+                                                       Msub_Red_sum_sub0000_cy<4>
+                                                       Msub_Red_sum_sub0000_cy<5>
+    SLICE_X19Y81.CIN     net (fanout=1)        0.000   Msub_Red_sum_sub0000_cy<5>
+    SLICE_X19Y81.COUT    Tbyp                  0.103   Red_sum_sub0000<6>
+                                                       Msub_Red_sum_sub0000_cy<6>
+                                                       Msub_Red_sum_sub0000_cy<7>
+    SLICE_X19Y82.CIN     net (fanout=1)        0.000   Msub_Red_sum_sub0000_cy<7>
+    SLICE_X19Y82.Y       Tciny                 0.756   Red_sum_sub0000<8>
+                                                       Msub_Red_sum_sub0000_cy<8>
+                                                       Msub_Red_sum_sub0000_xor<9>
+    SLICE_X21Y80.G4      net (fanout=1)        0.545   Red_sum_sub0000<9>
+    SLICE_X21Y80.COUT    Topcyg                0.871   Red_sum<8>
+                                                       Maccum_Red_sum_lut<9>
+                                                       Maccum_Red_sum_cy<9>
+    SLICE_X21Y81.CIN     net (fanout=1)        0.000   Maccum_Red_sum_cy<9>
+    SLICE_X21Y81.COUT    Tbyp                  0.103   Red_sum<10>
+                                                       Maccum_Red_sum_cy<10>
+                                                       Maccum_Red_sum_cy<11>
+    SLICE_X21Y82.CIN     net (fanout=1)        0.000   Maccum_Red_sum_cy<11>
+    SLICE_X21Y82.CLK     Tcinck                0.872   Red_sum<12>
+                                                       Maccum_Red_sum_cy<12>
+                                                       Maccum_Red_sum_xor<13>
+                                                       Red_sum_13
+    -------------------------------------------------  ---------------------------
+    Total                                      5.818ns (4.386ns logic, 1.432ns route)
+                                                       (75.4% logic, 24.6% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_CLK_50M_I = PERIOD TIMEGRP "CLK_50M_I" 20 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point cnt_r_0 (SLICE_X43Y65.SR), 1 path
+Paths for end point Mshreg_Blue_7_4 (SLICE_X44Y84.BY), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.732ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               cnt_r_0 (FF)
-  Destination:          cnt_r_0 (FF)
+Slack (hold path):      0.624ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Blue_0_4 (FF)
+  Destination:          Mshreg_Blue_7_4 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.732ns (Levels of Logic = 0)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      0.622ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.002ns (0.009 - 0.011)
   Source Clock:         ADC_1_CLK_O_OBUF rising at 20.000ns
   Destination Clock:    ADC_1_CLK_O_OBUF rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: cnt_r_0 to cnt_r_0
+  Minimum Data Path: Blue_0_4 to Mshreg_Blue_7_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X43Y65.YQ      Tcko                  0.409   cnt_r<0>
-                                                       cnt_r_0
-    SLICE_X43Y65.SR      net (fanout=2)        0.832   cnt_r<0>
-    SLICE_X43Y65.CLK     Tcksr       (-Th)    -0.491   cnt_r<0>
-                                                       cnt_r_0
+    SLICE_X45Y87.YQ      Tcko                  0.409   Blue_0_5
+                                                       Blue_0_4
+    SLICE_X44Y84.BY      net (fanout=2)        0.323   Blue_0_4
+    SLICE_X44Y84.CLK     Tdh         (-Th)     0.110   Blue_7_5
+                                                       Mshreg_Blue_7_4
     -------------------------------------------------  ---------------------------
-    Total                                      1.732ns (0.900ns logic, 0.832ns route)
-                                                       (52.0% logic, 48.0% route)
+    Total                                      0.622ns (0.299ns logic, 0.323ns route)
+                                                       (48.1% logic, 51.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point vga_3_o_r_1 (SLICE_X40Y64.CE), 1 path
+Paths for end point Mshreg_Green_7_9 (SLICE_X30Y83.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.748ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               cnt_r_0 (FF)
-  Destination:          vga_3_o_r_1 (FF)
+Slack (hold path):      0.625ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Green_0_9 (FF)
+  Destination:          Mshreg_Green_7_9 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.753ns (Levels of Logic = 1)
-  Clock Path Skew:      0.005ns (0.029 - 0.024)
+  Data Path Delay:      0.624ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.001ns (0.040 - 0.041)
   Source Clock:         ADC_1_CLK_O_OBUF rising at 20.000ns
   Destination Clock:    ADC_1_CLK_O_OBUF rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: cnt_r_0 to vga_3_o_r_1
+  Minimum Data Path: Green_0_9 to Mshreg_Green_7_9
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X43Y65.YQ      Tcko                  0.409   cnt_r<0>
-                                                       cnt_r_0
-    SLICE_X42Y64.G4      net (fanout=2)        0.331   cnt_r<0>
-    SLICE_X42Y64.Y       Tilo                  0.528   vga_1_o_r_or0000
-                                                       vga_1_o_r_or00001
-    SLICE_X40Y64.CE      net (fanout=5)        0.414   vga_1_o_r_or0000
-    SLICE_X40Y64.CLK     Tckce       (-Th)    -0.071   vga_3_o_r<1>
-                                                       vga_3_o_r_1
+    SLICE_X32Y83.XQ      Tcko                  0.412   Green_0_9
+                                                       Green_0_9
+    SLICE_X30Y83.BX      net (fanout=2)        0.342   Green_0_9
+    SLICE_X30Y83.CLK     Tdh         (-Th)     0.130   Green_7_9
+                                                       Mshreg_Green_7_9
     -------------------------------------------------  ---------------------------
-    Total                                      1.753ns (1.008ns logic, 0.745ns route)
-                                                       (57.5% logic, 42.5% route)
+    Total                                      0.624ns (0.282ns logic, 0.342ns route)
+                                                       (45.2% logic, 54.8% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point vga_3_o_r_0 (SLICE_X40Y64.CE), 1 path
+Paths for end point Mshreg_Blue_7_5 (SLICE_X44Y84.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.748ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               cnt_r_0 (FF)
-  Destination:          vga_3_o_r_0 (FF)
+Slack (hold path):      0.627ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Blue_0_5 (FF)
+  Destination:          Mshreg_Blue_7_5 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.753ns (Levels of Logic = 1)
-  Clock Path Skew:      0.005ns (0.029 - 0.024)
+  Data Path Delay:      0.625ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.002ns (0.009 - 0.011)
   Source Clock:         ADC_1_CLK_O_OBUF rising at 20.000ns
   Destination Clock:    ADC_1_CLK_O_OBUF rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: cnt_r_0 to vga_3_o_r_0
+  Minimum Data Path: Blue_0_5 to Mshreg_Blue_7_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X43Y65.YQ      Tcko                  0.409   cnt_r<0>
-                                                       cnt_r_0
-    SLICE_X42Y64.G4      net (fanout=2)        0.331   cnt_r<0>
-    SLICE_X42Y64.Y       Tilo                  0.528   vga_1_o_r_or0000
-                                                       vga_1_o_r_or00001
-    SLICE_X40Y64.CE      net (fanout=5)        0.414   vga_1_o_r_or0000
-    SLICE_X40Y64.CLK     Tckce       (-Th)    -0.071   vga_3_o_r<1>
-                                                       vga_3_o_r_0
+    SLICE_X45Y87.XQ      Tcko                  0.411   Blue_0_5
+                                                       Blue_0_5
+    SLICE_X44Y84.BX      net (fanout=2)        0.344   Blue_0_5
+    SLICE_X44Y84.CLK     Tdh         (-Th)     0.130   Blue_7_5
+                                                       Mshreg_Blue_7_5
     -------------------------------------------------  ---------------------------
-    Total                                      1.753ns (1.008ns logic, 0.745ns route)
-                                                       (57.5% logic, 42.5% route)
+    Total                                      0.625ns (0.281ns logic, 0.344ns route)
+                                                       (45.0% logic, 55.0% route)
 
 --------------------------------------------------------------------------------
 
@@ -228,26 +622,26 @@ Slack: 18.248ns (period - (min low pulse limit / (low pulse / period)))
   Period: 20.000ns
   Low pulse: 10.000ns
   Low pulse limit: 0.876ns (Twpl)
-  Physical resource: shift_r_v_sync<4>/CLK
-  Logical resource: Mshreg_shift_r_v_sync_4/SRL16E/WS
-  Location pin: SLICE_X20Y4.CLK
+  Physical resource: Green_7_9/CLK
+  Logical resource: Mshreg_Green_7_9/WS
+  Location pin: SLICE_X30Y83.CLK
   Clock network: ADC_1_CLK_O_OBUF
 --------------------------------------------------------------------------------
 Slack: 18.248ns (period - (min high pulse limit / (high pulse / period)))
   Period: 20.000ns
   High pulse: 10.000ns
   High pulse limit: 0.876ns (Twph)
-  Physical resource: shift_r_v_sync<4>/CLK
-  Logical resource: Mshreg_shift_r_v_sync_4/SRL16E/WS
-  Location pin: SLICE_X20Y4.CLK
+  Physical resource: Green_7_9/CLK
+  Logical resource: Mshreg_Green_7_9/WS
+  Location pin: SLICE_X30Y83.CLK
   Clock network: ADC_1_CLK_O_OBUF
 --------------------------------------------------------------------------------
 Slack: 18.248ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 1.752ns (570.776MHz) (Tcp)
-  Physical resource: shift_r_v_sync<4>/CLK
-  Logical resource: Mshreg_shift_r_v_sync_4/SRL16E/WS
-  Location pin: SLICE_X20Y4.CLK
+  Physical resource: Green_7_9/CLK
+  Logical resource: Mshreg_Green_7_9/WS
+  Location pin: SLICE_X30Y83.CLK
   Clock network: ADC_1_CLK_O_OBUF
 --------------------------------------------------------------------------------
 
@@ -264,7 +658,7 @@ Clock to Setup on destination clock CLK_50M_I
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_50M_I      |    3.138|         |         |         |
+CLK_50M_I      |    5.988|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -273,23 +667,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 9 paths, 0 nets, and 14 connections
+Constraints cover 5327 paths, 0 nets, and 346 connections
 
 Design statistics:
-   Minimum period:   3.138ns{1}   (Maximum frequency: 318.674MHz)
+   Minimum period:   5.988ns{1}   (Maximum frequency: 167.001MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Mon Mar 18 12:38:45 2013 
+Analysis completed Mon Mar 18 14:05:30 2013 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 163 MB
+Peak Memory Usage: 167 MB
 
 
 

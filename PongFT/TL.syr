@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: TL.prj
 
@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 100000
+Global Maximum Fanout              : 500
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -129,18 +129,26 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <TL>.
     Related source file is "C:/XilinxWorkSpace/PongFT/TL.vhd".
-WARNING:Xst:647 - Input <ADC_1_I<6:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <ADC_2_I<6:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <ADC_3_I<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 80-bit register for signal <Blue>.
+    Found 14-bit up accumulator for signal <Blue_sum>.
+    Found 14-bit subtractor for signal <Blue_sum$sub0000>.
     Found 3-bit up counter for signal <cnt_r>.
-    Found 5-bit register for signal <shift_r_h_sync>.
-    Found 5-bit register for signal <shift_r_v_sync>.
+    Found 80-bit register for signal <Green>.
+    Found 14-bit up accumulator for signal <Green_sum>.
+    Found 14-bit subtractor for signal <Green_sum$sub0000>.
+    Found 80-bit register for signal <Red>.
+    Found 14-bit up accumulator for signal <Red_sum>.
+    Found 14-bit subtractor for signal <Red_sum$sub0000>.
+    Found 9-bit register for signal <shift_r_h_sync>.
+    Found 9-bit register for signal <shift_r_v_sync>.
     Found 3-bit register for signal <vga_1_o_r>.
     Found 3-bit register for signal <vga_2_o_r>.
     Found 2-bit register for signal <vga_3_o_r>.
     Summary:
 	inferred   1 Counter(s).
-	inferred  18 D-type flip-flop(s).
+	inferred   3 Accumulator(s).
+	inferred 266 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
 Unit <TL> synthesized.
 
 
@@ -148,12 +156,17 @@ Unit <TL> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
+# Adders/Subtractors                                   : 3
+ 14-bit subtractor                                     : 3
 # Counters                                             : 1
  3-bit up counter                                      : 1
-# Registers                                            : 5
+# Accumulators                                         : 3
+ 14-bit up accumulator                                 : 3
+# Registers                                            : 29
+ 10-bit register                                       : 24
  2-bit register                                        : 1
  3-bit register                                        : 2
- 5-bit register                                        : 2
+ 9-bit register                                        : 2
 
 =========================================================================
 
@@ -166,10 +179,14 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
+# Adders/Subtractors                                   : 3
+ 14-bit subtractor                                     : 3
 # Counters                                             : 1
  3-bit up counter                                      : 1
-# Registers                                            : 18
- Flip-Flops                                            : 18
+# Accumulators                                         : 3
+ 14-bit up accumulator                                 : 3
+# Registers                                            : 266
+ Flip-Flops                                            : 266
 
 =========================================================================
 
@@ -183,23 +200,54 @@ Optimizing unit <TL> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block TL, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block TL, actual ratio is 4.
 
 Final Macro Processing ...
 
 Processing Unit <TL> :
-	Found 5-bit shift register for signal <shift_r_h_sync_4>.
-	Found 5-bit shift register for signal <shift_r_v_sync_4>.
+	Found 9-bit shift register for signal <shift_r_h_sync_8>.
+	Found 9-bit shift register for signal <shift_r_v_sync_8>.
+	Found 7-bit shift register for signal <Red_7_0>.
+	Found 7-bit shift register for signal <Red_7_1>.
+	Found 7-bit shift register for signal <Red_7_2>.
+	Found 7-bit shift register for signal <Red_7_3>.
+	Found 7-bit shift register for signal <Red_7_4>.
+	Found 7-bit shift register for signal <Red_7_5>.
+	Found 7-bit shift register for signal <Red_7_6>.
+	Found 7-bit shift register for signal <Red_7_7>.
+	Found 7-bit shift register for signal <Red_7_8>.
+	Found 7-bit shift register for signal <Red_7_9>.
+	Found 7-bit shift register for signal <Green_7_0>.
+	Found 7-bit shift register for signal <Green_7_1>.
+	Found 7-bit shift register for signal <Green_7_2>.
+	Found 7-bit shift register for signal <Green_7_3>.
+	Found 7-bit shift register for signal <Green_7_4>.
+	Found 7-bit shift register for signal <Green_7_5>.
+	Found 7-bit shift register for signal <Green_7_6>.
+	Found 7-bit shift register for signal <Green_7_7>.
+	Found 7-bit shift register for signal <Green_7_8>.
+	Found 7-bit shift register for signal <Green_7_9>.
+	Found 7-bit shift register for signal <Blue_7_0>.
+	Found 7-bit shift register for signal <Blue_7_1>.
+	Found 7-bit shift register for signal <Blue_7_2>.
+	Found 7-bit shift register for signal <Blue_7_3>.
+	Found 7-bit shift register for signal <Blue_7_4>.
+	Found 7-bit shift register for signal <Blue_7_5>.
+	Found 7-bit shift register for signal <Blue_7_6>.
+	Found 7-bit shift register for signal <Blue_7_7>.
+	Found 7-bit shift register for signal <Blue_7_8>.
+	Found 7-bit shift register for signal <Blue_7_9>.
 Unit <TL> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 9
- Flip-Flops                                            : 9
-# Shift Registers                                      : 2
- 5-bit shift register                                  : 2
+# Registers                                            : 81
+ Flip-Flops                                            : 81
+# Shift Registers                                      : 32
+ 7-bit shift register                                  : 30
+ 9-bit shift register                                  : 2
 
 =========================================================================
 
@@ -228,20 +276,23 @@ Design Statistics
 # IOs                              : 58
 
 Cell Usage :
-# BELS                             : 11
+# BELS                             : 233
 #      GND                         : 1
-#      LUT2                        : 9
+#      LUT2                        : 81
+#      MUXCY                       : 72
 #      VCC                         : 1
-# FlipFlops/Latches                : 11
+#      XORCY                       : 78
+# FlipFlops/Latches                : 113
 #      FD                          : 2
-#      FDE                         : 8
+#      FDE                         : 110
 #      FDR                         : 1
-# Shift Registers                  : 2
+# Shift Registers                  : 32
 #      SRL16                       : 2
+#      SRL16E                      : 30
 # Clock Buffers                    : 1
 #      BUFG                        : 1
-# IO Buffers                       : 36
-#      IBUF                        : 19
+# IO Buffers                       : 58
+#      IBUF                        : 41
 #      OBUF                        : 17
 =========================================================================
 
@@ -250,13 +301,13 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                        6  out of   4656     0%  
- Number of Slice Flip Flops:             11  out of   9312     0%  
- Number of 4 input LUTs:                 11  out of   9312     0%  
-    Number used as logic:                 9
-    Number used as Shift registers:       2
+ Number of Slices:                       80  out of   4656     1%  
+ Number of Slice Flip Flops:            113  out of   9312     1%  
+ Number of 4 input LUTs:                113  out of   9312     1%  
+    Number used as logic:                81
+    Number used as Shift registers:      32
  Number of IOs:                          58
- Number of bonded IOBs:                  36  out of    232    15%  
+ Number of bonded IOBs:                  58  out of    232    25%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -280,7 +331,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK_50M_I                          | IBUF+BUFG              | 13    |
+CLK_50M_I                          | IBUF+BUFG              | 145   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -291,8 +342,8 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 3.492ns (Maximum Frequency: 286.369MHz)
-   Minimum input arrival time before clock: 3.353ns
+   Minimum period: 5.808ns (Maximum Frequency: 172.181MHz)
+   Minimum input arrival time before clock: 3.729ns
    Maximum output required time after clock: 5.078ns
    Maximum combinational path delay: 5.847ns
 
@@ -302,44 +353,61 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK_50M_I'
-  Clock period: 3.492ns (frequency: 286.369MHz)
-  Total number of paths / destination ports: 11 / 11
+  Clock period: 5.808ns (frequency: 172.181MHz)
+  Total number of paths / destination ports: 5374 / 253
 -------------------------------------------------------------------------
-Delay:               3.492ns (Levels of Logic = 0)
-  Source:            Mshreg_shift_r_h_sync_4 (FF)
-  Destination:       shift_r_h_sync_4 (FF)
+Delay:               5.808ns (Levels of Logic = 17)
+  Source:            Blue_7_0 (FF)
+  Destination:       Blue_sum_13 (FF)
   Source Clock:      CLK_50M_I rising
   Destination Clock: CLK_50M_I rising
 
-  Data Path: Mshreg_shift_r_h_sync_4 to shift_r_h_sync_4
+  Data Path: Blue_7_0 to Blue_sum_13
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     SRL16:CLK->Q          1   3.224   0.000  Mshreg_shift_r_h_sync_4 (Mshreg_shift_r_h_sync_4)
-     FD:D                      0.268          shift_r_h_sync_4
+     FDE:C->Q              1   0.514   0.509  Blue_7_0 (Blue_7_0)
+     LUT2:I0->O            1   0.612   0.000  Msub_Blue_sum_sub0000_lut<0> (Msub_Blue_sum_sub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Msub_Blue_sum_sub0000_cy<0> (Msub_Blue_sum_sub0000_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Blue_sum_sub0000_cy<1> (Msub_Blue_sum_sub0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Blue_sum_sub0000_cy<2> (Msub_Blue_sum_sub0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Blue_sum_sub0000_cy<3> (Msub_Blue_sum_sub0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Blue_sum_sub0000_cy<4> (Msub_Blue_sum_sub0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Blue_sum_sub0000_cy<5> (Msub_Blue_sum_sub0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Blue_sum_sub0000_cy<6> (Msub_Blue_sum_sub0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Blue_sum_sub0000_cy<7> (Msub_Blue_sum_sub0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Blue_sum_sub0000_cy<8> (Msub_Blue_sum_sub0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Blue_sum_sub0000_cy<9> (Msub_Blue_sum_sub0000_cy<9>)
+     MUXCY:CI->O           0   0.052   0.000  Msub_Blue_sum_sub0000_cy<10> (Msub_Blue_sum_sub0000_cy<10>)
+     XORCY:CI->O           3   0.699   0.520  Msub_Blue_sum_sub0000_xor<11> (Blue_sum_sub0000<11>)
+     LUT2:I1->O            1   0.612   0.000  Maccum_Blue_sum_lut<11> (Maccum_Blue_sum_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  Maccum_Blue_sum_cy<11> (Maccum_Blue_sum_cy<11>)
+     MUXCY:CI->O           0   0.051   0.000  Maccum_Blue_sum_cy<12> (Maccum_Blue_sum_cy<12>)
+     XORCY:CI->O           1   0.699   0.000  Maccum_Blue_sum_xor<13> (Result<13>1)
+     FDE:D                     0.268          Blue_sum_13
     ----------------------------------------
-    Total                      3.492ns (3.492ns logic, 0.000ns route)
-                                       (100.0% logic, 0.0% route)
+    Total                      5.808ns (4.779ns logic, 1.029ns route)
+                                       (82.3% logic, 17.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_50M_I'
-  Total number of paths / destination ports: 18 / 18
+  Total number of paths / destination ports: 172 / 172
 -------------------------------------------------------------------------
-Offset:              3.353ns (Levels of Logic = 2)
+Offset:              3.729ns (Levels of Logic = 2)
   Source:            SW_I<3> (PAD)
-  Destination:       vga_2_o_r_0 (FF)
+  Destination:       Blue_0_0 (FF)
   Destination Clock: CLK_50M_I rising
 
-  Data Path: SW_I<3> to vga_2_o_r_0
+  Data Path: SW_I<3> to Blue_0_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.106   0.509  SW_I_3_IBUF (SW_I_3_IBUF)
-     LUT2:I0->O            8   0.612   0.643  vga_1_o_r_or00001 (vga_1_o_r_or0000)
-     FDE:CE                    0.483          vga_2_o_r_0
+     IBUF:I->O             1   1.106   0.426  SW_I_3_IBUF (SW_I_3_IBUF)
+     LUT2:I1->O          140   0.612   1.102  Red_4_or00001 (Red_4_or0000)
+     FDE:CE                    0.483          Blue_0_0
     ----------------------------------------
-    Total                      3.353ns (2.201ns logic, 1.152ns route)
-                                       (65.6% logic, 34.4% route)
+    Total                      3.729ns (2.201ns logic, 1.528ns route)
+                                       (59.0% logic, 41.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_50M_I'
@@ -383,14 +451,14 @@ Delay:               5.847ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.31 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.50 secs
  
 --> 
 
-Total memory usage is 255372 kilobytes
+Total memory usage is 262156 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    5 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

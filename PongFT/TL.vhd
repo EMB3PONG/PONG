@@ -66,8 +66,8 @@ architecture Behavioral of TL is
 	----------------------------------------------------------------
 	-- constant declarations
 	----------------------------------------------------------------
-	constant SYNC_DELAY 	: integer := 5;
-	constant C_DATA_CNT 	: integer := 4;
+	constant SYNC_DELAY 	: integer := 9;
+	constant C_DATA_CNT 	: integer := 8;
 	----------------------------------------------------------------
 	
 	----------------------------------------------------------------
@@ -83,9 +83,9 @@ architecture Behavioral of TL is
 	signal 		Green	: slav_array_type(0 to C_DATA_CNT-1) := (others=>(others=>'0'));
 	signal 		Blue	: slav_array_type(0 to C_DATA_CNT-1) := (others=>(others=>'0'));
 
-	signal 		Red_sum	:std_logic_vector(2 downto 0) := (others => '0');
-	signal 		Gre_sum	:std_logic_vector(2 downto 0) := (others => '0');
-	signal 		Blu_sum	:std_logic_vector(2 downto 0) := (others => '0');
+	signal 		Red_sum		:unsigned(13 downto 0) := (others => '0');
+	signal 		Green_sum	:unsigned(13 downto 0) := (others => '0');
+	signal 		Blue_sum		:unsigned(13 downto 0) := (others => '0');
 	
 	signal		cnt_r		:unsigned(2 downto 0) := (others => '0');
 	signal		cnt_next	:unsigned(2 downto 0) := (others => '0');
@@ -118,9 +118,9 @@ begin
 				--if(reset_i = '1') then
 					--cnt_r <= (others => '0');
 				if((cnt_r(0) = '1') OR (SW_I(3) = '1')) then
-					vga_1_o_r <= ADC_1_I(9 downto 7);
-					vga_2_o_r <= ADC_2_I(9 downto 7);
-					vga_3_o_r <= ADC_3_I(9 downto 8);
+					--vga_1_o_r <= ADC_1_I(9 downto 7);
+					--vga_2_o_r <= ADC_2_I(9 downto 7);
+					--vga_3_o_r <= ADC_3_I(9 downto 8);
 					
 					-- new code
 					Red(0) <= unsigned(ADC_1_I);
@@ -136,6 +136,10 @@ begin
 					Red_sum <= Red_sum + Red(0) - Red(C_DATA_CNT-1);
 					Green_sum <= Green_sum + Green(0) - Green(C_DATA_CNT-1);
 					Blue_sum <= Blue_sum + Blue(0) - Blue(C_DATA_CNT-1);
+					
+					vga_1_o_r <= std_logic_vector(Red_sum(13 downto 11));
+					vga_2_o_r <= std_logic_vector(Green_sum(13 downto 11));
+					vga_3_o_r <= std_logic_vector(Blue_sum(13 downto 12));
 					
 				end if;
 			end if;

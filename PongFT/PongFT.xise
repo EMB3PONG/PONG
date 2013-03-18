@@ -95,7 +95,7 @@
     <property xil_pn:name="Exclude Compilation of EDK Sub-Libraries" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Extra Effort" xil_pn:value="None" xil_pn:valueState="default"/>
     <property xil_pn:name="Extra Effort (Highest PAR level only)" xil_pn:value="None" xil_pn:valueState="default"/>
-    <property xil_pn:name="FPGA Start-Up Clock" xil_pn:value="CCLK" xil_pn:valueState="default"/>
+    <property xil_pn:name="FPGA Start-Up Clock" xil_pn:value="JTAG Clock" xil_pn:valueState="non-default"/>
     <property xil_pn:name="FSM Encoding Algorithm" xil_pn:value="Auto" xil_pn:valueState="default"/>
     <property xil_pn:name="FSM Style" xil_pn:value="LUT" xil_pn:valueState="default"/>
     <property xil_pn:name="Filter Files From Compile Order" xil_pn:value="true" xil_pn:valueState="default"/>
@@ -128,7 +128,8 @@
     <property xil_pn:name="Ignore User Timing Constraints Map" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Ignore User Timing Constraints Par" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Implementation Top" xil_pn:value="Architecture|TL|Behavioral" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="" xil_pn:valueState="default"/>
+    <property xil_pn:name="Implementation Top File" xil_pn:value="TL.vhd" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/TL" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Include 'uselib Directive in Verilog File" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Include SIMPRIM Models in Verilog File" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Include UNISIM Models in Verilog File" xil_pn:value="false" xil_pn:valueState="default"/>
