@@ -1,0 +1,5 @@
+set -tmpdir "/home/klaus/PONG/PongFT/xst/projnav.tmp"
+set -xsthdpdir "/home/klaus/PONG/PongFT/xst"
+elaborate
+-ifn detector.prj
+-ifmt mixed
