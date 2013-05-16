@@ -1,0 +1,902 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: TL.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TL.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TL"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : TL
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/XilinxWorkSpace/PongV5/mb/hdl/mb.vhd" in Library work.
+Entity <mb> compiled.
+Entity <mb> (Architecture <structure>) compiled.
+Compiling vhdl file "C:/XilinxWorkSpace/PongV5/dcm.vhd" in Library work.
+Architecture behavioral of Entity dcm is up to date.
+Compiling vhdl file "C:/XilinxWorkSpace/PongV5/Filter_3x3.vhd" in Library work.
+Architecture behavioral of Entity filter_3x3 is up to date.
+Compiling vhdl file "C:/XilinxWorkSpace/PongV5/ADC_signal_sync.vhd" in Library work.
+Architecture behavioral of Entity adc_signal_sync is up to date.
+Compiling vhdl file "C:/XilinxWorkSpace/PongV5/pixel_pointer.vhd" in Library work.
+Architecture behavioral of Entity pixel_pointer is up to date.
+Compiling vhdl file "C:/XilinxWorkSpace/PongV5/TL.vhd" in Library work.
+Entity <tl> compiled.
+Entity <tl> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TL> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <dcm> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Filter_3x3> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ADC_signal_sync> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <pixel_pointer> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TL> in library <work> (Architecture <behavioral>).
+WARNING:Xst:752 - "C:/XilinxWorkSpace/PongV5/TL.vhd" line 153: Unconnected input port 'RST_IN' of component 'dcm' is tied to default value.
+WARNING:Xst:753 - "C:/XilinxWorkSpace/PongV5/TL.vhd" line 153: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'dcm'.
+Entity <TL> analyzed. Unit <TL> generated.
+
+Analyzing Entity <dcm> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <dcm>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <dcm>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <dcm>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <dcm>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "CLKFX_DIVIDE =  4" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "CLKFX_MULTIPLY =  2" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "CLKIN_PERIOD =  20.0000000000000000" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <dcm>.
+Entity <dcm> analyzed. Unit <dcm> generated.
+
+Analyzing Entity <Filter_3x3> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:1610 - "C:/XilinxWorkSpace/PongV5/Filter_3x3.vhd" line 119: Width mismatch. <psf> has a width of 5 bits but assigned expression is 3-bit wide.
+WARNING:Xst:1610 - "C:/XilinxWorkSpace/PongV5/Filter_3x3.vhd" line 120: Width mismatch. <psc> has a width of 5 bits but assigned expression is 4-bit wide.
+WARNING:Xst:1610 - "C:/XilinxWorkSpace/PongV5/Filter_3x3.vhd" line 121: Width mismatch. <psb> has a width of 5 bits but assigned expression is 3-bit wide.
+WARNING:Xst:1610 - "C:/XilinxWorkSpace/PongV5/Filter_3x3.vhd" line 123: Width mismatch. <pixel_sum> has a width of 10 bits but assigned expression is 5-bit wide.
+Entity <Filter_3x3> analyzed. Unit <Filter_3x3> generated.
+
+Analyzing Entity <ADC_signal_sync> in library <work> (Architecture <Behavioral>).
+Entity <ADC_signal_sync> analyzed. Unit <ADC_signal_sync> generated.
+
+Analyzing Entity <pixel_pointer> in library <work> (Architecture <Behavioral>).
+Entity <pixel_pointer> analyzed. Unit <pixel_pointer> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Filter_3x3>.
+    Related source file is "C:/XilinxWorkSpace/PongV5/Filter_3x3.vhd".
+    Found 3-bit register for signal <back>.
+    Found 3-bit register for signal <center>.
+    Found 3-bit register for signal <front>.
+    Found 799-bit register for signal <h_sync_delay>.
+    Found 1-bit register for signal <h_sync_next>.
+    Found 791-bit register for signal <line_1>.
+    Found 791-bit register for signal <line_2>.
+    Found 3-bit register for signal <pb0>.
+    Found 3-bit register for signal <pb1>.
+    Found 3-bit register for signal <pb2>.
+    Found 3-bit register for signal <pc0>.
+    Found 4-bit register for signal <pc1>.
+    Found 3-bit register for signal <pc2>.
+    Found 3-bit register for signal <pf0>.
+    Found 3-bit register for signal <pf1>.
+    Found 3-bit register for signal <pf2>.
+    Found 1-bit register for signal <pixel_next>.
+    Found 10-bit comparator greater for signal <pixel_next$cmp_gt0000> created at line 125.
+    Found 1-bit register for signal <pixel_nf_next>.
+    Found 10-bit register for signal <pixel_sum>.
+    Found 5-bit adder for signal <pixel_sum$add0000> created at line 123.
+    Found 5-bit adder for signal <pixel_sum$addsub0000> created at line 123.
+    Found 5-bit register for signal <psb>.
+    Found 3-bit adder for signal <psb$add0000> created at line 121.
+    Found 3-bit adder for signal <psb$addsub0000> created at line 121.
+    Found 5-bit register for signal <psc>.
+    Found 4-bit adder for signal <psc$add0000> created at line 120.
+    Found 4-bit adder for signal <psc$addsub0000> created at line 120.
+    Found 5-bit register for signal <psf>.
+    Found 3-bit adder for signal <psf$add0000> created at line 119.
+    Found 3-bit adder for signal <psf$addsub0000> created at line 119.
+    Found 799-bit register for signal <v_sync_delay>.
+    Found 1-bit register for signal <v_sync_next>.
+INFO:Xst:738 - HDL ADVISOR - 791 flip-flops were inferred for signal <line_1>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:738 - HDL ADVISOR - 791 flip-flops were inferred for signal <line_2>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:738 - HDL ADVISOR - 799 flip-flops were inferred for signal <v_sync_delay>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:738 - HDL ADVISOR - 799 flip-flops were inferred for signal <h_sync_delay>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred 3246 D-type flip-flop(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <Filter_3x3> synthesized.
+
+
+Synthesizing Unit <ADC_signal_sync>.
+    Related source file is "C:/XilinxWorkSpace/PongV5/ADC_signal_sync.vhd".
+    Found 1-bit register for signal <blue_r>.
+    Found 6-bit register for signal <h_sync_sr>.
+    Found 6-bit register for signal <v_sync_sr>.
+    Summary:
+	inferred  13 D-type flip-flop(s).
+Unit <ADC_signal_sync> synthesized.
+
+
+Synthesizing Unit <pixel_pointer>.
+    Related source file is "C:/XilinxWorkSpace/PongV5/pixel_pointer.vhd".
+    Found 2-bit register for signal <h_sync>.
+    Found 10-bit up counter for signal <line>.
+    Found 10-bit up counter for signal <pixel>.
+    Found 2-bit register for signal <v_sync>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   4 D-type flip-flop(s).
+Unit <pixel_pointer> synthesized.
+
+
+Synthesizing Unit <dcm>.
+    Related source file is "C:/XilinxWorkSpace/PongV5/dcm.vhd".
+Unit <dcm> synthesized.
+
+
+Synthesizing Unit <TL>.
+    Related source file is "C:/XilinxWorkSpace/PongV5/TL.vhd".
+WARNING:Xst:646 - Signal <pointer_line> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <filter_pixel_nf> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <adc_clk> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <VGA_VS_O>.
+    Found 1-bit register for signal <VGA_HS_O>.
+    Found 1-bit register for signal <output>.
+    Found 10-bit comparator greater for signal <VGA_G_O$cmp_gt0000> created at line 226.
+    Found 10-bit comparator less for signal <VGA_G_O$cmp_lt0000> created at line 226.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <TL> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 8
+ 3-bit adder                                           : 4
+ 4-bit adder                                           : 2
+ 5-bit adder                                           : 2
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 32
+ 1-bit register                                        : 8
+ 10-bit register                                       : 1
+ 2-bit register                                        : 2
+ 3-bit register                                        : 11
+ 4-bit register                                        : 1
+ 5-bit register                                        : 3
+ 6-bit register                                        : 2
+ 791-bit register                                      : 2
+ 799-bit register                                      : 2
+# Comparators                                          : 3
+ 10-bit comparator greater                             : 2
+ 10-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:79 - Model 'dcm' has different characteristics in destination library
+WARNING:Xst:80 - Model name has been changed to 'dcm1'
+Reading core <mb.ngc>.
+Reading core <mb_microblaze_0_wrapper.ngc>.
+Reading core <mb_mb_plb_wrapper.ngc>.
+Reading core <mb_ilmb_wrapper.ngc>.
+Reading core <mb_dlmb_wrapper.ngc>.
+Reading core <mb_dlmb_cntlr_wrapper.ngc>.
+Reading core <mb_ilmb_cntlr_wrapper.ngc>.
+Reading core <mb_lmb_bram_wrapper.ngc>.
+Reading core <mb_leds_8bit_wrapper.ngc>.
+Reading core <mb_push_buttons_3bit_wrapper.ngc>.
+Reading core <mb_switches_8bit_wrapper.ngc>.
+Reading core <mb_rs232_port_wrapper.ngc>.
+Reading core <mb_clock_generator_0_wrapper.ngc>.
+Reading core <mb_mdm_0_wrapper.ngc>.
+Reading core <mb_proc_sys_reset_0_wrapper.ngc>.
+Loading core <mb_microblaze_0_wrapper> for timing and area information for instance <microblaze_0>.
+Loading core <mb_mb_plb_wrapper> for timing and area information for instance <mb_plb>.
+Loading core <mb_ilmb_wrapper> for timing and area information for instance <ilmb>.
+Loading core <mb_dlmb_wrapper> for timing and area information for instance <dlmb>.
+Loading core <mb_dlmb_cntlr_wrapper> for timing and area information for instance <dlmb_cntlr>.
+Loading core <mb_ilmb_cntlr_wrapper> for timing and area information for instance <ilmb_cntlr>.
+Loading core <mb_lmb_bram_wrapper> for timing and area information for instance <lmb_bram>.
+Loading core <mb_leds_8bit_wrapper> for timing and area information for instance <LEDs_8Bit>.
+Loading core <mb_push_buttons_3bit_wrapper> for timing and area information for instance <Push_Buttons_3Bit>.
+Loading core <mb_switches_8bit_wrapper> for timing and area information for instance <Switches_8Bit>.
+Loading core <mb_rs232_port_wrapper> for timing and area information for instance <RS232_PORT>.
+Loading core <mb_clock_generator_0_wrapper> for timing and area information for instance <clock_generator_0>.
+Loading core <mb_mdm_0_wrapper> for timing and area information for instance <mdm_0>.
+Loading core <mb_proc_sys_reset_0_wrapper> for timing and area information for instance <proc_sys_reset_0>.
+Loading core <mb> for timing and area information for instance <Inst_mb>.
+INFO:Xst:2261 - The FF/Latch <pc2_1> in Unit <Inst_Filter_3x3> is equivalent to the following FF/Latch, which will be removed : <line_2_0> 
+INFO:Xst:2261 - The FF/Latch <front_1> in Unit <Inst_Filter_3x3> is equivalent to the following FF/Latch, which will be removed : <pf0_0> 
+INFO:Xst:2261 - The FF/Latch <front_2> in Unit <Inst_Filter_3x3> is equivalent to the following FF/Latch, which will be removed : <pf1_1> 
+INFO:Xst:2261 - The FF/Latch <pf2_0> in Unit <Inst_Filter_3x3> is equivalent to the following FF/Latch, which will be removed : <line_1_0> 
+INFO:Xst:2261 - The FF/Latch <back_1> in Unit <Inst_Filter_3x3> is equivalent to the following FF/Latch, which will be removed : <pb0_0> 
+INFO:Xst:2261 - The FF/Latch <back_2> in Unit <Inst_Filter_3x3> is equivalent to the following FF/Latch, which will be removed : <pb1_1> 
+INFO:Xst:2261 - The FF/Latch <pf0_1> in Unit <Inst_Filter_3x3> is equivalent to the following 28 FFs/Latches, which will be removed : <pf0_2> <pf1_0> <pf1_2> <pf2_1> <pf2_2> <pc0_0> <pc0_2> <pc1_0> <pc1_1> <pc1_3> <pc2_0> <pc2_2> <psf_3> <psf_4> <pb0_1> <pb0_2> <pb1_0> <pb1_2> <pb2_1> <pb2_2> <psc_4> <psb_3> <psb_4> <pixel_sum_5> <pixel_sum_6> <pixel_sum_7> <pixel_sum_8> <pixel_sum_9> 
+INFO:Xst:2261 - The FF/Latch <center_1> in Unit <Inst_Filter_3x3> is equivalent to the following FF/Latch, which will be removed : <pc0_1> 
+INFO:Xst:2261 - The FF/Latch <center_2> in Unit <Inst_Filter_3x3> is equivalent to the following FF/Latch, which will be removed : <pc1_2> 
+WARNING:Xst:1293 - FF/Latch <pf0_1> has a constant value of 0 in block <Inst_Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 8
+ 3-bit adder                                           : 4
+ 4-bit adder                                           : 2
+ 5-bit adder                                           : 2
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 3266
+ Flip-Flops                                            : 3266
+# Comparators                                          : 3
+ 10-bit comparator greater                             : 2
+ 10-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <pixel_sum_9> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_sum_8> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_sum_7> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_sum_6> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_sum_5> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <psb_4> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <psb_3> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <psc_4> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pb2_2> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pb2_1> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pb1_2> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pb1_0> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pb0_2> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pb0_1> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <psf_4> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <psf_3> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pc2_2> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pc2_0> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pc1_3> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pc1_1> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pc1_0> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pc0_2> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pc0_0> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pf2_2> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pf2_1> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pf1_2> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pf1_0> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pf0_2> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pf0_1> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <pc2_1> in Unit <Filter_3x3> is equivalent to the following FF/Latch, which will be removed : <line_2_0> 
+INFO:Xst:2261 - The FF/Latch <front_1> in Unit <Filter_3x3> is equivalent to the following FF/Latch, which will be removed : <pf0_0> 
+INFO:Xst:2261 - The FF/Latch <front_2> in Unit <Filter_3x3> is equivalent to the following FF/Latch, which will be removed : <pf1_1> 
+INFO:Xst:2261 - The FF/Latch <pf2_0> in Unit <Filter_3x3> is equivalent to the following FF/Latch, which will be removed : <line_1_0> 
+INFO:Xst:2261 - The FF/Latch <back_1> in Unit <Filter_3x3> is equivalent to the following FF/Latch, which will be removed : <pb0_0> 
+INFO:Xst:2261 - The FF/Latch <back_2> in Unit <Filter_3x3> is equivalent to the following FF/Latch, which will be removed : <pb1_1> 
+INFO:Xst:2261 - The FF/Latch <center_1> in Unit <Filter_3x3> is equivalent to the following FF/Latch, which will be removed : <pc0_1> 
+INFO:Xst:2261 - The FF/Latch <center_2> in Unit <Filter_3x3> is equivalent to the following 2 FFs/Latches, which will be removed : <pixel_nf_next> <pc1_2> 
+WARNING:Xst:1293 - FF/Latch <psc_0> has a constant value of 0 in block <Filter_3x3>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <TL> ...
+
+Optimizing unit <Filter_3x3> ...
+
+Optimizing unit <ADC_signal_sync> ...
+
+Optimizing unit <pixel_pointer> ...
+WARNING:Xst:2677 - Node <Inst_pixel_pointer/line_9> of sequential type is unconnected in block <TL>.
+WARNING:Xst:2677 - Node <Inst_pixel_pointer/line_8> of sequential type is unconnected in block <TL>.
+WARNING:Xst:2677 - Node <Inst_pixel_pointer/line_7> of sequential type is unconnected in block <TL>.
+WARNING:Xst:2677 - Node <Inst_pixel_pointer/line_6> of sequential type is unconnected in block <TL>.
+WARNING:Xst:2677 - Node <Inst_pixel_pointer/line_5> of sequential type is unconnected in block <TL>.
+WARNING:Xst:2677 - Node <Inst_pixel_pointer/line_4> of sequential type is unconnected in block <TL>.
+WARNING:Xst:2677 - Node <Inst_pixel_pointer/line_3> of sequential type is unconnected in block <TL>.
+WARNING:Xst:2677 - Node <Inst_pixel_pointer/line_2> of sequential type is unconnected in block <TL>.
+WARNING:Xst:2677 - Node <Inst_pixel_pointer/line_1> of sequential type is unconnected in block <TL>.
+WARNING:Xst:2677 - Node <Inst_pixel_pointer/line_0> of sequential type is unconnected in block <TL>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TL, actual ratio is 80.
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Area.Decode_I/SWAP_Instr_0> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Area.Decode_I/SWAP_Instr_0_1> 
+INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_MPLB_RST[1].I_MPLB_RST> in Unit <mb_plb> is equivalent to the following 7 FFs/Latches : <mb_plb/GEN_MPLB_RST[0].I_MPLB_RST> <mb_plb/GEN_SPLB_RST[4].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[3].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[2].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[1].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[0].I_SPLB_RST> <mb_plb/I_PLB_RST> 
+INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM_FFd3> in Unit <mb_plb> is equivalent to the following FF/Latch : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM_FFd3_1> 
+INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1> in Unit <mb_plb> is equivalent to the following 3 FFs/Latches : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_1> <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_2> <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_3> 
+INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0> in Unit <mb_plb> is equivalent to the following 3 FFs/Latches : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_1> <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_2> <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_3> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Area.Decode_I/SWAP_Instr_0> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Area.Decode_I/SWAP_Instr_0_1> 
+INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_MPLB_RST[1].I_MPLB_RST> in Unit <mb_plb> is equivalent to the following 7 FFs/Latches : <mb_plb/GEN_MPLB_RST[0].I_MPLB_RST> <mb_plb/GEN_SPLB_RST[4].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[3].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[2].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[1].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[0].I_SPLB_RST> <mb_plb/I_PLB_RST> 
+INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM_FFd3> in Unit <mb_plb> is equivalent to the following FF/Latch : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM_FFd3_1> 
+INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1> in Unit <mb_plb> is equivalent to the following 3 FFs/Latches : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_1> <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_2> <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_3> 
+INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0> in Unit <mb_plb> is equivalent to the following 3 FFs/Latches : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_1> <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_2> <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_3> 
+
+Final Macro Processing ...
+
+Processing Unit <TL> :
+	Found 792-bit shift register for signal <Inst_Filter_3x3/back_1>.
+	Found 792-bit shift register for signal <Inst_Filter_3x3/center_1>.
+	Found 800-bit shift register for signal <Inst_Filter_3x3/v_sync_next>.
+	Found 800-bit shift register for signal <Inst_Filter_3x3/h_sync_next>.
+	Found 2-bit shift register for signal <Inst_Filter_3x3/front_1>.
+	Found 6-bit shift register for signal <Ints_ADC_signal_sync/h_sync_sr_5>.
+	Found 6-bit shift register for signal <Ints_ADC_signal_sync/v_sync_sr_5>.
+Unit <TL> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 39
+ Flip-Flops                                            : 39
+# Shift Registers                                      : 7
+ 2-bit shift register                                  : 1
+ 6-bit shift register                                  : 2
+ 792-bit shift register                                : 2
+ 800-bit shift register                                : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TL.ngr
+Top Level Output File Name         : TL
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 37
+
+Cell Usage :
+# BELS                             : 3248
+#      GND                         : 17
+#      INV                         : 49
+#      LUT1                        : 53
+#      LUT2                        : 269
+#      LUT2_D                      : 14
+#      LUT2_L                      : 9
+#      LUT3                        : 671
+#      LUT3_D                      : 47
+#      LUT3_L                      : 15
+#      LUT4                        : 1202
+#      LUT4_D                      : 22
+#      LUT4_L                      : 45
+#      MULT_AND                    : 34
+#      MUXCY                       : 157
+#      MUXCY_L                     : 136
+#      MUXF5                       : 345
+#      MUXF6                       : 6
+#      MUXF7                       : 2
+#      MUXF8                       : 1
+#      VCC                         : 10
+#      XORCY                       : 144
+# FlipFlops/Latches                : 2264
+#      FD                          : 309
+#      FDC                         : 20
+#      FDC_1                       : 5
+#      FDCE                        : 15
+#      FDE                         : 314
+#      FDE_1                       : 8
+#      FDP                         : 9
+#      FDR                         : 1052
+#      FDRE                        : 349
+#      FDRE_1                      : 1
+#      FDRS                        : 25
+#      FDRSE                       : 13
+#      FDS                         : 72
+#      FDSE                        : 72
+# RAMS                             : 132
+#      RAM16X1D                    : 128
+#      RAMB16_S9_S9                : 4
+# Shift Registers                  : 355
+#      SRL16                       : 34
+#      SRL16E                      : 117
+#      SRLC16                      : 196
+#      SRLC16E                     : 8
+# Clock Buffers                    : 8
+#      BUFG                        : 8
+# IO Buffers                       : 37
+#      IBUF                        : 16
+#      IBUFG                       : 1
+#      OBUF                        : 20
+# DCMs                             : 2
+#      DCM_SP                      : 2
+# MULTs                            : 3
+#      MULT18X18SIO                : 3
+# Others                           : 1
+#      BSCAN_SPARTAN3              : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     1991  out of   4656    42%  
+ Number of Slice Flip Flops:           2264  out of   9312    24%  
+ Number of 4 input LUTs:               3007  out of   9312    32%  
+    Number used as logic:              2396
+    Number used as Shift registers:     355
+    Number used as RAMs:                256
+ Number of IOs:                          37
+ Number of bonded IOBs:                  37  out of    232    15%  
+ Number of BRAMs:                         4  out of     20    20%  
+ Number of MULT18X18SIOs:                 3  out of     20    15%  
+ Number of GCLKs:                         8  out of     24    33%  
+ Number of DCMs:                          2  out of      4    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                           | Load  |
+-----------------------------------+---------------------------------------------------------------------------------+-------+
+CLK_50M_I                          | Inst_dcm/DCM_SP_INST:CLK0+clock_generator_0/DCM0_INST/Using_Virtex.DCM_INST:CLK0| 2250  |
+Inst_mb/mdm_0/mdm_0/drck_i         | BUFG                                                                            | 212   |
+Inst_mb/mdm_0/mdm_0/update1        | BUFG                                                                            | 43    |
+CLK_50M_I                          | Inst_dcm/DCM_SP_INST:CLKFX                                                      | 249   |
+-----------------------------------+---------------------------------------------------------------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                    | Buffer(FF name)                                                                                                                   | Load  |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+-------+
+Inst_mb/mdm_0/mdm_0/MDM_Core_I1/Config_Reg_Acst_inv(Inst_mb/mdm_0/mdm_0/MDM_Core_I1/Config_Reg_Acst_inv1_INV_0:O)                                                                                                                                 | NONE(Inst_mb/mdm_0/mdm_0/MDM_Core_I1/Config_Reg_0)                                                                                | 23    |
+Inst_mb/mdm_0/mdm_0/MDM_Core_I1/SEL_inv(Inst_mb/mdm_0/mdm_0/MDM_Core_I1/SEL_inv1_INV_0:O)                                                                                                                                                         | NONE(Inst_mb/mdm_0/mdm_0/MDM_Core_I1/PORT_Selector_0)                                                                             | 12    |
+Inst_mb_not0000(Inst_mb_not00001_INV_0:O)                                                                                                                                                                                                         | NONE(Inst_mb/clock_generator_0/clock_generator_0/DCM0_INST/rst_delay_0)                                                           | 4     |
+Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/command_reg_clear(Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/command_reg_clear:Q)| NONE(Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/command_reg_0)         | 2     |
+Inst_mb/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/data_cmd_inv(Inst_mb/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/data_cmd_inv1_INV_0:O)                                                                                                                 | NONE(Inst_mb/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/execute)                                                                      | 1     |
+Inst_mb/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/local_sel_n3(Inst_mb/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[4].LUT_Delay:O)                                                                                                          | NONE(Inst_mb/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I)                                                                        | 1     |
+Inst_mb/mdm_0/mdm_0/update1(Inst_mb/mdm_0/mdm_0/Use_Spartan3.BSCAN_SPARTAN3_I:UPDATE)                                                                                                                                                             | BUFG(Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/running_clock)         | 1     |
+Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/continue_from_brk(Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/continue_from_brk:Q)| NONE(Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/continue_from_brk_TClk)| 1     |
+Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/force_stop_cmd(Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/force_stop_cmd1:O)     | NONE(Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/force_stop_TClk)       | 1     |
+Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/no_sleeping(Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/no_sleeping1_INV_0:O)     | NONE(Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Dbg_Wakeup)            | 1     |
+Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/normal_stop_cmd(Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/normal_stop_cmd1:O)   | NONE(Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/normal_stop_TClk)      | 1     |
+Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/start_single_step(Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/start_single_step:Q)| NONE(Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/single_Step_TClk)      | 1     |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 16.050ns (Maximum Frequency: 62.305MHz)
+   Minimum input arrival time before clock: 4.704ns
+   Maximum output required time after clock: 12.965ns
+   Maximum combinational path delay: 6.890ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_50M_I'
+  Clock period: 12.380ns (frequency: 80.774MHz)
+  Total number of paths / destination ports: 137252 / 6354
+-------------------------------------------------------------------------
+Delay:               12.380ns (Levels of Logic = 10)
+  Source:            Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Area_Debug_Control.Using_FPGA.Dbg_Inhibit_EX_FDRSE (FF)
+  Destination:       Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[29].Operand_Select_Bit_I/Op2_DFF (FF)
+  Source Clock:      CLK_50M_I rising
+  Destination Clock: CLK_50M_I rising
+
+  Data Path: Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Area_Debug_Control.Using_FPGA.Dbg_Inhibit_EX_FDRSE to Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[29].Operand_Select_Bit_I/Op2_DFF
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRSE:C->Q           70   0.591   1.353  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Area_Debug_Control.Using_FPGA.Dbg_Inhibit_EX_FDRSE (LOCKSTEP_MASTER_OUT<2>)
+     LUT2:I1->O            4   0.704   0.622  microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/pcmp_instr_i_0_and00001 (microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/pcmp_instr_i)
+     LUT4:I2->O            8   0.704   0.792  microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Shift_Logic_Module_I/Shift_Logic_Result_i_26_mux0000110 (microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Shift_Logic_Module_I/N8)
+     LUT4_D:I2->O          1   0.704   0.455  microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Shift_Logic_Module_I/normal_res<0>4 (microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Shift_Logic_Module_I/normal_res<0>4)
+     LUT4:I2->O            1   0.704   0.424  microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Shift_Logic_Module_I/normal_res<0>105_SW0 (N247)
+     LUT4_L:I3->LO         1   0.704   0.275  microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Shift_Logic_Module_I/normal_res<0>135 (microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Shift_Logic_Module_I/normal_res<0>)
+     LUT2:I0->O            1   0.704   0.499  microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Shift_Logic_Module_I/Use_PCMP_instr.Using_FPGA.shift_logic_result_i_lut_0 (microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/shift_Logic_Result<29>)
+     LUT4:I1->O            1   0.704   0.000  microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA.Result_Mux_Bits[29].Result_Mux_Bit_I/Data_Shift_Mux (microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA.Result_Mux_Bits[29].Result_Mux_Bit_I/data_Shift_Res)
+     MUXF5:I1->O           7   0.321   0.787  microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA.Result_Mux_Bits[29].Result_Mux_Bit_I/Result_MUXF5 (microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/ex_Result<29>)
+     LUT3:I1->O            2   0.704   0.000  microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[29].Operand_Select_Bit_I/Using_LUT4_1.Op1_Mux2_1 (microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[29].Operand_Select_Bit_I/op1_Reg)
+     MUXF5:I0->O           1   0.321   0.000  microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[29].Operand_Select_Bit_I/Using_LUT4_1.Op1_MUXF5 (microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[29].Operand_Select_Bit_I/op1_I)
+     FDE:D                     0.308          microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[29].Operand_Select_Bit_I/Op1_DFF
+    ----------------------------------------
+    Total                     12.380ns (7.173ns logic, 5.207ns route)
+                                       (57.9% logic, 42.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_mb/mdm_0/mdm_0/drck_i'
+  Clock period: 12.228ns (frequency: 81.780MHz)
+  Total number of paths / destination ports: 320 / 260
+-------------------------------------------------------------------------
+Delay:               6.114ns (Levels of Logic = 5)
+  Source:            Inst_mb/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/SYNC_FDRE (FF)
+  Destination:       Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_7 (FF)
+  Source Clock:      Inst_mb/mdm_0/mdm_0/drck_i falling
+  Destination Clock: Inst_mb/mdm_0/mdm_0/drck_i rising
+
+  Data Path: Inst_mb/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/SYNC_FDRE to Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE_1:C->Q           1   0.591   0.499  JTAG_CONTROL_I/SYNC_FDRE (JTAG_CONTROL_I/sync)
+     LUT3:I1->O            1   0.704   0.424  JTAG_CONTROL_I/shifting_Data_SW0 (N34)
+     LUT4:I3->O            9   0.704   0.820  JTAG_CONTROL_I/shifting_Data (Dbg_Shift_9)
+     end scope: 'mdm_0/MDM_Core_I1'
+     end scope: 'mdm_0'
+     begin scope: 'microblaze_0'
+     INV:I->O              8   0.704   0.757  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Shift_inv1_INV_0 (microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Shift_inv)
+     FDR:R                     0.911          microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_0
+    ----------------------------------------
+    Total                      6.114ns (3.614ns logic, 2.500ns route)
+                                       (59.1% logic, 40.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_mb/mdm_0/mdm_0/update1'
+  Clock period: 16.050ns (frequency: 62.305MHz)
+  Total number of paths / destination ports: 345 / 51
+-------------------------------------------------------------------------
+Delay:               8.025ns (Levels of Logic = 6)
+  Source:            Inst_mb/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I (FF)
+  Destination:       Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/control_reg_0 (FF)
+  Source Clock:      Inst_mb/mdm_0/mdm_0/update1 falling
+  Destination Clock: Inst_mb/mdm_0/mdm_0/update1 rising
+
+  Data Path: Inst_mb/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I to Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/control_reg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q           14   0.591   1.175  JTAG_CONTROL_I/FDC_I (JTAG_CONTROL_I/data_cmd)
+     LUT2:I0->O            2   0.704   0.622  JTAG_CONTROL_I/Dbg_Reg_En_I<1>1 (Dbg_Reg_En_0<1>)
+     end scope: 'mdm_0/MDM_Core_I1'
+     end scope: 'mdm_0'
+     begin scope: 'microblaze_0'
+     LUT4:I0->O            4   0.704   0.762  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Command_Reg_En_cmp_eq000011 (microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/N4)
+     LUT3:I0->O            2   0.704   0.622  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Control_Reg_En_cmp_eq000011 (microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/N16)
+     LUT3:I0->O           10   0.704   0.882  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Control_Reg_En_cmp_eq00001 (microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Control_Reg_En)
+     FDCE:CE                   0.555          microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Dbg_Wakeup
+    ----------------------------------------
+    Total                      8.025ns (3.962ns logic, 4.063ns route)
+                                       (49.4% logic, 50.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_mb/mdm_0/mdm_0/drck_i'
+  Total number of paths / destination ports: 123 / 99
+-------------------------------------------------------------------------
+Offset:              4.704ns (Levels of Logic = 4)
+  Source:            Inst_mb/mdm_0/mdm_0/Use_Spartan3.BSCAN_SPARTAN3_I:SHIFT (PAD)
+  Destination:       Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_7 (FF)
+  Destination Clock: Inst_mb/mdm_0/mdm_0/drck_i rising
+
+  Data Path: Inst_mb/mdm_0/mdm_0/Use_Spartan3.BSCAN_SPARTAN3_I:SHIFT to Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN3:SHIFT    5   0.000   0.000  mdm_0/Use_Spartan3.BSCAN_SPARTAN3_I (mdm_0/shift)
+     begin scope: 'mdm_0/MDM_Core_I1'
+     LUT4:I0->O            9   0.704   0.820  JTAG_CONTROL_I/shifting_Data (Dbg_Shift_9)
+     end scope: 'mdm_0/MDM_Core_I1'
+     end scope: 'mdm_0'
+     begin scope: 'microblaze_0'
+     INV:I->O              8   0.704   0.757  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Shift_inv1_INV_0 (microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Shift_inv)
+     FDR:R                     0.911          microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_0
+    ----------------------------------------
+    Total                      4.704ns (3.127ns logic, 1.577ns route)
+                                       (66.5% logic, 33.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_50M_I'
+  Total number of paths / destination ports: 19 / 19
+-------------------------------------------------------------------------
+Offset:              3.074ns (Levels of Logic = 2)
+  Source:            SW_I<0> (PAD)
+  Destination:       output (FF)
+  Destination Clock: CLK_50M_I rising 0.5X
+
+  Data Path: SW_I<0> to output
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.218   0.844  SW_I_0_IBUF (SW_I_0_IBUF)
+     LUT3:I0->O            1   0.704   0.000  output_mux00011 (output_mux0001)
+     FD:D                      0.308          output
+    ----------------------------------------
+    Total                      3.074ns (2.230ns logic, 0.844ns route)
+                                       (72.5% logic, 27.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_mb/mdm_0/mdm_0/update1'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              4.085ns (Levels of Logic = 3)
+  Source:            Inst_mb/mdm_0/mdm_0/Use_Spartan3.BSCAN_SPARTAN3_I:SEL2 (PAD)
+  Destination:       Inst_mb/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/command_0 (FF)
+  Destination Clock: Inst_mb/mdm_0/mdm_0/update1 falling
+
+  Data Path: Inst_mb/mdm_0/mdm_0/Use_Spartan3.BSCAN_SPARTAN3_I:SEL2 to Inst_mb/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/command_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN3:SEL2    2   0.000   0.000  mdm_0/Use_Spartan3.BSCAN_SPARTAN3_I (mdm_0/sel)
+     begin scope: 'mdm_0/MDM_Core_I1'
+     LUT3:I0->O            7   0.704   0.743  Ext_JTAG_SEL11 (N2)
+     LUT3:I2->O            8   0.704   0.757  Old_MDM_SEL1 (Old_MDM_SEL)
+     FDE_1:CE                  0.555          JTAG_CONTROL_I/command_7
+    ----------------------------------------
+    Total                      4.085ns (2.585ns logic, 1.500ns route)
+                                       (63.3% logic, 36.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_50M_I'
+  Total number of paths / destination ports: 109 / 19
+-------------------------------------------------------------------------
+Offset:              9.919ns (Levels of Logic = 7)
+  Source:            Inst_pixel_pointer/pixel_2 (FF)
+  Destination:       VGA_G_O<2> (PAD)
+  Source Clock:      CLK_50M_I rising 0.5X
+
+  Data Path: Inst_pixel_pointer/pixel_2 to VGA_G_O<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.591   0.706  Inst_pixel_pointer/pixel_2 (Inst_pixel_pointer/pixel_2)
+     LUT4:I0->O            1   0.704   0.000  VGA_G_O<1>211 (VGA_G_O<1>211)
+     MUXF5:I0->O           1   0.321   0.455  VGA_G_O<1>21_f5 (VGA_G_O<1>21)
+     LUT3:I2->O            1   0.704   0.424  VGA_G_O<1>44_SW0 (N8)
+     LUT4:I3->O            2   0.704   0.482  VGA_G_O<1>44 (VGA_G_O<1>44)
+     LUT3:I2->O            1   0.704   0.000  VGA_G_O<1>1192 (VGA_G_O<1>1191)
+     MUXF5:I0->O           3   0.321   0.531  VGA_G_O<1>119_f5 (VGA_G_O_1_OBUF)
+     OBUF:I->O                 3.272          VGA_G_O_2_OBUF (VGA_G_O<2>)
+    ----------------------------------------
+    Total                      9.919ns (7.321ns logic, 2.598ns route)
+                                       (73.8% logic, 26.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_mb/mdm_0/mdm_0/drck_i'
+  Total number of paths / destination ports: 134 / 1
+-------------------------------------------------------------------------
+Offset:              12.965ns (Levels of Logic = 11)
+  Source:            Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Use_SRL16.SRL16E_7/Use_unisim.MB_SRL16E_I1 (FF)
+  Destination:       Inst_mb/mdm_0/mdm_0/Use_Spartan3.BSCAN_SPARTAN3_I:TDO2 (PAD)
+  Source Clock:      Inst_mb/mdm_0/mdm_0/drck_i rising
+
+  Data Path: Inst_mb/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Use_SRL16.SRL16E_7/Use_unisim.MB_SRL16E_I1 to Inst_mb/mdm_0/mdm_0/Use_Spartan3.BSCAN_SPARTAN3_I:TDO2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16E:CLK->Q         2   3.706   0.622  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Use_SRL16.SRL16E_7/Use_unisim.MB_SRL16E_I1 (microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/tdo_config_word1<14>)
+     LUT4:I0->O            1   0.704   0.000  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/TDO162 (microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/TDO162)
+     MUXF5:I0->O           1   0.321   0.424  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/TDO16_f5 (microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/TDO16)
+     LUT4:I3->O            1   0.704   0.455  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/TDO30 (microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/TDO30)
+     LUT3:I2->O            1   0.704   0.000  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/TDO84_G (N391)
+     MUXF5:I1->O           1   0.321   0.499  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/TDO84 (microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/TDO84)
+     LUT4:I1->O            1   0.704   0.595  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/TDO138_SW0 (N292)
+     LUT4:I0->O            1   0.704   0.499  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/TDO138 (DBG_TDO)
+     end scope: 'microblaze_0'
+     begin scope: 'mdm_0'
+     begin scope: 'mdm_0/MDM_Core_I1'
+     LUT4:I1->O            1   0.704   0.595  TDO_i81 (TDO_i81)
+     LUT4:I0->O            0   0.704   0.000  TDO_i217 (TDO)
+     end scope: 'mdm_0/MDM_Core_I1'
+    BSCAN_SPARTAN3:TDO2        0.000          mdm_0/Use_Spartan3.BSCAN_SPARTAN3_I
+    ----------------------------------------
+    Total                     12.965ns (9.276ns logic, 3.689ns route)
+                                       (71.5% logic, 28.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_mb/mdm_0/mdm_0/update1'
+  Total number of paths / destination ports: 54 / 1
+-------------------------------------------------------------------------
+Offset:              8.921ns (Levels of Logic = 10)
+  Source:            Inst_mb/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I (FF)
+  Destination:       Inst_mb/mdm_0/mdm_0/Use_Spartan3.BSCAN_SPARTAN3_I:TDO2 (PAD)
+  Source Clock:      Inst_mb/mdm_0/mdm_0/update1 falling
+
+  Data Path: Inst_mb/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I to Inst_mb/mdm_0/mdm_0/Use_Spartan3.BSCAN_SPARTAN3_I:TDO2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q           14   0.591   1.175  JTAG_CONTROL_I/FDC_I (JTAG_CONTROL_I/data_cmd)
+     LUT2:I0->O            7   0.704   0.708  JTAG_CONTROL_I/Dbg_Reg_En_I<7>1 (Dbg_Reg_En_0<7>)
+     end scope: 'mdm_0/MDM_Core_I1'
+     end scope: 'mdm_0'
+     begin scope: 'microblaze_0'
+     MUXF5:S->O            1   0.739   0.499  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/TDO84 (microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/TDO84)
+     LUT4:I1->O            1   0.704   0.595  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/TDO138_SW0 (N292)
+     LUT4:I0->O            1   0.704   0.499  microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/TDO138 (DBG_TDO)
+     end scope: 'microblaze_0'
+     begin scope: 'mdm_0'
+     begin scope: 'mdm_0/MDM_Core_I1'
+     LUT4:I1->O            1   0.704   0.595  TDO_i81 (TDO_i81)
+     LUT4:I0->O            0   0.704   0.000  TDO_i217 (TDO)
+     end scope: 'mdm_0/MDM_Core_I1'
+    BSCAN_SPARTAN3:TDO2        0.000          mdm_0/Use_Spartan3.BSCAN_SPARTAN3_I
+    ----------------------------------------
+    Total                      8.921ns (4.850ns logic, 4.071ns route)
+                                       (54.4% logic, 45.6% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 6 / 3
+-------------------------------------------------------------------------
+Delay:               6.890ns (Levels of Logic = 4)
+  Source:            SW_I<0> (PAD)
+  Destination:       VGA_G_O<2> (PAD)
+
+  Data Path: SW_I<0> to VGA_G_O<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.218   0.844  SW_I_0_IBUF (SW_I_0_IBUF)
+     LUT3:I0->O            1   0.704   0.000  VGA_G_O<1>1192 (VGA_G_O<1>1191)
+     MUXF5:I0->O           3   0.321   0.531  VGA_G_O<1>119_f5 (VGA_G_O_1_OBUF)
+     OBUF:I->O                 3.272          VGA_G_O_2_OBUF (VGA_G_O<2>)
+    ----------------------------------------
+    Total                      6.890ns (5.515ns logic, 1.375ns route)
+                                       (80.0% logic, 20.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 53.00 secs
+Total CPU time to Xst completion: 53.25 secs
+ 
+--> 
+
+Total memory usage is 418348 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   52 (   0 filtered)
+Number of infos    :   31 (   0 filtered)
+
