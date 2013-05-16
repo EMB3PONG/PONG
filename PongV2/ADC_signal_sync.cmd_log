@@ -1,0 +1,1 @@
+vhdtdtfi -prj PongV2 -o C:/XilinxWorkSpace/PongV2/ADC_signal_sync.vhi -module ADC_signal_sync -template C:/Xilinx/14.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ADC_signal_sync.vhd 

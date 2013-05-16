@@ -1,0 +1,2 @@
+sch2vhdl -intstyle ise -family spartan3e -tionly -w C:/XilinxWorkSpace/PongV2/ShiftRegForFilter.sch ShiftRegForFilter.vhi 
+sch2vhdl -intstyle ise -family spartan3e -tionly -w C:/XilinxWorkSpace/PongV2/ShiftRegForFilter.sch ShiftRegForFilter.vhi 

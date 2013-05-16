@@ -1,0 +1,504 @@
+//! **************************************************************************
+// Written by: Map P.49d on Tue May 14 01:58:24 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "ADC_3_I<5>" LOCATE = SITE "F11" LEVEL 1;
+COMP "SW_I<4>" LOCATE = SITE "L14" LEVEL 1;
+COMP "ADC_3_I<6>" LOCATE = SITE "E12" LEVEL 1;
+COMP "SW_I<5>" LOCATE = SITE "L13" LEVEL 1;
+COMP "ADC_3_I<7>" LOCATE = SITE "F12" LEVEL 1;
+COMP "SW_I<6>" LOCATE = SITE "N17" LEVEL 1;
+COMP "ADC_3_I<8>" LOCATE = SITE "A13" LEVEL 1;
+COMP "SW_I<7>" LOCATE = SITE "R17" LEVEL 1;
+COMP "ADC_3_I<9>" LOCATE = SITE "B13" LEVEL 1;
+COMP "VGA_HS_O" LOCATE = SITE "T4" LEVEL 1;
+COMP "VGA_HS_I" LOCATE = SITE "A16" LEVEL 1;
+COMP "VGA_G_O<0>" LOCATE = SITE "N8" LEVEL 1;
+COMP "VGA_G_O<1>" LOCATE = SITE "P8" LEVEL 1;
+COMP "ADC_1_I<0>" LOCATE = SITE "A4" LEVEL 1;
+COMP "VGA_G_O<2>" LOCATE = SITE "P6" LEVEL 1;
+COMP "ADC_1_I<1>" LOCATE = SITE "C3" LEVEL 1;
+COMP "ADC_1_I<2>" LOCATE = SITE "C4" LEVEL 1;
+COMP "ADC_1_I<3>" LOCATE = SITE "B6" LEVEL 1;
+COMP "VGA_VS_I" LOCATE = SITE "M9" LEVEL 1;
+COMP "ADC_1_I<4>" LOCATE = SITE "D5" LEVEL 1;
+COMP "BTN_I<0>" LOCATE = SITE "B18" LEVEL 1;
+COMP "ADC_1_CLK_O" LOCATE = SITE "B4" LEVEL 1;
+COMP "ADC_1_I<5>" LOCATE = SITE "C5" LEVEL 1;
+COMP "BTN_I<1>" LOCATE = SITE "D18" LEVEL 1;
+COMP "ADC_1_I<6>" LOCATE = SITE "F7" LEVEL 1;
+COMP "BTN_I<2>" LOCATE = SITE "E18" LEVEL 1;
+COMP "ADC_1_I<7>" LOCATE = SITE "E7" LEVEL 1;
+COMP "BTN_I<3>" LOCATE = SITE "H13" LEVEL 1;
+COMP "ADC_1_I<8>" LOCATE = SITE "A6" LEVEL 1;
+COMP "ADC_1_I<9>" LOCATE = SITE "C7" LEVEL 1;
+COMP "ADC_2_I<0>" LOCATE = SITE "D7" LEVEL 1;
+COMP "ADC_2_I<1>" LOCATE = SITE "E8" LEVEL 1;
+COMP "CLK_50M_I" LOCATE = SITE "B8" LEVEL 1;
+COMP "ADC_2_I<2>" LOCATE = SITE "E9" LEVEL 1;
+COMP "ADC_3_CLK_O" LOCATE = SITE "A11" LEVEL 1;
+COMP "ADC_2_I<3>" LOCATE = SITE "C9" LEVEL 1;
+COMP "VGA_B_O<0>" LOCATE = SITE "U5" LEVEL 1;
+COMP "ADC_2_I<4>" LOCATE = SITE "A8" LEVEL 1;
+COMP "VGA_B_O<1>" LOCATE = SITE "U4" LEVEL 1;
+COMP "ADC_2_I<5>" LOCATE = SITE "G9" LEVEL 1;
+COMP "ADC_2_I<6>" LOCATE = SITE "F9" LEVEL 1;
+COMP "LEDS_O<0>" LOCATE = SITE "J14" LEVEL 1;
+COMP "ADC_2_I<7>" LOCATE = SITE "D10" LEVEL 1;
+COMP "VGA_R_O<0>" LOCATE = SITE "R9" LEVEL 1;
+COMP "LEDS_O<1>" LOCATE = SITE "J15" LEVEL 1;
+COMP "ADC_2_I<8>" LOCATE = SITE "A10" LEVEL 1;
+COMP "VGA_R_O<1>" LOCATE = SITE "T8" LEVEL 1;
+COMP "LEDS_O<2>" LOCATE = SITE "K15" LEVEL 1;
+COMP "ADC_2_I<9>" LOCATE = SITE "B10" LEVEL 1;
+COMP "VGA_R_O<2>" LOCATE = SITE "R8" LEVEL 1;
+COMP "LEDS_O<3>" LOCATE = SITE "K14" LEVEL 1;
+COMP "LEDS_O<4>" LOCATE = SITE "E17" LEVEL 1;
+COMP "LEDS_O<5>" LOCATE = SITE "P15" LEVEL 1;
+COMP "LEDS_O<6>" LOCATE = SITE "F4" LEVEL 1;
+COMP "LEDS_O<7>" LOCATE = SITE "R4" LEVEL 1;
+COMP "ADC_3_I<0>" LOCATE = SITE "D11" LEVEL 1;
+COMP "ADC_3_I<1>" LOCATE = SITE "E10" LEVEL 1;
+COMP "SW_I<0>" LOCATE = SITE "G18" LEVEL 1;
+COMP "ADC_3_I<2>" LOCATE = SITE "B11" LEVEL 1;
+COMP "SW_I<1>" LOCATE = SITE "H18" LEVEL 1;
+COMP "VGA_VS_O" LOCATE = SITE "U3" LEVEL 1;
+COMP "ADC_3_I<3>" LOCATE = SITE "C11" LEVEL 1;
+COMP "SW_I<2>" LOCATE = SITE "K18" LEVEL 1;
+COMP "ADC_3_I<4>" LOCATE = SITE "E11" LEVEL 1;
+COMP "SW_I<3>" LOCATE = SITE "K17" LEVEL 1;
+COMP "ADC_2_CLK_O" LOCATE = SITE "F8" LEVEL 1;
+TIMEGRP Inst_dcm_1_CLKFX_BUF = BEL "output" BEL "VGA_HS_O" BEL "VGA_VS_O" BEL
+        "Inst_Filter_3x3/pixel_sum_4" BEL "Inst_Filter_3x3/pixel_sum_3" BEL
+        "Inst_Filter_3x3/pixel_sum_2" BEL "Inst_Filter_3x3/pixel_sum_1" BEL
+        "Inst_Filter_3x3/pixel_sum_0" BEL "Inst_Filter_3x3/psb_2" BEL
+        "Inst_Filter_3x3/psb_1" BEL "Inst_Filter_3x3/psb_0" BEL
+        "Inst_Filter_3x3/psc_2" BEL "Inst_Filter_3x3/psc_1" BEL
+        "Inst_Filter_3x3/pb2_0" BEL "Inst_Filter_3x3/back_2" BEL
+        "Inst_Filter_3x3/psf_2" BEL "Inst_Filter_3x3/psf_1" BEL
+        "Inst_Filter_3x3/psf_0" BEL "Inst_Filter_3x3/pc2_1" BEL
+        "Inst_Filter_3x3/center_2" BEL "Inst_Filter_3x3/pf2_0" BEL
+        "Inst_Filter_3x3/front_2" BEL "Inst_Filter_3x3/pixel_next" BEL
+        "Ints_ADC_signal_sync/blue_r_9" BEL "Inst_pixel_pointer/pixel_9" BEL
+        "Inst_pixel_pointer/pixel_8" BEL "Inst_pixel_pointer/pixel_7" BEL
+        "Inst_pixel_pointer/pixel_6" BEL "Inst_pixel_pointer/pixel_5" BEL
+        "Inst_pixel_pointer/pixel_4" BEL "Inst_pixel_pointer/pixel_3" BEL
+        "Inst_pixel_pointer/pixel_2" BEL "Inst_pixel_pointer/pixel_1" BEL
+        "Inst_pixel_pointer/pixel_0" BEL "Inst_pixel_pointer/v_sync_1" BEL
+        "Inst_pixel_pointer/v_sync_0" BEL "Inst_pixel_pointer/h_sync_1" BEL
+        "Inst_pixel_pointer/h_sync_0" BEL "Inst_Filter_3x3/psc_3" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_0/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_1.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_1/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_1.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_2/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_3.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_3/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_3.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_4/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_5.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_5/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_5.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_6/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_7.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_7/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_7.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_8/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_9.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_9/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_9.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_10/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_11.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_11/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_11.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_12/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_13.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_13/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_13.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_14/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_15.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_15/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_15.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_16/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_17.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_17/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_17.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_18/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_19.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_19/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_19.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_20/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_21.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_21/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_21.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_22/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_23.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_23/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_23.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_24/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_25.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_25/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_25.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_26/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_27.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_27/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_27.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_28/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_29.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_29/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_29.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_30/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_31.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_31/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_31.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_32/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_33.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_33/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_33.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_34/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_35.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_35/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_35.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_36/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_37.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_37/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_37.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_38/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_39.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_39/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_39.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_40/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_41.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_41/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_41.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_42/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_43.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_43/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_43.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_44/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_45.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_45/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_45.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_46/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_47.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_47/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_47.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_48/SRLC16E" BEL
+        "Inst_Filter_3x3/back<1>.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_back_1_49/SRL16E" BEL "Inst_Filter_3x3/back_1"
+        BEL "Inst_Filter_3x3/Mshreg_center_1_0/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_1.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_1/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_1.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_2/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_3.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_3/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_3.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_4/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_5.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_5/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_5.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_6/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_7.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_7/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_7.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_8/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_9.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_9/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_9.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_10/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_11.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_11/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_11.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_12/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_13.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_13/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_13.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_14/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_15.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_15/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_15.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_16/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_17.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_17/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_17.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_18/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_19.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_19/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_19.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_20/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_21.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_21/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_21.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_22/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_23.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_23/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_23.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_24/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_25.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_25/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_25.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_26/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_27.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_27/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_27.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_28/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_29.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_29/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_29.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_30/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_31.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_31/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_31.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_32/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_33.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_33/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_33.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_34/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_35.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_35/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_35.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_36/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_37.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_37/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_37.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_38/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_39.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_39/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_39.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_40/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_41.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_41/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_41.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_42/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_43.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_43/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_43.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_44/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_45.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_45/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_45.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_46/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_47.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_47/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_47.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_48/SRLC16E" BEL
+        "Inst_Filter_3x3/center<1>.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_center_1_49/SRL16E" BEL
+        "Inst_Filter_3x3/center_1" BEL
+        "Ints_ADC_signal_sync/Mshreg_v_sync_sr_5/SRL16E" BEL
+        "Ints_ADC_signal_sync/v_sync_sr_5" BEL
+        "Inst_Filter_3x3/Mshreg_front_1/SRL16E" BEL "Inst_Filter_3x3/front_1"
+        BEL "Ints_ADC_signal_sync/Mshreg_h_sync_sr_5/SRL16E" BEL
+        "Ints_ADC_signal_sync/h_sync_sr_5" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_0/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_1.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_1/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_1.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_2/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_3.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_3/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_3.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_4/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_5.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_5/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_5.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_6/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_7.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_7/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_7.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_8/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_9.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_9/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_9.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_10/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_11.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_11/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_11.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_12/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_13.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_13/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_13.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_14/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_15.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_15/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_15.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_16/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_17.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_17/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_17.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_18/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_19.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_19/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_19.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_20/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_21.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_21/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_21.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_22/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_23.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_23/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_23.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_24/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_25.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_25/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_25.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_26/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_27.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_27/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_27.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_28/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_29.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_29/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_29.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_30/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_31.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_31/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_31.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_32/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_33.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_33/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_33.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_34/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_35.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_35/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_35.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_36/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_37.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_37/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_37.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_38/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_39.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_39/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_39.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_40/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_41.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_41/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_41.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_42/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_43.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_43/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_43.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_44/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_45.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_45/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_45.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_46/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_47.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_47/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_47.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_48/SRLC16E" BEL
+        "Inst_Filter_3x3/v_sync_next.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_v_sync_next_49/SRL16E" BEL
+        "Inst_Filter_3x3/v_sync_next" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_0/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_1.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_1/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_1.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_2/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_3.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_3/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_3.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_4/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_5.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_5/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_5.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_6/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_7.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_7/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_7.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_8/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_9.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_9/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_9.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_10/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_11.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_11/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_11.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_12/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_13.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_13/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_13.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_14/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_15.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_15/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_15.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_16/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_17.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_17/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_17.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_18/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_19.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_19/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_19.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_20/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_21.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_21/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_21.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_22/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_23.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_23/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_23.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_24/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_25.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_25/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_25.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_26/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_27.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_27/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_27.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_28/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_29.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_29/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_29.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_30/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_31.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_31/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_31.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_32/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_33.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_33/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_33.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_34/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_35.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_35/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_35.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_36/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_37.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_37/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_37.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_38/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_39.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_39/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_39.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_40/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_41.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_41/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_41.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_42/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_43.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_43/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_43.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_44/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_45.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_45/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_45.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_46/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_47.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_47/SRLC16E" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_47.SLICEM_FMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_48/SRLC16E" BEL
+        "Inst_Filter_3x3/h_sync_next.SLICEM_GMC15_BLACKBOX" BEL
+        "Inst_Filter_3x3/Mshreg_h_sync_next_49/SRL16E" BEL
+        "Inst_Filter_3x3/h_sync_next" BEL "ADC_1_CLK_O" BEL "ADC_2_CLK_O" BEL
+        "ADC_3_CLK_O" BEL "Inst_dcm_1/CLKFX_BUFG_INST.GCLKMUX" BEL
+        "Inst_dcm_1/CLKFX_BUFG_INST";
+PIN Inst_dcm_1/DCM_SP_INST_pins<3> = BEL "Inst_dcm_1/DCM_SP_INST" PINNAME
+        CLKIN;
+TIMEGRP CLK_50M_I = PIN "Inst_dcm_1/DCM_SP_INST_pins<3>";
+TS_CLK_50M_I = PERIOD TIMEGRP "CLK_50M_I" 20 ns HIGH 50%;
+TS_Inst_dcm_1_CLKFX_BUF = PERIOD TIMEGRP "Inst_dcm_1_CLKFX_BUF" TS_CLK_50M_I /
+        0.5 HIGH 50%;
+SCHEMATIC END;
+

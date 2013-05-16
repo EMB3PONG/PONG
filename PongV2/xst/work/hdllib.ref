@@ -1,0 +1,12 @@
+EN adc_signal_sync NULL C:/XilinxWorkSpace/PongV2/ADC_signal_sync.vhd sub00/vhpl06 1368489472
+EN mb NULL C:/XilinxWorkSpace/PongV2/mb/hdl/mb.vhd sub00/vhpl10 1368448408
+AR tl behavioral C:/XilinxWorkSpace/PongV2/TL.vhd sub00/vhpl01 1368489477
+AR dcm_1 behavioral C:/XilinxWorkSpace/PongV2/dcm_1.vhd sub00/vhpl03 1368489469
+EN pixel_pointer NULL C:/XilinxWorkSpace/PongV2/pixel_pointer.vhd sub00/vhpl08 1368489474
+AR filter_3x3 behavioral C:/XilinxWorkSpace/PongV2/Filter_3x3.vhd sub00/vhpl05 1368489471
+EN filter_3x3 NULL C:/XilinxWorkSpace/PongV2/Filter_3x3.vhd sub00/vhpl04 1368489470
+EN tl NULL C:/XilinxWorkSpace/PongV2/TL.vhd sub00/vhpl00 1368489476
+AR adc_signal_sync behavioral C:/XilinxWorkSpace/PongV2/ADC_signal_sync.vhd sub00/vhpl07 1368489473
+AR pixel_pointer behavioral C:/XilinxWorkSpace/PongV2/pixel_pointer.vhd sub00/vhpl09 1368489475
+EN dcm_1 NULL C:/XilinxWorkSpace/PongV2/dcm_1.vhd sub00/vhpl02 1368489468
+AR mb structure C:/XilinxWorkSpace/PongV2/mb/hdl/mb.vhd sub00/vhpl11 1368448409

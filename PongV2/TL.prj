@@ -1,0 +1,5 @@
+vhdl work "pixel_pointer.vhd"
+vhdl work "dcm_1.vhd"
+vhdl work "Filter_3x3.vhd"
+vhdl work "ADC_signal_sync.vhd"
+vhdl work "TL.vhd"

@@ -1,0 +1,29 @@
+#Please do not modify this file by hand
+XmpVersion: 14.4
+VerMgmt: 14.4
+IntStyle: default
+Flow: ise
+MHS File: mb.mhs
+Architecture: spartan3e
+Device: xc3s500e
+Package: fg320
+SpeedGrade: -4
+UserCmd1: 
+UserCmd1Type: 0
+UserCmd2: 
+UserCmd2Type: 0
+GenSimTB: 0
+SdkExportBmmBit: 0
+SdkExportDir: SDK/SDK_Export
+InsertNoPads: 1
+WarnForEAArch: 1
+HdlLang: vhdl
+SimModel: BEHAVIORAL
+ExternalMemSim: 0
+UcfFile: data/mb.ucf
+EnableParTimingError: 1
+ShowLicenseDialog: 1
+BInfo: 
+Processor: microblaze_0
+ElfImp: 
+ElfSim: 

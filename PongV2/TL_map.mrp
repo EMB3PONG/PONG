@@ -1,0 +1,707 @@
+Release 14.4 Map P.49d (nt64)
+Xilinx Mapping Report File for Design 'TL'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off
+-c 100 -o TL_map.ncd TL.ngd TL.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Tue May 14 01:58:22 2013
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   36
+Logic Utilization:
+  Number of Slice Flip Flops:            46 out of   9,312    1%
+  Number of 4 input LUTs:               237 out of   9,312    2%
+Logic Distribution:
+  Number of occupied Slices:            138 out of   4,656    2%
+    Number of Slices containing only related logic:     138 out of     138 100%
+    Number of Slices containing unrelated logic:          0 out of     138   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         246 out of   9,312    2%
+    Number used as logic:                34
+    Number used as a route-thru:          9
+    Number used as Shift registers:     203
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 66 out of     232   28%
+  Number of BUFGMUXs:                     2 out of      24    8%
+  Number of DCMs:                         1 out of       4   25%
+
+Average Fanout of Non-Clock Nets:                1.30
+
+Peak Memory Usage:  249 MB
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   2 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:367 - The signal <ADC_3_I<5>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <SW_I<4>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_3_I<6>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <SW_I<5>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_3_I<7>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <SW_I<6>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_3_I<8>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <SW_I<7>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_1_I<0>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_1_I<1>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_1_I<2>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_1_I<3>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_1_I<4>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_1_I<5>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_1_I<6>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_1_I<7>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_1_I<8>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_1_I<9>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_2_I<0>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_2_I<1>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_2_I<2>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_2_I<3>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_2_I<4>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_2_I<5>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_2_I<6>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_2_I<7>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_2_I<8>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_2_I<9>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_3_I<0>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_3_I<1>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_3_I<2>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <SW_I<1>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_3_I<3>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <SW_I<2>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ADC_3_I<4>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <SW_I<3>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network ADC_1_I<9>_IBUF has no load.
+INFO:LIT:395 - The above info message is repeated 231 more times for the
+   following (max. 5 shown):
+   ADC_1_I<8>_IBUF,
+   ADC_1_I<7>_IBUF,
+   ADC_1_I<6>_IBUF,
+   ADC_1_I<5>_IBUF,
+   ADC_1_I<4>_IBUF
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp Inst_dcm_1/DCM_SP_INST,
+   consult the device Interactive Data Sheet.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 205 block(s) optimized away
+ 196 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "Inst_Filter_3x3/Mshreg_back_1_0/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_1/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_2/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_3/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_4/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_5/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_6/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_7/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_8/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_9/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_10/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_11/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_12/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_13/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_14/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_15/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_16/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_17/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_18/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_19/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_20/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_21/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_22/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_23/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_24/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_25/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_26/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_27/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_28/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_29/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_30/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_31/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_32/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_33/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_34/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_35/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_36/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_37/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_38/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_39/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_40/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_41/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_42/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_43/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_44/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_45/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_46/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_47/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_back_1_48/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_0/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_1/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_2/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_3/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_4/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_5/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_6/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_7/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_8/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_9/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_10/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_11/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_12/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_13/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_14/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_15/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_16/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_17/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_18/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_19/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_20/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_21/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_22/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_23/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_24/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_25/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_26/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_27/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_28/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_29/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_30/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_31/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_32/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_33/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_34/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_35/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_36/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_37/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_38/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_39/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_40/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_41/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_42/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_43/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_44/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_45/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_46/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_47/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_center_1_48/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_0/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_1/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_2/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_3/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_4/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_5/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_6/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_7/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_8/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_9/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_10/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_11/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_12/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_13/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_14/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_15/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_16/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_17/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_18/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_19/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_20/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_21/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_22/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_23/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_24/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_25/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_26/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_27/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_28/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_29/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_30/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_31/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_32/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_33/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_34/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_35/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_36/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_37/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_38/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_39/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_40/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_41/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_42/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_43/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_44/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_45/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_46/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_47/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_v_sync_next_48/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_0/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_1/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_2/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_3/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_4/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_5/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_6/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_7/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_8/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_9/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_10/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_11/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_12/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_13/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_14/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_15/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_16/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_17/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_18/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_19/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_20/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_21/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_22/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_23/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_24/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_25/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_26/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_27/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_28/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_29/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_30/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_31/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_32/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_33/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_34/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_35/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_36/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_37/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_38/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_39/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_40/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_41/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_42/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_43/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_44/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_45/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_46/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_47/Q" is sourceless and has been
+removed.
+The signal "Inst_Filter_3x3/Mshreg_h_sync_next_48/Q" is sourceless and has been
+removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ADC_1_CLK_O                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| ADC_1_I<0>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_1_I<1>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_1_I<2>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_1_I<3>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_1_I<4>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_1_I<5>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_1_I<6>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_1_I<7>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_1_I<8>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_1_I<9>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_2_CLK_O                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| ADC_2_I<0>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_2_I<1>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_2_I<2>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_2_I<3>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_2_I<4>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_2_I<5>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_2_I<6>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_2_I<7>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_2_I<8>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_2_I<9>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_3_CLK_O                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| ADC_3_I<0>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_3_I<1>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_3_I<2>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_3_I<3>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_3_I<4>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_3_I<5>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_3_I<6>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_3_I<7>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_3_I<8>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ADC_3_I<9>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| BTN_I<0>                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| BTN_I<1>                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| BTN_I<2>                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| BTN_I<3>                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| CLK_50M_I                          | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| LEDS_O<0>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| LEDS_O<1>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| LEDS_O<2>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| LEDS_O<3>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| LEDS_O<4>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| LEDS_O<5>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| LEDS_O<6>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| LEDS_O<7>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| SW_I<0>                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| SW_I<1>                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| SW_I<2>                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| SW_I<3>                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| SW_I<4>                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| SW_I<5>                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| SW_I<6>                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| SW_I<7>                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| VGA_B_O<0>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| VGA_B_O<1>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| VGA_G_O<0>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| VGA_G_O<1>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| VGA_G_O<2>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| VGA_HS_I                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| VGA_HS_O                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| VGA_R_O<0>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| VGA_R_O<1>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| VGA_R_O<2>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| VGA_VS_I                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| VGA_VS_O                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

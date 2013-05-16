@@ -1,0 +1,5 @@
+vhdl work "C:\XilinxWorkSpace\PongV2\pixel_pointer.vhd"
+vhdl work "C:\XilinxWorkSpace\PongV2\dcm_1.vhd"
+vhdl work "C:\XilinxWorkSpace\PongV2\Filter_3x3.vhd"
+vhdl work "C:\XilinxWorkSpace\PongV2\ADC_signal_sync.vhd"
+vhdl work "C:\XilinxWorkSpace\PongV2\TL.vhd"
