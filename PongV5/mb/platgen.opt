@@ -1,0 +1,13 @@
+-p
+xc3s500efg320-4
+-lang
+vhdl
+-intstyle
+ise
+-toplevel
+no
+-ti
+mb_i
+-msg
+__xps/ise/xmsgprops.lst
+mb.mhs
