@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-03-18T12:32:42</DateModified>
+  <DateModified>2013-05-19T12:30:15</DateModified>
   <ModuleName>TL</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/XilinxWorkSpace/PongFT/iseconfig/TL.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/XilinxWorkSpace/PongFT\</ImplementationReportsDirectory>
+  <SavedFilePath>/home/klaus/PONG/PongFT/iseconfig/TL.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/klaus/PONG/PongFT/</ImplementationReportsDirectory>
   <DateInitialized>2013-03-18T00:27:44</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-03-14T09:26:31</DateModified>
+  <DateModified>2013-05-19T13:46:02</DateModified>
   <ModuleName>VGA_READER</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/klaus/Dropbox/8. Semester/EMB3/vga_generator/iseconfig/VGA_READER.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/klaus/Dropbox/8. Semester/EMB3/vga_generator/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/klaus/PONG/vga_generator/iseconfig/VGA_READER.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/klaus/PONG/vga_generator/</ImplementationReportsDirectory>
   <DateInitialized>2013-03-07T10:38:09</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

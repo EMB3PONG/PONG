@@ -1,4 +1,9 @@
-V3 3
+V3 6
+FL /home/klaus/PONG/PongFT/detector.vhd 2013/05/02.10:54:22 P.49d
+EN work/detector 0 FL /home/klaus/PONG/PongFT/detector.vhd PB ieee/std_logic_1164 1354696159 \
+      PB ieee/NUMERIC_STD 1354696164
+AR work/detector/Behavioral 0 \
+      FL /home/klaus/PONG/PongFT/detector.vhd EN work/detector 0
 FL C:/XilinxWorkSpace/PongFT/TL.vhd 2013/03/18.14:04:45 P.49d
 EN work/TL 1363611891 FL C:/XilinxWorkSpace/PongFT/TL.vhd PB ieee/std_logic_1164 1354696159 \
       PB ieee/NUMERIC_STD 1354696164

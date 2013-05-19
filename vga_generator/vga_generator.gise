@@ -35,6 +35,30 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1368963500" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1368963500">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1368963500" xil_pn:in_ck="-5466358793032670254" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1368963500">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <outfile xil_pn:name="../PongFT/detector.vhd"/>
+      <outfile xil_pn:name="VGA_READER.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1368963500" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4817210959197367187" xil_pn:start_ts="1368963500">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1368963500" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2902278667358697967" xil_pn:start_ts="1368963500">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1368963500" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-3418630534825894080" xil_pn:start_ts="1368963500">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
     <transform xil_pn:end_ts="1363246621" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1363246621">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -66,6 +90,8 @@
     <transform xil_pn:end_ts="1363246639" xil_pn:in_ck="3831550184347149248" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-7901379265690582695" xil_pn:start_ts="1363246621">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
       <outfile xil_pn:name="VGA_READER.lso"/>
       <outfile xil_pn:name="VGA_READER.prj"/>
       <outfile xil_pn:name="VGA_READER.syr"/>

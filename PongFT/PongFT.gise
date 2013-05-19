@@ -66,6 +66,9 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="detector.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="detector.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="detector.xst"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="netgen"/>
     <file xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/synthesis/TL_synthesis.nlf"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="netgen/synthesis/TL_synthesis.vhd"/>
@@ -112,21 +115,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name=".lso"/>
-      <outfile xil_pn:name="TL.lso"/>
-      <outfile xil_pn:name="TL.ngc"/>
-      <outfile xil_pn:name="TL.ngr"/>
-      <outfile xil_pn:name="TL.prj"/>
-      <outfile xil_pn:name="TL.stx"/>
-      <outfile xil_pn:name="TL.syr"/>
-      <outfile xil_pn:name="TL.xst"/>
-      <outfile xil_pn:name="TL_vhdl.prj"/>
-      <outfile xil_pn:name="TL_xst.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1363606592" xil_pn:in_ck="3457742300333975032" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8802257621540237304" xil_pn:start_ts="1363606592">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -135,72 +130,65 @@
     <transform xil_pn:end_ts="1363611906" xil_pn:in_ck="-4172201872515300258" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="1023946305717590137" xil_pn:start_ts="1363611899">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="TL.bld"/>
-      <outfile xil_pn:name="TL.ngd"/>
-      <outfile xil_pn:name="TL_ngdbuild.xrpt"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1363611911" xil_pn:in_ck="-6532416292171971649" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1309755933173654900" xil_pn:start_ts="1363611906">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="TL.pcf"/>
-      <outfile xil_pn:name="TL_map.map"/>
-      <outfile xil_pn:name="TL_map.mrp"/>
-      <outfile xil_pn:name="TL_map.ncd"/>
-      <outfile xil_pn:name="TL_map.ngm"/>
-      <outfile xil_pn:name="TL_map.xrpt"/>
-      <outfile xil_pn:name="TL_summary.xml"/>
-      <outfile xil_pn:name="TL_usage.xml"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1363611931" xil_pn:in_ck="2497302167499861688" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1363611911">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="TL.ncd"/>
-      <outfile xil_pn:name="TL.pad"/>
-      <outfile xil_pn:name="TL.par"/>
-      <outfile xil_pn:name="TL.ptwx"/>
-      <outfile xil_pn:name="TL.unroutes"/>
-      <outfile xil_pn:name="TL.xpi"/>
-      <outfile xil_pn:name="TL_pad.csv"/>
-      <outfile xil_pn:name="TL_pad.txt"/>
-      <outfile xil_pn:name="TL_par.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1363611948" xil_pn:in_ck="3379279267" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="5775731546441462550" xil_pn:start_ts="1363611931">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="TL.ut"/>
-      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
-      <outfile xil_pn:name="tl.bgn"/>
-      <outfile xil_pn:name="tl.bit"/>
-      <outfile xil_pn:name="tl.drc"/>
-      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
-      <outfile xil_pn:name="webtalk.log"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1363559640" xil_pn:in_ck="4669548461" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1363559639">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1363611931" xil_pn:in_ck="-8578762150553725509" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1363611927">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="TL.twr"/>
-      <outfile xil_pn:name="TL.twx"/>
-      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1363557599" xil_pn:in_ck="3379279398" xil_pn:name="TRAN_postSynthesisSimModel" xil_pn:prop_ck="784200476544403932" xil_pn:start_ts="1363557596">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
-      <outfile xil_pn:name="netgen"/>
-      <outfile xil_pn:name="netgen/synthesis/TL_synthesis.nlf"/>
-      <outfile xil_pn:name="netgen/synthesis/TL_synthesis.vhd"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
   </transforms>
 
