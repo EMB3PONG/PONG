@@ -1,0 +1,2 @@
+vhdl isim_temp "VGA_READER.vhd"
+vhdl isim_temp "tb_VGA_1.vhd"

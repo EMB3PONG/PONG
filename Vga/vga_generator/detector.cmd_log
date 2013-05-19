@@ -1,0 +1,2 @@
+vhdtdtfi -prj vga_generator -o /home/klaus/PONG/Vga/vga_generator/detector.vhi -module detector -template /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../../PongFT/detector.vhd 
+vhdtdtfi -prj vga_generator -o /home/klaus/PONG/Vga/vga_generator/detector.vhi -module detector -template /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../../PongFT/detector.vhd 

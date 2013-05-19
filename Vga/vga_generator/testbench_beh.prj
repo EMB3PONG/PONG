@@ -1,0 +1,4 @@
+vhdl work "VGA_READER.vhd"
+vhdl work "../../PongV2/pixel_pointer.vhd"
+vhdl work "../../PongFT/detector.vhd"
+vhdl work "tb_VGA_1.vhd"

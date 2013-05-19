@@ -1,0 +1,27 @@
+Running: /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/klaus/PONG/Vga/vga_generator/testbench_isim_beh.exe -prj /home/klaus/PONG/Vga/vga_generator/testbench_beh.prj work.testbench 
+ISim P.49d (signature 0xfbc00daa)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/klaus/PONG/Vga/vga_generator/VGA_READER.vhd" into library work
+Parsing VHDL file "/home/klaus/PONG/Vga/vga_generator/../../PongV2/pixel_pointer.vhd" into library work
+Parsing VHDL file "/home/klaus/PONG/Vga/vga_generator/../../PongFT/detector.vhd" into library work
+Parsing VHDL file "/home/klaus/PONG/Vga/vga_generator/tb_VGA_1.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 96656 KB
+Fuse CPU Usage: 1570 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavioral of entity VGA_READER [vga_reader_default]
+Compiling architecture behavioral of entity detector [detector_default]
+Compiling architecture behavioral of entity pixel_pointer [pixel_pointer_default]
+Compiling architecture behavior of entity testbench
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 10 VHDL Units
+Built simulation executable /home/klaus/PONG/Vga/vga_generator/testbench_isim_beh.exe
+Fuse Memory Usage: 406188 KB
+Fuse CPU Usage: 1690 ms
+GCC CPU Usage: 370 ms

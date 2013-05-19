@@ -1,0 +1,3 @@
+vhdtdtfi -prj vga_generator -o C:/XilinxWorkSpace/vga_generator/VGA_1.vhi -module VGA_1 -template C:/Xilinx/14.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work VGA_1.vhd 
+vhdtdtfi -prj vga_generator -o C:/XilinxWorkSpace/vga_generator/VGA_1.vhi -module VGA_1 -template C:/Xilinx/14.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work VGA_READER.vhd -lib work VGA_1.vhd 
+xst -intstyle ise -ifn "C:/XilinxWorkSpace/vga_generator/VGA_1.xst" -ofn "C:/XilinxWorkSpace/vga_generator/VGA_1.syr" 
