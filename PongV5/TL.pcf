@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.49d on Thu May 23 14:38:25 2013
+// Written by: Map P.49d on Thu May 23 20:52:50 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -512,7 +512,7 @@ PIN
         = BEL
         "Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[5].U_BRAM/ram_rt1_s1_s2_if.ram_rt1_s1_s2_i.A"
         PINNAME CLKA;
-TIMEGRP J_CLK = PIN "Inst_mb/lmb_bram/lmb_bram/ramb16_s9_s9_0.A_pins<12>" PIN
+TIMEGRP U_CLK = PIN "Inst_mb/lmb_bram/lmb_bram/ramb16_s9_s9_0.A_pins<12>" PIN
         "Inst_mb/lmb_bram/lmb_bram/ramb16_s9_s9_1.A_pins<12>" PIN
         "Inst_mb/lmb_bram/lmb_bram/ramb16_s9_s9_2.A_pins<12>" PIN
         "Inst_mb/lmb_bram/lmb_bram/ramb16_s9_s9_3.A_pins<12>" BEL
@@ -972,7 +972,7 @@ TIMEGRP J_CLK = PIN "Inst_mb/lmb_bram/lmb_bram/ramb16_s9_s9_0.A_pins<12>" PIN
         "Inst_mb/chipscope_icon_0/chipscope_icon_0/i_chipscope_icon_0/U0/U_ICON/I_NO_BSCAN.I_BUFG.I_USE_XST_TCK_WORKAROUND_EQ1.U_ICON_BSCAN_BUFG/U_BUFG.GCLKMUX"
         BEL
         "Inst_mb/chipscope_icon_0/chipscope_icon_0/i_chipscope_icon_0/U0/U_ICON/I_NO_BSCAN.I_BUFG.I_USE_XST_TCK_WORKAROUND_EQ1.U_ICON_BSCAN_BUFG/U_BUFG";
-TIMEGRP U_CLK = PIN "Inst_mb/lmb_bram/lmb_bram/ramb16_s9_s9_0.A_pins<12>" PIN
+TIMEGRP J_CLK = PIN "Inst_mb/lmb_bram/lmb_bram/ramb16_s9_s9_0.A_pins<12>" PIN
         "Inst_mb/lmb_bram/lmb_bram/ramb16_s9_s9_1.A_pins<12>" PIN
         "Inst_mb/lmb_bram/lmb_bram/ramb16_s9_s9_2.A_pins<12>" PIN
         "Inst_mb/lmb_bram/lmb_bram/ramb16_s9_s9_3.A_pins<12>" BEL

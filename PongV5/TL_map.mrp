@@ -1,4 +1,4 @@
-Release 14.4 Map P.49d (nt64)
+Release 14.4 Map P.49d (lin64)
 Xilinx Mapping Report File for Design 'TL'
 
 Design Information
@@ -9,7 +9,7 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Thu May 23 14:38:18 2013
+Mapped Date    : Thu May 23 20:52:41 2013
 
 Design Summary
 --------------
@@ -45,8 +45,8 @@ Logic Distribution:
   Number of RPM macros:           12
 Average Fanout of Non-Clock Nets:                3.32
 
-Peak Memory Usage:  286 MB
-Total REAL time to MAP completion:  9 secs 
+Peak Memory Usage:  602 MB
+Total REAL time to MAP completion:  11 secs 
 Total CPU time to MAP completion:   9 secs 
 
 NOTES:
@@ -88,6 +88,9 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
 WARNING:Pack:266 - The function generator XST_GND failed to merge with F5
    multiplexer Inst_Filter_3x3/pixel_next_not0001_f5.  There is a conflict for
    the FXMUX.  The design will exhibit suboptimal timing.
@@ -150,6 +153,7 @@ WARNING:PhysDesignRules:774 - Unexpected DCM configuration. CLKOUT_PHASE_SHIFT
 
 Section 3 - Informational
 -------------------------
+INFO:Security:54 - 'xc3s500e' is a WebPack part.
 INFO:LIT:243 - Logical network Inst_Filter_3x3/Mshreg_back_1_0/Q has no load.
 INFO:LIT:395 - The above info message is repeated 845 more times for the
    following (max. 5 shown):

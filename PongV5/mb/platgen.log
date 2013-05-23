@@ -1,11 +1,18 @@
 Release 14.4 - platgen Xilinx EDK 14.4 Build EDK_P.49d
- (nt64)
+ (lin64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 Command Line: platgen -p xc3s500efg320-4 -lang vhdl -intstyle ise -toplevel no
 -ti mb_i -msg __xps/ise/xmsgprops.lst mb.mhs 
 
-Parse C:/XilinxWorkSpace/PongV5/mb/mb.mhs ...
+WARNING:EDK - INFO:Security:71 - If a license for part 'xc3s500e' is available,
+   it will be possible to use 'XPS_TDP' instead of 'XPS'.
+   WARNING:Security:42 - Your software subscription period has lapsed. Your
+   current version of Xilinx tools will continue to function, but you no longer
+   qualify for Xilinx software updates or new releases.
+
+
+Parse /home/klaus/pong/PONG/PongV5/mb/mb.mhs ...
 
 Read MPD definitions ...
 
@@ -35,64 +42,64 @@ Address Map for Processor microblaze_0
   (0x84400000-0x8440ffff) mdm_0	mb_plb
 INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
    C_PLBV46_NUM_MASTERS value to 2 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
-   \plb_v46_v2_1_0.mpd line 79 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/plb_v46_v1_05_a/data/plb_v46_v2_1_0.mpd line 79 
 INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
    C_PLBV46_MID_WIDTH value to 1 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
-   \plb_v46_v2_1_0.mpd line 81 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/plb_v46_v1_05_a/data/plb_v46_v2_1_0.mpd line 81 
 INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
    C_PLBV46_DWIDTH value to 32 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
-   \plb_v46_v2_1_0.mpd line 83 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/plb_v46_v1_05_a/data/plb_v46_v2_1_0.mpd line 83 
 INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:ilmb - tool is overriding PARAMETER
    C_LMB_NUM_SLAVES value to 1 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data
-   \lmb_v10_v2_1_0.mpd line 82 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/lmb_v10_v2_00_b/data/lmb_v10_v2_1_0.mpd line 82 
 INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:dlmb - tool is overriding PARAMETER
    C_LMB_NUM_SLAVES value to 1 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data
-   \lmb_v10_v2_1_0.mpd line 82 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/lmb_v10_v2_00_b/data/lmb_v10_v2_1_0.mpd line 82 
 INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:lmb_bram - tool is overriding
    PARAMETER C_MEMSIZE value to 0x2000 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
-   ata\bram_block_v2_1_0.mpd line 78 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/bram_block_v1_00_a/data/bram_block_v2_1_0.mpd line 78 
 INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:LEDs_8Bit - tool is overriding
    PARAMETER C_SPLB_NUM_MASTERS value to 2 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
-   a\xps_gpio_v2_1_0.mpd line 82 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/xps_gpio_v2_00_a/data/xps_gpio_v2_1_0.mpd line 82 
 INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:Push_Buttons_3Bit - tool is
    overriding PARAMETER C_SPLB_NUM_MASTERS value to 2 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
-   a\xps_gpio_v2_1_0.mpd line 82 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/xps_gpio_v2_00_a/data/xps_gpio_v2_1_0.mpd line 82 
 INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:Switches_8Bit - tool is overriding
    PARAMETER C_SPLB_NUM_MASTERS value to 2 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
-   a\xps_gpio_v2_1_0.mpd line 82 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/xps_gpio_v2_00_a/data/xps_gpio_v2_1_0.mpd line 82 
 INFO:EDK:4130 - IPNAME: xps_uartlite, INSTANCE:RS232_PORT - tool is overriding
    PARAMETER C_SPLB_NUM_MASTERS value to 2 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_uartlite_v1_02_a
-   \data\xps_uartlite_v2_1_0.mpd line 84 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/xps_uartlite_v1_02_a/data/xps_uartlite_v2_1_0.mpd line 84 
 INFO:EDK:4130 - IPNAME: mdm, INSTANCE:mdm_0 - tool is overriding PARAMETER
    C_SPLB_MID_WIDTH value to 1 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_10_a\data\mdm
-   _v2_1_0.mpd line 118 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/mdm_v2_10_a/data/mdm_v2_1_0.mpd line 118 
 INFO:EDK:4130 - IPNAME: mdm, INSTANCE:mdm_0 - tool is overriding PARAMETER
    C_SPLB_NUM_MASTERS value to 2 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_10_a\data\mdm
-   _v2_1_0.mpd line 119 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/mdm_v2_10_a/data/mdm_v2_1_0.mpd line 119 
 INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:ball_color_o - tool is overriding
    PARAMETER C_SPLB_NUM_MASTERS value to 2 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
-   a\xps_gpio_v2_1_0.mpd line 82 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/xps_gpio_v2_00_a/data/xps_gpio_v2_1_0.mpd line 82 
 INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:BatPos_L_R - tool is overriding
    PARAMETER C_SPLB_NUM_MASTERS value to 2 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
-   a\xps_gpio_v2_1_0.mpd line 82 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/xps_gpio_v2_00_a/data/xps_gpio_v2_1_0.mpd line 82 
 INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:BallPos_XY - tool is overriding
    PARAMETER C_SPLB_NUM_MASTERS value to 2 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
-   a\xps_gpio_v2_1_0.mpd line 82 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/xps_gpio_v2_00_a/data/xps_gpio_v2_1_0.mpd line 82 
 
 Checking platform address map ...
 
@@ -104,37 +111,37 @@ IPNAME: lmb_v10, INSTANCE: dlmb - 1 master(s) : 1 slave(s)
 Checking port drivers...
 WARNING:EDK:4180 - PORT: tdi_in, CONNECTOR: bscan_tdi - No driver found. Port
    will be driven to GND -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
-   _a\data\chipscope_icon_v2_1_0.mpd line 101 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 101 
 WARNING:EDK:4180 - PORT: reset_in, CONNECTOR: bscan_reset - No driver found.
    Port will be driven to GND -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
-   _a\data\chipscope_icon_v2_1_0.mpd line 102 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 102 
 WARNING:EDK:4180 - PORT: shift_in, CONNECTOR: bscan_shift - No driver found.
    Port will be driven to GND -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
-   _a\data\chipscope_icon_v2_1_0.mpd line 103 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 103 
 WARNING:EDK:4180 - PORT: update_in, CONNECTOR: bscan_update - No driver found.
    Port will be driven to GND -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
-   _a\data\chipscope_icon_v2_1_0.mpd line 104 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 104 
 WARNING:EDK:4180 - PORT: sel_in, CONNECTOR: bscan_sel1 - No driver found. Port
    will be driven to GND -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
-   _a\data\chipscope_icon_v2_1_0.mpd line 105 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 105 
 WARNING:EDK:4180 - PORT: drck_in, CONNECTOR: bscan_drck1 - No driver found. Port
    will be driven to GND -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
-   _a\data\chipscope_icon_v2_1_0.mpd line 106 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 106 
 WARNING:EDK:4180 - PORT: capture_in, CONNECTOR: bscan_capture - No driver found.
    Port will be driven to GND -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
-   _a\data\chipscope_icon_v2_1_0.mpd line 107 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 107 
 WARNING:EDK:4181 - PORT: Peripheral_Reset, CONNECTOR: sys_periph_reset -
-   floating connection - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 183 
+   floating connection - /home/klaus/pong/PONG/PongV5/mb/mb.mhs line 183 
 WARNING:EDK:4181 - PORT: tdo_out, CONNECTOR: bscan_tdo1 - floating connection -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
-   _a\data\chipscope_icon_v2_1_0.mpd line 108 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 108 
 
 Performing Clock DRCs...
 
@@ -143,40 +150,40 @@ Performing Reset DRCs...
 Overriding system level properties...
 INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
    PARAMETER C_D_PLB value to 1 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
-   ata\microblaze_v2_1_0.mpd line 231 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/microblaze_v8_40_b/data/microblaze_v2_1_0.mpd line 231 
 INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
    PARAMETER C_I_PLB value to 1 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
-   ata\microblaze_v2_1_0.mpd line 234 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/microblaze_v8_40_b/data/microblaze_v2_1_0.mpd line 234 
 INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
    PARAMETER C_ADDR_TAG_BITS value to 0 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
-   ata\microblaze_v2_1_0.mpd line 335 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/microblaze_v8_40_b/data/microblaze_v2_1_0.mpd line 335 
 INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
    PARAMETER C_DCACHE_ADDR_TAG value to 0 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
-   ata\microblaze_v2_1_0.mpd line 365 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/microblaze_v8_40_b/data/microblaze_v2_1_0.mpd line 365 
 INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
    PARAMETER C_USE_EXT_BRK value to 1 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
-   ata\microblaze_v2_1_0.mpd line 400 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/microblaze_v8_40_b/data/microblaze_v2_1_0.mpd line 400 
 INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
    PARAMETER C_USE_EXT_NM_BRK value to 1 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
-   ata\microblaze_v2_1_0.mpd line 401 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/microblaze_v8_40_b/data/microblaze_v2_1_0.mpd line 401 
 INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:dlmb_cntlr - tcl is
    overriding PARAMETER C_MASK value to 0x80000000 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3
-   _10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/lmb_bram_if_cntlr_v3_10_c/data/lmb_bram_if_cntlr_v2_1_0.mpd line 92 
 INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:ilmb_cntlr - tcl is
    overriding PARAMETER C_MASK value to 0x80000000 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3
-   _10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/lmb_bram_if_cntlr_v3_10_c/data/lmb_bram_if_cntlr_v2_1_0.mpd line 92 
 INFO:EDK:4130 - IPNAME: chipscope_icon, INSTANCE:chipscope_icon_0 - tcl is
    overriding PARAMETER C_SYSTEM_CONTAINS_MDM value to 1 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
-   _a\data\chipscope_icon_v2_1_0.mpd line 81 
+   /home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcore
+   s/chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 81 
 
 Running system level update procedures...
 
@@ -214,31 +221,74 @@ Creating hardware output directories ...
 
 Managing hardware (BBD-specified) netlist files ...
 IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
-C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 196 - Copying (BBD-specified) netlist
-files.
+/home/klaus/pong/PONG/PongV5/mb/mb.mhs line 196 - Copying (BBD-specified)
+netlist files.
 IPNAME:chipscope_ila INSTANCE:chipscope_ila_0 -
-C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 202 - Copying (BBD-specified) netlist
-files.
+/home/klaus/pong/PONG/PongV5/mb/mb.mhs line 202 - Copying (BBD-specified)
+netlist files.
 
 Managing cache ...
+IPNAME:microblaze INSTANCE:microblaze_0 - /home/klaus/pong/PONG/PongV5/mb/mb.mhs
+line 33 - Copying cache implementation netlist
+IPNAME:plb_v46 INSTANCE:mb_plb - /home/klaus/pong/PONG/PongV5/mb/mb.mhs line 47
+- Copying cache implementation netlist
+IPNAME:lmb_v10 INSTANCE:ilmb - /home/klaus/pong/PONG/PongV5/mb/mb.mhs line 54 -
+Copying cache implementation netlist
+IPNAME:lmb_v10 INSTANCE:dlmb - /home/klaus/pong/PONG/PongV5/mb/mb.mhs line 61 -
+Copying cache implementation netlist
+IPNAME:lmb_bram_if_cntlr INSTANCE:dlmb_cntlr -
+/home/klaus/pong/PONG/PongV5/mb/mb.mhs line 68 - Copying cache implementation
+netlist
+IPNAME:lmb_bram_if_cntlr INSTANCE:ilmb_cntlr -
+/home/klaus/pong/PONG/PongV5/mb/mb.mhs line 77 - Copying cache implementation
+netlist
+IPNAME:bram_block INSTANCE:lmb_bram - /home/klaus/pong/PONG/PongV5/mb/mb.mhs
+line 86 - Copying cache implementation netlist
+IPNAME:xps_gpio INSTANCE:leds_8bit - /home/klaus/pong/PONG/PongV5/mb/mb.mhs line
+93 - Copying cache implementation netlist
+IPNAME:xps_gpio INSTANCE:push_buttons_3bit -
+/home/klaus/pong/PONG/PongV5/mb/mb.mhs line 106 - Copying cache implementation
+netlist
+IPNAME:xps_gpio INSTANCE:switches_8bit - /home/klaus/pong/PONG/PongV5/mb/mb.mhs
+line 119 - Copying cache implementation netlist
+IPNAME:xps_uartlite INSTANCE:rs232_port - /home/klaus/pong/PONG/PongV5/mb/mb.mhs
+line 132 - Copying cache implementation netlist
+IPNAME:mdm INSTANCE:mdm_0 - /home/klaus/pong/PONG/PongV5/mb/mb.mhs line 161 -
+Copying cache implementation netlist
+IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
+/home/klaus/pong/PONG/PongV5/mb/mb.mhs line 173 - Copying cache implementation
+netlist
+IPNAME:xps_gpio INSTANCE:ball_color_o - /home/klaus/pong/PONG/PongV5/mb/mb.mhs
+line 186 - Copying cache implementation netlist
+IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
+/home/klaus/pong/PONG/PongV5/mb/mb.mhs line 196 - Copying cache implementation
+netlist
+IPNAME:chipscope_ila INSTANCE:chipscope_ila_0 -
+/home/klaus/pong/PONG/PongV5/mb/mb.mhs line 202 - Copying cache implementation
+netlist
+IPNAME:xps_gpio INSTANCE:batpos_l_r - /home/klaus/pong/PONG/PongV5/mb/mb.mhs
+line 217 - Copying cache implementation netlist
+IPNAME:xps_gpio INSTANCE:ballpos_xy - /home/klaus/pong/PONG/PongV5/mb/mb.mhs
+line 228 - Copying cache implementation netlist
 
 Elaborating instances ...
-IPNAME:bram_block INSTANCE:lmb_bram - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line
-86 - elaborating IP
+IPNAME:bram_block INSTANCE:lmb_bram - /home/klaus/pong/PONG/PongV5/mb/mb.mhs
+line 86 - elaborating IP
 IPNAME:clock_generator INSTANCE:clock_generator_0 -
-C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 146 - elaborating IP
+/home/klaus/pong/PONG/PongV5/mb/mb.mhs line 146 - elaborating IP
 ClkGen elaborate status: PASSED
 ----------------------------------------
 ----------------------------------------
 IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
-C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 196 - elaborating IP
+/home/klaus/pong/PONG/PongV5/mb/mb.mhs line 196 - elaborating IP
 Created elaborate directory hdl/elaborate/chipscope_icon_0_v1_06_a/synhdl/vhdl/
 Generating ChipScope core: chipscope_icon_0 ...
-ChipScope Core Generator command: coregen.exe -b C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_icon_0.xco
-Release 14.4 - Xilinx CORE Generator P.49d (nt64)
+ChipScope Core Generator command: coregen -b /home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_icon_0.xco
+Release 14.4 - Xilinx CORE Generator P.49d (lin64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 All runtime messages will be recorded in
-C:\XilinxWorkSpace\PongV5\mb\implementation\chipscope_icon_0_wrapper\coregen.log
+/home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_icon_0_wrapper/coregen.
+log
 Updating project device from '3s500e' to 'xc3s500e'.
 Wrote CGP file for project 'coregen'.
 Resolving generic values...
@@ -268,17 +318,17 @@ Generating ISE project...
 XCO file found: chipscope_icon_0.xco
 XMDF file found: chipscope_icon_0_xmdf.tcl
 Adding
-C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg/chi
-pscope_icon_0.asy -view all -origin_type imported
+/home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg/
+chipscope_icon_0.asy -view all -origin_type imported
 Adding
-C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg/chi
-pscope_icon_0.ngc -view all -origin_type created
+/home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg/
+chipscope_icon_0.ngc -view all -origin_type created
 Checking file
-"C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg/ch
-ipscope_icon_0.ngc" for project device match ...
+"/home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg
+/chipscope_icon_0.ngc" for project device match ...
 File
-"C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg/ch
-ipscope_icon_0.ngc" device information matches project device.
+"/home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg
+/chipscope_icon_0.ngc" device information matches project device.
 INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
    Please set the new top explicitly by running the "project set top" command.
    To re-calculate the new top automatically, set the "Auto Implementation Top"
@@ -291,14 +341,15 @@ Finished moving files to output directory
 Saved CGP file for project 'coregen'.
 *************************************************************
 IPNAME:chipscope_ila INSTANCE:chipscope_ila_0 -
-C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 202 - elaborating IP
+/home/klaus/pong/PONG/PongV5/mb/mb.mhs line 202 - elaborating IP
 Created elaborate directory hdl/elaborate/chipscope_ila_0_v1_05_a/synhdl/vhdl/
 Generating ChipScope core: chipscope_ila_0 ...
-ChipScope Core Generator command: coregen.exe -b C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_ila_0.xco
-Release 14.4 - Xilinx CORE Generator P.49d (nt64)
+ChipScope Core Generator command: coregen -b /home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_ila_0.xco
+Release 14.4 - Xilinx CORE Generator P.49d (lin64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 All runtime messages will be recorded in
-C:\XilinxWorkSpace\PongV5\mb\implementation\chipscope_ila_0_wrapper\coregen.log
+/home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_ila_0_wrapper/coregen.l
+og
 Updating project device from '3s500e' to 'xc3s500e'.
 Wrote CGP file for project 'coregen'.
 Resolving generic values...
@@ -327,18 +378,24 @@ Generating metadata file...
 Generating ISE project...
 XCO file found: chipscope_ila_0.xco
 XMDF file found: chipscope_ila_0_xmdf.tcl
+WARNING:EDK - : chipscope_ila_0.vhd does not exist, will not be added to ISE
+   project.
+
+WARNING:EDK - : chipscope_ila_0.vho does not exist, will not be added to ISE
+   project.
+
 Adding
-C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_ila_0_wrapper/tmp/_cg/chip
-scope_ila_0.asy -view all -origin_type imported
+/home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_ila_0_wrapper/tmp/_cg/c
+hipscope_ila_0.asy -view all -origin_type imported
 Adding
-C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_ila_0_wrapper/tmp/_cg/chip
-scope_ila_0.ngc -view all -origin_type created
+/home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_ila_0_wrapper/tmp/_cg/c
+hipscope_ila_0.ngc -view all -origin_type created
 Checking file
-"C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_ila_0_wrapper/tmp/_cg/chi
-pscope_ila_0.ngc" for project device match ...
+"/home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_ila_0_wrapper/tmp/_cg/
+chipscope_ila_0.ngc" for project device match ...
 File
-"C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_ila_0_wrapper/tmp/_cg/chi
-pscope_ila_0.ngc" device information matches project device.
+"/home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_ila_0_wrapper/tmp/_cg/
+chipscope_ila_0.ngc" device information matches project device.
 INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
    Please set the new top explicitly by running the "project set top" command.
    To re-calculate the new top automatically, set the "Auto Implementation Top"
@@ -370,62 +427,16 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:microblaze_0 - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 33 - Running
-XST synthesis
-INSTANCE:mb_plb - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 47 - Running XST
-synthesis
-INSTANCE:ilmb - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 54 - Running XST
-synthesis
-INSTANCE:dlmb - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 61 - Running XST
-synthesis
-INSTANCE:dlmb_cntlr - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 68 - Running XST
-synthesis
-INSTANCE:ilmb_cntlr - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 77 - Running XST
-synthesis
-INSTANCE:lmb_bram - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 86 - Running XST
-synthesis
-INSTANCE:leds_8bit - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 93 - Running XST
-synthesis
-INSTANCE:push_buttons_3bit - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 106 -
+INSTANCE:clock_generator_0 - /home/klaus/pong/PONG/PongV5/mb/mb.mhs line 146 -
 Running XST synthesis
-INSTANCE:switches_8bit - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 119 - Running
-XST synthesis
-INSTANCE:rs232_port - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 132 - Running XST
-synthesis
-INSTANCE:clock_generator_0 - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 146 -
-Running XST synthesis
-INSTANCE:mdm_0 - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 161 - Running XST
-synthesis
-INSTANCE:proc_sys_reset_0 - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 173 -
-Running XST synthesis
-INSTANCE:ball_color_o - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 186 - Running
-XST synthesis
-INSTANCE:chipscope_icon_0 - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 196 -
-Running XST synthesis
-INSTANCE:chipscope_ila_0 - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 202 -
-Running XST synthesis
-INSTANCE:batpos_l_r - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 217 - Running XST
-synthesis
-INSTANCE:ballpos_xy - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 228 - Running XST
-synthesis
 
 Running NGCBUILD ...
-IPNAME:mb_microblaze_0_wrapper INSTANCE:microblaze_0 -
-C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 33 - Running NGCBUILD
-IPNAME:mb_ilmb_wrapper INSTANCE:ilmb - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line
-54 - Running NGCBUILD
-IPNAME:mb_dlmb_wrapper INSTANCE:dlmb - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line
-61 - Running NGCBUILD
 IPNAME:mb_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
-C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 146 - Running NGCBUILD
-IPNAME:mb_chipscope_icon_0_wrapper INSTANCE:chipscope_icon_0 -
-C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 196 - Running NGCBUILD
-IPNAME:mb_chipscope_ila_0_wrapper INSTANCE:chipscope_ila_0 -
-C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 202 - Running NGCBUILD
+/home/klaus/pong/PONG/PongV5/mb/mb.mhs line 146 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/mb.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 1022.00 seconds
+Total run time: 263.00 seconds

@@ -34,17 +34,17 @@ WARNING:coreutil - WARNING: chipscope_icon_0.vhd does not exist, will not be
    WARNING: chipscope_icon_0.vho does not exist, will not be added to ISE
    project.
 Adding
-C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg/chi
-pscope_icon_0.asy -view all -origin_type imported
+/home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg/
+chipscope_icon_0.asy -view all -origin_type imported
 Adding
-C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg/chi
-pscope_icon_0.ngc -view all -origin_type created
+/home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg/
+chipscope_icon_0.ngc -view all -origin_type created
 Checking file
-"C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg/ch
-ipscope_icon_0.ngc" for project device match ...
+"/home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg
+/chipscope_icon_0.ngc" for project device match ...
 File
-"C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg/ch
-ipscope_icon_0.ngc" device information matches project device.
+"/home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg
+/chipscope_icon_0.ngc" device information matches project device.
 INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
    Please set the new top explicitly by running the "project set top" command.
    To re-calculate the new top automatically, set the "Auto Implementation Top"

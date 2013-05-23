@@ -1,5 +1,5 @@
 proc pnsynth {} {
-  cd C:/XilinxWorkSpace/PongV5/mb
+  cd /home/klaus/pong/PONG/PongV5/mb
   if { [ catch { xload xmp mb.xmp } result ] } {
     exit 10
   }

@@ -1,12 +1,14 @@
-Release 14.4 - xst P.49d (nt64)
+Release 14.4 - xst P.49d (lin64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:\XilinxWorkSpace\PongV5\mb\synthesis\xst_temp_dir\
+--> 
+Parameter TMPDIR set to /home/klaus/pong/PONG/PongV5/mb/synthesis/xst_temp_dir/
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
+
 TABLE OF CONTENTS
   1) Synthesis Options Summary
   2) HDL Compilation
@@ -30,7 +32,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "mb_clock_generator_0_wrapper_xst.prj"
-Verilog Include Directory          : {"C:\XilinxWorkSpace\PongV5\mb\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+Verilog Include Directory          : {"/home/klaus/pong/PONG/PongV5/mb/pcores/" "/home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc3s500efg320-4
@@ -57,22 +59,22 @@ Cores Search Directories           : {../implementation}
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/dcm_module.vhd" in Library clock_generator_v4_03_a.
+Compiling vhdl file "/home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/dcm_module.vhd" in Library clock_generator_v4_03_a.
 Entity <dcm_module> compiled.
 Entity <dcm_module> (Architecture <STRUCT>) compiled.
-Compiling vhdl file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/pll_module.vhd" in Library clock_generator_v4_03_a.
+Compiling vhdl file "/home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/pll_module.vhd" in Library clock_generator_v4_03_a.
 Entity <pll_module> compiled.
 Entity <pll_module> (Architecture <STRUCT>) compiled.
-Compiling vhdl file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/mmcm_module.vhd" in Library clock_generator_v4_03_a.
+Compiling vhdl file "/home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/mmcm_module.vhd" in Library clock_generator_v4_03_a.
 Entity <mmcm_module> compiled.
 Entity <mmcm_module> (Architecture <STRUCT>) compiled.
-Compiling vhdl file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/plle2_module.vhd" in Library clock_generator_v4_03_a.
+Compiling vhdl file "/home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/plle2_module.vhd" in Library clock_generator_v4_03_a.
 Entity <plle2_module> compiled.
 Entity <plle2_module> (Architecture <STRUCT>) compiled.
-Compiling vhdl file "C:/XilinxWorkSpace/PongV5/mb/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" in Library clock_generator_0_v4_03_a.
+Compiling vhdl file "/home/klaus/pong/PONG/PongV5/mb/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" in Library clock_generator_0_v4_03_a.
 Entity <clock_generator> compiled.
 Entity <clock_generator> (Architecture <STRUCTURE>) compiled.
-Compiling vhdl file "C:/XilinxWorkSpace/PongV5/mb/hdl/mb_clock_generator_0_wrapper.vhd" in Library work.
+Compiling vhdl file "/home/klaus/pong/PONG/PongV5/mb/hdl/mb_clock_generator_0_wrapper.vhd" in Library work.
 Entity <mb_clock_generator_0_wrapper> compiled.
 Entity <mb_clock_generator_0_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -130,10 +132,10 @@ Analyzing generic Entity <clock_generator> in library <clock_generator_0_v4_03_a
 	C_FAMILY = "spartan3e"
 	C_PACKAGE = "fg320"
 	C_SPEEDGRADE = "-4"
-WARNING:Xst:753 - "C:/XilinxWorkSpace/PongV5/mb/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" line 249: Unconnected output port 'CLK180' of component 'dcm_module'.
-WARNING:Xst:753 - "C:/XilinxWorkSpace/PongV5/mb/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" line 249: Unconnected output port 'CLK2X180' of component 'dcm_module'.
-WARNING:Xst:753 - "C:/XilinxWorkSpace/PongV5/mb/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" line 249: Unconnected output port 'CLKFX180' of component 'dcm_module'.
-WARNING:Xst:753 - "C:/XilinxWorkSpace/PongV5/mb/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" line 249: Unconnected output port 'STATUS' of component 'dcm_module'.
+WARNING:Xst:753 - "/home/klaus/pong/PONG/PongV5/mb/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" line 249: Unconnected output port 'CLK180' of component 'dcm_module'.
+WARNING:Xst:753 - "/home/klaus/pong/PONG/PongV5/mb/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" line 249: Unconnected output port 'CLK2X180' of component 'dcm_module'.
+WARNING:Xst:753 - "/home/klaus/pong/PONG/PongV5/mb/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" line 249: Unconnected output port 'CLKFX180' of component 'dcm_module'.
+WARNING:Xst:753 - "/home/klaus/pong/PONG/PongV5/mb/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" line 249: Unconnected output port 'STATUS' of component 'dcm_module'.
 Entity <clock_generator> analyzed. Unit <clock_generator> generated.
 
 Analyzing generic Entity <dcm_module> in library <clock_generator_v4_03_a> (Architecture <STRUCT>).
@@ -164,7 +166,7 @@ Analyzing generic Entity <dcm_module> in library <clock_generator_v4_03_a> (Arch
 	C_FAMILY = "spartan3e"
 	C_PHASE_SHIFT = 0
 	C_STARTUP_WAIT = false
-WARNING:Xst:819 - "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/dcm_module.vhd" line 259: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "/home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/dcm_module.vhd" line 259: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <reset>
     Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <Using_Virtex.DCM_INST> in unit <dcm_module>.
     Set user-defined property "CLKFX_DIVIDE =  1" for instance <Using_Virtex.DCM_INST> in unit <dcm_module>.
@@ -192,7 +194,7 @@ Entity <dcm_module> analyzed. Unit <dcm_module> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <dcm_module>.
-    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/dcm_module.vhd".
+    Related source file is "/home/klaus/programs/Xilinx14.4/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/dcm_module.vhd".
     Found 3-bit register for signal <rst_delay>.
     Found 1-bit register for signal <rsti>.
     Summary:
@@ -201,7 +203,7 @@ Unit <dcm_module> synthesized.
 
 
 Synthesizing Unit <clock_generator>.
-    Related source file is "C:/XilinxWorkSpace/PongV5/mb/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd".
+    Related source file is "/home/klaus/pong/PONG/PongV5/mb/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd".
 WARNING:Xst:1305 - Output <CLKFBOUT> is never assigned. Tied to value 0.
 WARNING:Xst:647 - Input <PSEN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1305 - Output <PSDONE> is never assigned. Tied to value 0.
@@ -231,7 +233,7 @@ Unit <clock_generator> synthesized.
 
 
 Synthesizing Unit <mb_clock_generator_0_wrapper>.
-    Related source file is "C:/XilinxWorkSpace/PongV5/mb/hdl/mb_clock_generator_0_wrapper.vhd".
+    Related source file is "/home/klaus/pong/PONG/PongV5/mb/hdl/mb_clock_generator_0_wrapper.vhd".
 Unit <mb_clock_generator_0_wrapper> synthesized.
 
 
@@ -400,12 +402,13 @@ Delay:               1.319ns (Levels of Logic = 0)
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.27 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.17 secs
  
 --> 
 
-Total memory usage is 281516 kilobytes
+
+Total memory usage is 523312 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   30 (   0 filtered)

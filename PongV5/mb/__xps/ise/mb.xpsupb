@@ -5,7 +5,7 @@
   <Version XPSPNVER="1.0" EDKVER="14.4" />
   <FPGA family="spartan3e" device="xc3s500e" package="fg320" speedgrade="-4" />
   <File Type="MHS" URL="../../mb.mhs" />
-  <File Type="UCF" URL="../../data\mb.ucf" />
+  <File Type="UCF" URL="../../data/mb.ucf" />
   <File Type="BitinitOpt" URL="../bitinit.opt" />
 
 

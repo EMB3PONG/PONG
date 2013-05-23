@@ -1,5 +1,5 @@
 The following files were generated for 'chipscope_ila_0' in directory
-C:\XilinxWorkSpace\PongV5\mb\implementation\chipscope_ila_0_wrapper\
+/home/klaus/pong/PONG/PongV5/mb/implementation/chipscope_ila_0_wrapper/
 
 XCO file generator:
    Generate an XCO file for compatibility with legacy flows.

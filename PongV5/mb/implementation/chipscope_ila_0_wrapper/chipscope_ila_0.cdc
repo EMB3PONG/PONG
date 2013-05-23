@@ -1,5 +1,5 @@
 #ChipScope Core Generator Project File Version 3.0
-#Thu May 23 14:04:37 Romance Daylight Time 2013
+#Thu May 23 20:48:09 CEST 2013
 SignalExport.bus<0001>.channelList= 1 0
 SignalExport.bus<0001>.name=chipscope_ila_0_TRIG0_pin
 SignalExport.bus<0001>.offset=0.0

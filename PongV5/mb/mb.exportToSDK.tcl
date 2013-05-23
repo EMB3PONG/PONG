@@ -1,5 +1,5 @@
 proc exportToSDK {} {
-  cd C:/XilinxWorkSpace/PongV5/mb
+  cd /home/klaus/pong/PONG/PongV5/mb
   if { [ catch { xload xmp mb.xmp } result ] } {
     exit 10
   }
@@ -14,13 +14,13 @@ if { [catch {exportToSDK} result] } {
 }
 
 set sExportDir [ xget sdk_export_dir ]
-set sExportDir [ file join "C:/XilinxWorkSpace/PongV5/mb" "$sExportDir" "hw" ] 
-if { [ file exists C:/XilinxWorkSpace/PongV5/edkBmmFile_bd.bmm ] } {
-   puts "Copying placed bmm file C:/XilinxWorkSpace/PongV5/edkBmmFile_bd.bmm to $sExportDir" 
-   file copy -force "C:/XilinxWorkSpace/PongV5/edkBmmFile_bd.bmm" $sExportDir
+set sExportDir [ file join "/home/klaus/pong/PONG/PongV5/mb" "$sExportDir" "hw" ] 
+if { [ file exists /home/klaus/pong/PONG/PongV5/edkBmmFile_bd.bmm ] } {
+   puts "Copying placed bmm file /home/klaus/pong/PONG/PongV5/edkBmmFile_bd.bmm to $sExportDir" 
+   file copy -force "/home/klaus/pong/PONG/PongV5/edkBmmFile_bd.bmm" $sExportDir
 }
-if { [ file exists C:/XilinxWorkSpace/PongV5/TL.bit ] } {
-   puts "Copying bit file C:/XilinxWorkSpace/PongV5/TL.bit to $sExportDir" 
-   file copy -force "C:/XilinxWorkSpace/PongV5/TL.bit" $sExportDir
+if { [ file exists /home/klaus/pong/PONG/PongV5/TL.bit ] } {
+   puts "Copying bit file /home/klaus/pong/PONG/PongV5/TL.bit to $sExportDir" 
+   file copy -force "/home/klaus/pong/PONG/PongV5/TL.bit" $sExportDir
 }
 exit $result
