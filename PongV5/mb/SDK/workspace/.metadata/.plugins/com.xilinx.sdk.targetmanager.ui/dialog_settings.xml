@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="bootloop" key="mb_hw_platform-microblaze_0-initElf"/>
 	<item value="C:\XilinxWorkSpace\PongV5\mb\SDK\workspace\mb_hw_platform\system.bit" key="mb_hw_platform-bitFile"/>
-	<item value="C:\XilinxWorkSpace\PongV5\mb\SDK\workspace\PongSoft\Debug\PongSoft.elf" key="mb_hw_platform-microblaze_0-initElf"/>
 	<item value="C:\XilinxWorkSpace\PongV5\mb\SDK\workspace\mb_hw_platform\system_bd.bmm" key="mb_hw_platform-bmmFile"/>
 </section>
