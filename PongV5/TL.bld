@@ -25,6 +25,60 @@ Loading design module
 Loading design module "C:\XilinxWorkSpace\PongV5/mb_mdm_0_wrapper.ngc"...
 Loading design module
 "C:\XilinxWorkSpace\PongV5/mb_proc_sys_reset_0_wrapper.ngc"...
+Loading design module "C:\XilinxWorkSpace\PongV5/mb_ball_color_o_wrapper.ngc"...
+Loading design module
+"C:\XilinxWorkSpace\PongV5/mb_chipscope_icon_0_wrapper.ngc"...
+Loading design module
+"C:\XilinxWorkSpace\PongV5/mb_chipscope_ila_0_wrapper.ngc"...
+Loading design module "C:\XilinxWorkSpace\PongV5/mb_batpos_l_r_wrapper.ngc"...
+Loading design module "C:\XilinxWorkSpace\PongV5/mb_ballpos_xy_wrapper.ngc"...
+Applying constraints in
+"C:\XilinxWorkSpace\PongV5/mb_chipscope_icon_0_wrapper.ncf" to module
+"Inst_mb/chipscope_icon_0"...
+Checking Constraint Associations...
+Applying constraints in
+"C:\XilinxWorkSpace\PongV5/mb_chipscope_ila_0_wrapper.ncf" to module
+"Inst_mb/chipscope_ila_0"...
+WARNING:ConstraintSystem:192 - The TNM 'D2_CLK', does not directly or indirectly
+   drive any flip-flops, latches and/or RAMS and cannot be actively used by the
+   referencing TIg constraint ''. If clock manager blocks are directly or
+   indirectly driven, a new TNM constraint will not be derived since the none of
+   the referencing constraints are a PERIOD constraint. This TNM is used in the
+   following user groups and/or specifications:
+   <TIMESPEC TS_D2_TO_T2 = FROM D2_CLK TO "FFS" TIG;>
+   [C:\XilinxWorkSpace\PongV5/mb_chipscope_ila_0_wrapper.ncf(6)]
+   <TIMESPEC TS_J2_TO_D2 = FROM "FFS" TO D2_CLK TIG;>
+   [C:\XilinxWorkSpace\PongV5/mb_chipscope_ila_0_wrapper.ncf(7)]
+   <TIMESPEC TS_J3_TO_D2 = FROM "FFS" TO D2_CLK TIG;>
+   [C:\XilinxWorkSpace\PongV5/mb_chipscope_ila_0_wrapper.ncf(8)]
+   <TIMESPEC TS_J4_TO_D2 = FROM "FFS" TO D2_CLK TIG;>
+   [C:\XilinxWorkSpace\PongV5/mb_chipscope_ila_0_wrapper.ncf(9)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_D2_TO_T2 = FROM D2_CLK TO "FFS" TIG;>
+   [C:\XilinxWorkSpace\PongV5/mb_chipscope_ila_0_wrapper.ncf(6)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_J2_TO_D2 = FROM "FFS" TO D2_CLK TIG;>
+   [C:\XilinxWorkSpace\PongV5/mb_chipscope_ila_0_wrapper.ncf(7)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_J3_TO_D2 = FROM "FFS" TO D2_CLK TIG;>
+   [C:\XilinxWorkSpace\PongV5/mb_chipscope_ila_0_wrapper.ncf(8)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_J4_TO_D2 = FROM "FFS" TO D2_CLK TIG;>
+   [C:\XilinxWorkSpace\PongV5/mb_chipscope_ila_0_wrapper.ncf(9)]
+
+Checking Constraint Associations...
+INFO:NgdBuild:981 - Could not find any associations for the following
+   constraint:
+       '<INST "U0/*/U_STAT/U_DIRTY_LDC" TNM = D2_CLK;>
+   [C:\XilinxWorkSpace\PongV5/mb_chipscope_ila_0_wrapper.ncf(5)]'
 Applying constraints in "C:\XilinxWorkSpace\PongV5/mb.ncf" to module
 "Inst_mb"...
 Checking Constraint Associations...
@@ -34,6 +88,28 @@ Done.
 Annotating constraints to design from ucf file "pong_contoller_nexys_II.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_D2_TO_T2 = FROM "D2_CLK"
+   TO FFS TIG;>: Unable to find an active 'TimeGrp' or 'TNM' or 'TPSync'
+   constraint named 'D2_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_J2_TO_D2 = FROM FFS TO
+   "D2_CLK" TIG;>: Unable to find an active 'TimeGrp' or 'TNM' or 'TPSync'
+   constraint named 'D2_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_J3_TO_D2 = FROM FFS TO
+   "D2_CLK" TIG;>: Unable to find an active 'TimeGrp' or 'TNM' or 'TPSync'
+   constraint named 'D2_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_J4_TO_D2 = FROM FFS TO
+   "D2_CLK" TIG;>: Unable to find an active 'TimeGrp' or 'TNM' or 'TPSync'
+   constraint named 'D2_CLK'.
+
+WARNING:ConstraintSystem - TNM : D_CLK was distributed to a DCM but new TNM
+   constraints were not derived. This TNM is used in the following user groups
+   or specifications:
+   <TIMESPEC TS_J_TO_D = FROM "J_CLK" TO "D_CLK" TIG;>
+   <TIMESPEC TS_D_TO_J = FROM "D_CLK" TO "J_CLK" TIG;>
+
 INFO:ConstraintSystem:178 - TNM 'CLK_50M_I', used in period specification
    'TS_CLK_50M_I', was traced into DCM_SP instance Inst_dcm/DCM_SP_INST. The
    following new TNM groups and period specifications were generated at the
@@ -71,12 +147,12 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:   0
+  Number of warnings:  10
 
-Total memory usage is 209832 kilobytes
+Total memory usage is 226620 kilobytes
 
 Writing NGD file "TL.ngd" ...
-Total REAL time to NGDBUILD completion:  34 sec
-Total CPU time to NGDBUILD completion:   33 sec
+Total REAL time to NGDBUILD completion:  41 sec
+Total CPU time to NGDBUILD completion:   40 sec
 
 Writing NGDBUILD log file "TL.bld"...

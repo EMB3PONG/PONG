@@ -1,0 +1,6 @@
+[Inputs]
+clk_i
+=D_i[0:0]=
+=Q_o[0:0]=
+[Outputs]
+[BiDir]

@@ -33,8 +33,11 @@ entity pixel_pointer is
     Port ( clk_i : in  STD_LOGIC;
            v_sync_i : in  STD_LOGIC;
            h_sync_i : in  STD_LOGIC;
+			  v_sync_o : out  STD_LOGIC;
+           h_sync_o : out  STD_LOGIC;
            line_o : out  STD_LOGIC_VECTOR (9 downto 0);
            pixel_o : out  STD_LOGIC_VECTOR (9 downto 0));
+			  
 end pixel_pointer;
 
 architecture Behavioral of pixel_pointer is
@@ -45,8 +48,8 @@ signal line_next 		: unsigned (9 downto 0) := (others => '0');
 signal pixel 			: unsigned (9 downto 0) := (others => '0');
 signal pixel_next 	: unsigned (9 downto 0) := (others => '0');
 
-signal v_sync			: std_logic_vector(1 downto 0) := (others => '0');
-signal h_sync			: std_logic_vector(1 downto 0) := (others => '0');
+signal v_sync			: std_logic_vector(2 downto 0) := (others => '0');
+signal h_sync			: std_logic_vector(2 downto 0) := (others => '0');
 
 begin
 
@@ -57,14 +60,14 @@ begin
 			pixel <= pixel_next;		
 			
 			-- V and H shift registers
-			v_sync <= v_sync(0) & v_sync_i;
-			h_sync <= h_sync(0) & h_sync_i;
+			v_sync <= v_sync(1 downto 0) & v_sync_i;
+			h_sync <= h_sync(1 downto 0) & h_sync_i;
 
-			if v_sync = "01" then
+			if v_sync = "001" then
 				--reset
 				line <= (others => '0');
 				pixel <= (others => '0');
-			elsif h_sync = "01" then
+			elsif h_sync = "001" then
 				line <= line_next;
 				pixel <= (others => '0');
 			end if;
@@ -77,6 +80,9 @@ begin
 	
 	line_o <= std_logic_vector(line);
 	pixel_o <= std_logic_vector(pixel);
+	
+	v_sync_o <= v_sync(0);
+	h_sync_o <= h_sync(0);
 
 
 end Behavioral;

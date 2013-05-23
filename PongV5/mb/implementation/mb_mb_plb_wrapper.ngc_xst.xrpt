@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Thu May 16 12:00:55 2013">
+  <application stringID="Xst" timeStamp="Thu May 23 14:11:59 2013">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -65,7 +65,7 @@
       <item DEFAULT="/" stringID="XST_HIERARCHYSEPARATOR" value="/"/>
       <item DEFAULT="YES" label="-iobuf" stringID="XST_IOBUF" value="NO"/>
       <item DEFAULT="" label="-sd" stringID="XST_SD" value="{../implementation}"/>
-      <item DEFAULT="" label="-vlgincdir" stringID="XST_VLGINCDIR" value="{&quot;C:\XilinxWorkSpace\PongV5\mb\pcores\&quot; &quot;C:\Xilinx\14.4\ISE_DS\EDK\data\wizards\BsbCores\pcores\&quot; &quot;C:\Xilinx\14.4\ISE_DS\EDK\data\wizards\ipxact\pcores\&quot; &quot;C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\&quot; &quot;C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\&quot; }"/>
+      <item DEFAULT="" label="-vlgincdir" stringID="XST_VLGINCDIR" value="{&quot;C:\XilinxWorkSpace\PongV5\mb\pcores\&quot; &quot;C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\&quot; &quot;C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\&quot; }"/>
     </section>
     <section stringID="XST_HDL_SYNTHESIS_REPORT">
       <item dataType="int" stringID="XST_COUNTERS" value="1">
@@ -85,13 +85,13 @@
       <item dataType="int" stringID="XST_COUNTERS" value="1">
         <item dataType="int" stringID="XST_4BIT_DOWN_COUNTER" value="1"/>
       </item>
-      <item dataType="int" stringID="XST_REGISTERS" value="141">
-        <item dataType="int" stringID="XST_FLIPFLOPS" value="141"/>
+      <item dataType="int" stringID="XST_REGISTERS" value="144">
+        <item dataType="int" stringID="XST_FLIPFLOPS" value="144"/>
       </item>
     </section>
     <section stringID="XST_FINAL_REGISTER_REPORT">
-      <item dataType="int" stringID="XST_REGISTERS" value="154">
-        <item dataType="int" stringID="XST_FLIPFLOPS" value="154"/>
+      <item dataType="int" stringID="XST_REGISTERS" value="158">
+        <item dataType="int" stringID="XST_FLIPFLOPS" value="158"/>
       </item>
     </section>
     <section stringID="XST_PARTITION_REPORT">
@@ -107,40 +107,40 @@
         <item stringID="XST_KEEP_HIERARCHY" value="no"/>
       </section>
       <section stringID="XST_DESIGN_STATISTICS">
-        <item stringID="XST_IOS" value="934"/>
+        <item stringID="XST_IOS" value="1108"/>
       </section>
       <section stringID="XST_CELL_USAGE">
-        <item dataType="int" stringID="XST_BELS" value="496">
+        <item dataType="int" stringID="XST_BELS" value="552">
           <item dataType="int" stringID="XST_GND" value="1"/>
           <item dataType="int" stringID="XST_INV" value="4"/>
-          <item dataType="int" stringID="XST_LUT2" value="39"/>
-          <item dataType="int" stringID="XST_LUT2D" value="6"/>
+          <item dataType="int" stringID="XST_LUT2" value="70"/>
+          <item dataType="int" stringID="XST_LUT2D" value="7"/>
           <item dataType="int" stringID="XST_LUT2L" value="2"/>
-          <item dataType="int" stringID="XST_LUT3" value="34"/>
-          <item dataType="int" stringID="XST_LUT3L" value="1"/>
-          <item dataType="int" stringID="XST_LUT4" value="279"/>
-          <item dataType="int" stringID="XST_LUT4D" value="4"/>
-          <item dataType="int" stringID="XST_LUT4L" value="12"/>
+          <item dataType="int" stringID="XST_LUT3" value="44"/>
+          <item dataType="int" stringID="XST_LUT3L" value="2"/>
+          <item dataType="int" stringID="XST_LUT4" value="345"/>
+          <item dataType="int" stringID="XST_LUT4D" value="5"/>
+          <item dataType="int" stringID="XST_LUT4L" value="13"/>
           <item dataType="int" stringID="XST_MUXCY" value="52"/>
-          <item dataType="int" stringID="XST_MUXF5" value="61"/>
+          <item dataType="int" stringID="XST_MUXF5" value="6"/>
           <item dataType="int" stringID="XST_VCC" value="1"/>
         </item>
-        <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="154">
+        <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="158">
           <item dataType="int" stringID="XST_FD" value="1"/>
-          <item dataType="int" stringID="XST_FDR" value="106"/>
+          <item dataType="int" stringID="XST_FDR" value="107"/>
           <item dataType="int" stringID="XST_FDRE" value="27"/>
           <item dataType="int" stringID="XST_FDRS" value="8"/>
-          <item dataType="int" stringID="XST_FDS" value="8"/>
+          <item dataType="int" stringID="XST_FDS" value="11"/>
           <item dataType="int" stringID="XST_FDSE" value="4"/>
         </item>
       </section>
     </section>
     <section stringID="XST_DEVICE_UTILIZATION_SUMMARY">
       <item stringID="XST_SELECTED_DEVICE" value="3s500efg320-4"/>
-      <item AVAILABLE="4656" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="247"/>
-      <item AVAILABLE="9312" dataType="int" label="Number of Slice Flip Flops" stringID="XST_NUMBER_OF_SLICE_FLIP_FLOPS" value="154"/>
-      <item AVAILABLE="9312" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="381"/>
-      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="934"/>
+      <item AVAILABLE="4656" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="287"/>
+      <item AVAILABLE="9312" dataType="int" label="Number of Slice Flip Flops" stringID="XST_NUMBER_OF_SLICE_FLIP_FLOPS" value="158"/>
+      <item AVAILABLE="9312" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="492"/>
+      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="1108"/>
       <item AVAILABLE="232" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="0"/>
     </section>
     <section stringID="XST_PARTITION_RESOURCE_SUMMARY">

@@ -1,0 +1,3 @@
+vhdtdtfi -lib work SRL16_SReg.vhd -prj PongV5 -o SRL16_SReg.spl -module SRL16_SReg -template C:/Xilinx/14.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work SRL16_SReg.vhd -prj PongV5 -o SRL16_SReg.spl -module SRL16_SReg -template C:/Xilinx/14.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e SRL16_SReg.spl C:/XilinxWorkSpace/PongV5/SRL16_SReg.sym 

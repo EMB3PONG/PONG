@@ -1,0 +1,2 @@
+vhdtdtfi -prj PongV5 -o C:/XilinxWorkSpace/PongV5/detector.vhi -module detector -template C:/Xilinx/14.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work detector.vhd 
+vhdtdtfi -prj PongV5 -o C:/XilinxWorkSpace/PongV5/detector.vhi -module detector -template C:/Xilinx/14.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work pixel_pointer.vhd -lib work detector.vhd 

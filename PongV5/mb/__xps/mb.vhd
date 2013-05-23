@@ -4,12 +4,18 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY mb IS
 PORT (
 	fpga_0_LEDs_8Bit_GPIO_IO_O_pin : OUT STD_LOGIC_VECTOR(0 TO 7);
-	fpga_0_Push_Buttons_3Bit_GPIO_IO_I_pin : IN STD_LOGIC_VECTOR(0 TO 2);
+	fpga_0_Push_Buttons_3Bit_GPIO_IO_I_pin : IN STD_LOGIC_VECTOR(0 TO 3);
 	fpga_0_Switches_8Bit_GPIO_IO_I_pin : IN STD_LOGIC_VECTOR(0 TO 7);
 	fpga_0_RS232_PORT_RX_pin : IN STD_LOGIC;
 	fpga_0_RS232_PORT_TX_pin : OUT STD_LOGIC;
 	fpga_0_clk_1_sys_clk_pin : IN STD_LOGIC;
-	fpga_0_rst_1_sys_rst_pin : IN STD_LOGIC
+	fpga_0_rst_1_sys_rst_pin : IN STD_LOGIC;
+	ball_color_o_GPIO_IO_O_pin : OUT STD_LOGIC_VECTOR(0 TO 7);
+	chipscope_ila_0_DATA_pin : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+	chipscope_ila_0_TRIG0_pin : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+	chipscope_ila_0_TRIG_OUT_pin : OUT STD_LOGIC;
+	BallPos_XY_GPIO_IO_I_pin : IN STD_LOGIC_VECTOR(0 TO 19);
+	BatPos_L_R_GPIO_IO_I_pin : IN STD_LOGIC_VECTOR(0 TO 19)
 	);
 END mb;
 

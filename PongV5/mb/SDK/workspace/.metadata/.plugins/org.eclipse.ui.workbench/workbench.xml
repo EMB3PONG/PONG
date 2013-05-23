@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="21" version="2.0">
+<workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
-<window height="770" width="1278" x="1" y="0">
+<window height="770" maximized="true" width="1278" x="96" y="149">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -17,7 +17,7 @@
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="89" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="84" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -25,27 +25,29 @@
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1368705864314" focus="true" label="Workspace - Debug">
+<page aggregateWorkingSetId="Aggregate for window 1368705864314" focus="true" label="Workspace - C/C++">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" partName="system.mss" path="C:/XilinxWorkSpace/PongV5/mb/SDK/workspace/PongSoft_bsp/system.mss" title="system.mss" tooltip="PongSoft_bsp/system.mss" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/PongSoft_bsp/system.mss"/>
-</editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="C:/XilinxWorkSpace/PongV5/mb/SDK/workspace/PongSoft/src/helloworld.c" title="helloworld.c" tooltip="PongSoft/src/helloworld.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/PongSoft/src/helloworld.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1074" selectionTopPixel="459"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="940" selectionTopPixel="261"/>
 </editor>
 </editors>
 <views>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+<view IMemento.internal.id="org.eclipse.cdt.ui.pdomSearchViewPage" definitionColumnWidth="150" locationColumnWidth="300" matchColumnWidth="300" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" showEnclosingDefinitions="true"/>
+</viewState>
+</view>
 <view id="org.eclipse.tm.terminal.view.TerminalView" partName="Terminal 1">
 <viewState Title="Terminal 1" _keys_="Title,connectionManageractive,connectionManagerconnection0HasCommandInputField,connectionManagerconnection0PartName,connectionManagersize" connectionManageractive="connection0" connectionManagerconnection0HasCommandInputField="false" connectionManagerconnection0PartName="Terminal 1" connectionManagersize="1"/>
 </view>
@@ -73,9 +75,9 @@
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>&#x0A;<category IMemento.internal.id="Warnings (1 item)"/>
+<expanded>&#x0A;<category IMemento.internal.id="Warnings"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -87,7 +89,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.debug.ui.DebugView" activePerspective="org.eclipse.debug.ui.DebugPerspective">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -140,6 +142,7 @@
 <view id="org.eclipse.ui.views.PropertySheet"/>
 <view id="org.eclipse.tm.terminal.view.TerminalView"/>
 <view id="com.xilinx.sdk.targetmanager.ui.XmdConsoleView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.cdt.make.ui.views.MakeView"/>
 <fastViewBars/>
@@ -173,6 +176,7 @@
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
 <page content="org.eclipse.tm.terminal.view.TerminalView" label="Terminal 1"/>
 <page content="com.xilinx.sdk.targetmanager.ui.XmdConsoleView" label="XMD Console"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
@@ -180,6 +184,7 @@
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
+<part id="6"/>
 </presentation>
 </folder>
 </info>
@@ -242,27 +247,18 @@
 <view id="com.xilinx.sdk.targetmanager.ui.XmdConsoleView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.7498033" ratioLeft="953" ratioRight="318" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.7498033" ratioLeft="953" ratioRight="318" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74928504" ratioLeft="786" ratioRight="263" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.8836858" ratioLeft="585" ratioRight="77" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.tm.terminal.view.TerminalView" label="Terminal 1"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
@@ -270,8 +266,7 @@
 <page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
@@ -279,28 +274,22 @@
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.4491094" ratioLeft="353" ratioRight="433" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7498033" ratioLeft="953" ratioRight="318" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info part="org.eclipse.ui.editorss" ratio="0.5681818" ratioLeft="225" ratioRight="171" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7498033" ratioLeft="953" ratioRight="318" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.4996066" ratioLeft="635" ratioRight="636" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.4996066" ratioLeft="635" ratioRight="636" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="com.xilinx.sdk.targetmanager.ui.XmdConsoleView" label="XMD Console"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.ModuleView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 </presentation>
@@ -313,52 +302,46 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" path="/mb_hw_platform/system.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/standalone_bsp_0/system.mss"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/standalone_bsp_0/microblaze_0/include/xuartlite.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/PongSoft_bsp/system.mss"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/PongSoft/src/helloworld.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/PongSoft_bsp/microblaze_0/include/xgpio.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/PongSoft_bsp/microblaze_0/include/xparameters.h"/>
 </editors>
-<item historyLabel="system.xml" index="0"/>
-<item historyLabel="system.mss" index="1"/>
-<item historyLabel="xuartlite.h" index="2">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="system.mss" index="0"/>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1190" y="0"/>
 </item>
-<item historyLabel="system.mss" index="1"/>
-<item historyLabel="system.xml" index="0"/>
-<item historyLabel="system.mss" index="3"/>
-<item historyLabel="helloworld.c" index="4">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="xparameters.h" index="2">
+<position/>
 </item>
-<item historyLabel="system.mss" index="3"/>
-<item historyLabel="system.mss" index="3"/>
-<item historyLabel="helloworld.c" index="4">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1246" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="4">
-<position info="not_deleted" x="965" y="0"/>
+<item historyLabel="xparameters.h" index="2">
+<position/>
 </item>
-<item historyLabel="helloworld.c" index="4">
-<position info="not_deleted" x="979" y="0"/>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1188" y="0"/>
 </item>
-<item historyLabel="xgpio.h" index="5">
-<position info="not_deleted" x="1050" y="0"/>
+<item historyLabel="xparameters.h" index="2">
+<position/>
 </item>
-<item historyLabel="helloworld.c" index="4">
-<position info="not_deleted" x="979" y="0"/>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1072" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="4">
-<position info="not_deleted" x="1074" y="0"/>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1331" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="4">
-<position info="not_deleted" x="1274" y="0"/>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1190" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="4">
-<position info="not_deleted" x="1307" y="0"/>
+<item historyLabel="xparameters.h" index="2">
+<position info="not_deleted" x="3260" y="23"/>
 </item>
-<item active="true" historyLabel="helloworld.c" index="4">
-<position info="not_deleted" x="1074" y="0"/>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1314" y="0"/>
+</item>
+<item active="true" historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1331" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -377,14 +360,17 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" tooltip="PongSoft_bsp/microblaze_0/include/xparameters.h">
+<persistable path="/PongSoft_bsp/microblaze_0/include/xparameters.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="PongSoft_bsp/system.mss">
+<persistable path="/PongSoft_bsp/system.mss"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xgpio.h" tooltip="PongSoft_bsp/microblaze_0/include/xgpio.h">
 <persistable path="/PongSoft_bsp/microblaze_0/include/xgpio.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" tooltip="PongSoft/src/helloworld.c">
 <persistable path="/PongSoft/src/helloworld.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="PongSoft_bsp/system.mss">
-<persistable path="/PongSoft_bsp/system.mss"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" tooltip="mb_hw_platform/system.xml">
 <persistable path="/mb_hw_platform/system.xml"/>

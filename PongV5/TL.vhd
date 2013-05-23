@@ -107,8 +107,27 @@ architecture Behavioral of TL is
 	signal 		output				:std_logic := '0';
 	
 	-- pixel pointer
-	signal 		pointer_line		:std_logic_vector(9 downto 0) := (others => '0');
-	signal 		pointer_pixel		:std_logic_vector(9 downto 0) := (others => '0');
+	signal 		pointer_line		:std_logic_vector(9 downto 0) 	:= (others => '0');
+	signal 		pointer_pixel		:std_logic_vector(9 downto 0) 	:= (others => '0');
+	
+	-- ChipScope
+	signal		CONTROL				:std_logic_vector(35 downto 0)	:= (others => '0');
+	signal		CLK 					:std_logic := '0';
+	signal		DATA 					:std_logic_vector(9 DOWNTO 0)		:= (others => '0');
+	signal		TRIG0 				:std_logic_vector(7 DOWNTO 0)		:= (others => '0');
+	
+	-- mb outputs
+	signal		ball_color_mb_o	:std_logic_vector(7 DOWNTO 0)		:= (others => '0');
+	
+	-- mb inputs
+	signal		mb_ballPos_XY_i	:std_logic_vector(19 downto 0)	:= (others => '0');
+	signal		mb_BatPos_L_R_i	:std_logic_vector(19 downto 0)	:= (others => '0');
+	
+	-- Detector
+	signal det_bat_left_y :STD_LOGIC_VECTOR(9 downto 0) := (others => '0');
+	signal det_bat_right_y :STD_LOGIC_VECTOR(9 downto 0) := (others => '0');
+	signal det_ball_x :STD_LOGIC_VECTOR(9 downto 0) := (others => '0');
+	signal det_ball_y :STD_LOGIC_VECTOR(9 downto 0) := (others => '0');
 		
 	----------------------------------------------------------------
 	
@@ -129,9 +148,15 @@ architecture Behavioral of TL is
 		fpga_0_Switches_8Bit_GPIO_IO_I_pin : IN std_logic_vector(0 to 7);
 		fpga_0_RS232_PORT_RX_pin : IN std_logic;
 		fpga_0_clk_1_sys_clk_pin : IN std_logic;
-		fpga_0_rst_1_sys_rst_pin : IN std_logic;          
+		fpga_0_rst_1_sys_rst_pin : IN std_logic;
+		chipscope_ila_0_DATA_pin : IN std_logic_vector(9 downto 0);
+		chipscope_ila_0_TRIG0_pin : IN std_logic_vector(1 downto 0);
+		BallPos_XY_GPIO_IO_I_pin : IN std_logic_vector(0 to 19);
+		BatPos_L_R_GPIO_IO_I_pin : IN std_logic_vector(0 to 19);          
 		fpga_0_LEDs_8Bit_GPIO_IO_O_pin : OUT std_logic_vector(0 to 7);
-		fpga_0_RS232_PORT_TX_pin : OUT std_logic
+		fpga_0_RS232_PORT_TX_pin : OUT std_logic;
+		ball_color_o_GPIO_IO_O_pin : OUT std_logic_vector(0 to 7);
+		chipscope_ila_0_TRIG_OUT_pin : OUT std_logic
 		);
 	END COMPONENT;
 
@@ -142,34 +167,29 @@ begin
 
 Inst_mb: mb PORT MAP(
 		fpga_0_LEDs_8Bit_GPIO_IO_O_pin => LEDS_O,
-		fpga_0_Push_Buttons_3Bit_GPIO_IO_I_pin => BTN_I(3 downto 0),
+		fpga_0_Push_Buttons_3Bit_GPIO_IO_I_pin => BTN_I,
 		fpga_0_Switches_8Bit_GPIO_IO_I_pin => SW_I,
 		fpga_0_RS232_PORT_RX_pin => RSRX_I,
 		fpga_0_RS232_PORT_TX_pin => RSTX_O,
 		fpga_0_clk_1_sys_clk_pin => clk_dcm_50M,
-		fpga_0_rst_1_sys_rst_pin => not dcm_lock
+		fpga_0_rst_1_sys_rst_pin => not dcm_lock,
+		ball_color_o_GPIO_IO_O_pin => ball_color_mb_o,
+		chipscope_ila_0_DATA_pin => "0000000000",
+		chipscope_ila_0_TRIG0_pin => "00",
+		chipscope_ila_0_TRIG_OUT_pin => open,
+		BallPos_XY_GPIO_IO_I_pin => "00000111110010011011",
+		BatPos_L_R_GPIO_IO_I_pin => "00100110110000011111"
 	);
 
+	
 	Inst_dcm: dcm PORT MAP(
 		CLKIN_IN => CLK_50M_I,
 		--RST_IN => ,
 		--CLKFX_OUT => clk_dcm_100M,
 		CLKFX_OUT => clk_dcm_25M,
---		CLKIN_IBUFG_OUT => ,
+		--CLKIN_IBUFG_OUT => ,
 		CLK0_OUT => clk_dcm_50M,
 		LOCKED_OUT => dcm_lock
-	);
-	
-	Inst_Filter_3x3: entity work.Filter_3x3
-	PORT MAP(
-		clk_i => clk_dcm_25M,
-		pixel_i => adc_pixel,
-		v_sync_i => adc_v_sync,
-		h_sync_i => adc_h_sync,
-		pixel_o => filter_pixel,
-		pixel_nf_o => filter_pixel_nf,
-		v_sync_o => filter_v_sync,
-		h_sync_o => filter_h_sync
 	);
 
 	Ints_ADC_signal_sync: entity work.ADC_signal_sync
@@ -183,74 +203,74 @@ Inst_mb: mb PORT MAP(
 		v_sync_o 	=> adc_v_sync,
 		h_sync_o 	=> adc_h_sync
 	);
-	
-	Inst_pixel_pointer: entity work.pixel_pointer
+		
+			
+	Inst_Filter_3x3: entity work.Filter_3x3
 	PORT MAP(
 		clk_i => clk_dcm_25M,
-		v_sync_i => filter_v_sync,
-		h_sync_i => filter_h_sync,
-		line_o => pointer_line,
-		pixel_o => pointer_pixel
+		EN_i	=> SW_I(6),
+		pixel_i => adc_pixel,
+		v_sync_i => adc_v_sync,
+		h_sync_i => adc_h_sync,
+		pixel_o => filter_pixel,
+		pixel_nf_o => filter_pixel_nf,
+		v_sync_o => filter_v_sync,
+		h_sync_o => filter_h_sync
 	);
-		
+	
+	Inst_detector: entity work.detector PORT MAP(
+		CLK_25M_I => clk_dcm_25M,
+		V_SYNC_i => filter_v_sync,
+		H_SYNC_i => filter_h_sync,
+		blue => filter_pixel,
+		bat_left_y => det_bat_left_y,
+		bat_right_y => det_bat_right_y,
+		ball_x => det_ball_x,
+		ball_y => det_ball_y
+	);
+	
 -- ADC clock outputs
 		--ADC_1_CLK_O <= clk_dcm_25M;
 		--ADC_2_CLK_O <= clk_dcm_25M;
 		ADC_3_CLK_O <= clk_dcm_25M;
-
-
--- ADC outputs
---		VGA_R_O <= "000" WHEN	adc_pixel = '0' ELSE
---              "111";
---		VGA_G_O <= "000" WHEN 	adc_pixel = '0' ELSE
---              "111";
---		VGA_B_O <= "00" WHEN 	adc_pixel = '0' ELSE
---              "11";		  
+				  
+Inst_re_color: entity work.re_color
+	PORT MAP(
+		CLK_i => clk_dcm_25M,
+		EN_i => SW_I(7),
+		PIXEL_i => filter_pixel,
+		H_SYNC_i => filter_h_sync,
+		V_SYNC_i => filter_v_sync,
+		NEW_COLOR_i => ball_color_mb_o,
+		H_SYNC_o => VGA_HS_O,
+		V_SYNC_o => VGA_VS_O,
+		RED_o => VGA_R_O,
+		GREEN_o => VGA_G_O,
+		BLUE_o => VGA_B_O
+	);
+	
+--		 Output directly from ADC
+--		VGA_HS_O <= filter_h_sync;
+--		VGA_VS_O <= filter_v_sync;
+--
+--		VGA_R_O <= 	"000" 	WHEN	filter_pixel = '0' ELSE
+--						"111";
 --				  
---		VGA_HS_O <= adc_h_sync;
---		VGA_VS_O <= adc_v_sync;
-		
--- Filter outputs
-
---		VGA_R_O <= "000" WHEN	output = '0' ELSE
---              "111";
---		VGA_G_O <= "000" WHEN 	output = '0' ELSE
---              "111";
---		VGA_B_O <= "00" WHEN 	output = '0' ELSE
---              "11";	
-
--- Pointer outputs (finding the ball region) TODO: make into an output component!!!!
-		VGA_R_O <= 	"000" 	WHEN	output = '0' ELSE
-						"111";
-				  
-		VGA_G_O <= 	"000"		WHEN 	output = '0' ELSE
-						"000"		WHEN	(pointer_pixel > "0001100000" AND pointer_pixel < "1010001110" AND SW_I(0) = '0') ELSE
-						"111";
-				  
-		VGA_B_O <= 	"00" 		WHEN 	output = '0' ELSE
-						--"00"		WHEN	(pointer_pixel > "0001100000" AND pointer_pixel < "1010001110" AND SW_I(0) = '0') ELSE
-						"11";	
-				  
-	-- FIX THIS OUTPUT SELECTION PROCESS!!!!
-	process(clk_dcm_25M) begin
-		if rising_edge(clk_dcm_25M) then
-			if SW_I(0) = '1' then
-				output <= adc_pixel;
-				VGA_HS_O <= adc_h_sync;
-				VGA_VS_O <= adc_v_sync;
-			else
-				output <= filter_pixel;
-				VGA_HS_O <= filter_h_sync;
-				VGA_VS_O <= filter_v_sync;
-			end if;
-			
-		end if;
-	end process;
-				  
-
-		
+--		VGA_G_O <= 	"000"		WHEN 	filter_pixel = '0' ELSE
+--						"111";
+--				  
+--		VGA_B_O <= 	"00" 		WHEN 	filter_pixel = '0' ELSE
+--						"11";	
+	
 -- connect buttons to LEDs
 		--LEDS_O <= BTN_I & BTN_I;
+		
+	mb_BatPos_L_R_i <= "00000111110010011011" when SW_I(4) = '0' ELSE
+							det_bat_left_y & det_bat_right_y;
+	
+	
+	mb_ballPos_XY_i <= "00100110110000011111" when SW_I(4) = '0' ELSE
+							det_ball_x & det_ball_y;
 		
 end Behavioral;
 

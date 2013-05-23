@@ -31,20 +31,25 @@ void print(char *str);
 int main()
 {
 	int i = 0;
-	uint32_t *ptr_pushButtons, *ptr_LEDs;
-	ptr_pushButtons = XPAR_PUSH_BUTTONS_3BIT_BASEADDR;
-	ptr_LEDs = XPAR_LEDS_8BIT_BASEADDR;
+	uint32_t counter = 0;
+//	uint32_t *ptr_pushButtons, *ptr_LEDs, *ptr_ballColor;
+	volatile uint32_t* ptr_pushButtons = ((volatile uint32_t*)(XPAR_PUSH_BUTTONS_3BIT_BASEADDR));
+	volatile uint32_t* ptr_LEDs = ((volatile uint32_t*)(XPAR_LEDS_8BIT_BASEADDR));
+	volatile uint32_t* ptr_ballColor = ((volatile uint32_t*)(XPAR_BALL_COLOR_O_BASEADDR));
 
     init_platform();
 
     print("Hello World\n\r");
 
     while(1){
+    	counter++;
+    	*ptr_ballColor = counter;
+
     	// Set LEDs according to push buttons
     	*ptr_LEDs = *ptr_pushButtons;
 
     	// Delay
-    	for (i = 0;  i < 10000; ++ i);
+    	for (i = 0;  i < 500000; ++ i);
     }
 
     return 0;

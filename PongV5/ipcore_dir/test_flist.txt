@@ -1,0 +1,19 @@
+# Output products list for <test>
+_xmsgs\pn_parser.xmsgs
+test.asy
+test.cdc
+test.constraints\test.ucf
+test.constraints\test.xdc
+test.gise
+test.ncf
+test.ngc
+test.sym
+test.ucf
+test.vhd
+test.vho
+test.xco
+test.xdc
+test.xise
+test_flist.txt
+test_readme.txt
+test_xmdf.tcl

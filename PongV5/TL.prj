@@ -1,6 +1,8 @@
 vhdl work "C:/XilinxWorkSpace/PongV5/mb/hdl/mb.vhd"
 vhdl work "pixel_pointer.vhd"
+vhdl work "re_color.vhd"
 vhdl work "dcm.vhd"
 vhdl work "Filter_3x3.vhd"
+vhdl work "detector.vhd"
 vhdl work "ADC_signal_sync.vhd"
 vhdl work "TL.vhd"

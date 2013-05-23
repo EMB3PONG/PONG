@@ -46,8 +46,8 @@ end ADC_signal_sync;
 architecture Behavioral of ADC_signal_sync is
 
 -- Signals
-signal v_sync_sr 		: STD_LOGIC_VECTOR(5 downto 0) 	:= (others => '0');
-signal h_sync_sr 		: STD_LOGIC_VECTOR(5 downto 0) 	:= (others => '0');
+signal v_sync_sr 		: STD_LOGIC_VECTOR(32 downto 0) 	:= (others => '0');
+signal h_sync_sr 		: STD_LOGIC_VECTOR(32 downto 0) 	:= (others => '0');
 signal blue_r 			: STD_LOGIC 							:= '0';
 
 begin
@@ -59,8 +59,8 @@ begin
 				blue_r 	<= blue_i;
 				
 				-- Shift delay for sync signals
-				v_sync_sr <= v_sync_sr(4 downto 0) & v_sync_i;
-				h_sync_sr <= h_sync_sr(4 downto 0) & h_sync_i;
+				v_sync_sr <= v_sync_sr(31 downto 0) & v_sync_i;
+				h_sync_sr <= h_sync_sr(31 downto 0) & h_sync_i;
 				
 			end if;
 		end process;
@@ -72,8 +72,8 @@ pixel_o <= blue_r;
 --             '0';
 
 -- Output the delayed sync signals (6 clock pulses)
-v_sync_o <= v_sync_sr(5);
-h_sync_o <= h_sync_sr(5);
+v_sync_o <= v_sync_sr(13);
+h_sync_o <= h_sync_sr(13);
 
 -- output the clock signa for the ADC
 ADC_clk_o <= clk_i;

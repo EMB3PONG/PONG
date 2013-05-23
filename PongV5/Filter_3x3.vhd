@@ -30,14 +30,15 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity Filter_3x3 is
-    Port ( clk_i : in  STD_LOGIC;
-           pixel_i : in  STD_LOGIC;
-           v_sync_i : in  STD_LOGIC;
-           h_sync_i : in  STD_LOGIC;
-           pixel_o : out  STD_LOGIC;
-			  pixel_nf_o : out  STD_LOGIC;
-           v_sync_o : out  STD_LOGIC;
-           h_sync_o : out  STD_LOGIC);
+    Port (	clk_i : in  STD_LOGIC;
+				EN_i		: in STD_LOGIC;
+				pixel_i : in  STD_LOGIC;
+				v_sync_i : in  STD_LOGIC;
+				h_sync_i : in  STD_LOGIC;
+				pixel_o : out  STD_LOGIC;
+				pixel_nf_o : out  STD_LOGIC;
+				v_sync_o : out  STD_LOGIC;
+				h_sync_o : out  STD_LOGIC);
 end Filter_3x3;
 
 architecture Behavioral of Filter_3x3 is
@@ -138,10 +139,16 @@ process(clk_i) begin
 end process;
 	
 	-- Output logic
-	pixel_o 		<= pixel_next;
-	pixel_nf_o 	<= pixel_nf_next;
-	v_sync_o 	<= v_sync_next;
-	h_sync_o 	<= h_sync_next;
+--	pixel_o 		<= pixel_next;
+--	pixel_nf_o 	<= pixel_nf_next;
+--	v_sync_o 	<= v_sync_next;
+--	h_sync_o 	<= h_sync_next;
+	
+	pixel_o 		<= pixel_next 			WHEN	EN_i = '1'	ELSE pixel_i;
+	pixel_nf_o 	<= pixel_nf_next 		WHEN	EN_i = '1'	ELSE pixel_i;
+	v_sync_o 	<= v_sync_next			WHEN	EN_i = '1'	ELSE v_sync_i;
+	h_sync_o 	<= h_sync_next			WHEN	EN_i = '1'	ELSE h_sync_i;
+	
 
 end Behavioral;
 

@@ -1,13 +1,24 @@
 Release 14.4 - par P.49d (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Thu May 16 21:11:59 2013
+Thu May 23 14:39:25 2013
 
 All signals are completely routed.
 
-WARNING:ParHelpers:361 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC
+WARNING:ParHelpers:361 - There are 13 loadless signals in this design. This design will cause Bitgen to issue DRC
    warnings.
 
+   Inst_mb/chipscope_icon_0/chipscope_icon_0/i_chipscope_icon_0/U0/U_ICON/iTDO_VEC<15>
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<0>
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<1>
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<2>
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<3>
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<4>
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<5>
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/muxAddrFF<0>
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/muxAddrFF<1>
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/muxAddrFF<2>
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/iSTAT_DOUT
    Inst_mb/dlmb_LMB_ABus<30>
    Inst_mb/dlmb_LMB_ABus<31>
 

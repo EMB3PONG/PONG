@@ -3,7 +3,7 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:\XilinxWorkSpace\PongV5\mb\synthesis\xst_temp_dir\
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.13 secs
  
 --> 
@@ -30,7 +30,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "mb_rs232_port_wrapper_xst.prj"
-Verilog Include Directory          : {"C:\XilinxWorkSpace\PongV5\mb\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\data\wizards\BsbCores\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\data\wizards\ipxact\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+Verilog Include Directory          : {"C:\XilinxWorkSpace\PongV5\mb\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
 
 ---- Target Parameters
 Target Device                      : xc3s500efg320-4
@@ -1275,12 +1275,12 @@ Offset:              0.591ns (Levels of Logic = 0)
 =========================================================================
 
 
-Total REAL time to Xst completion: 33.00 secs
-Total CPU time to Xst completion: 32.16 secs
+Total REAL time to Xst completion: 32.00 secs
+Total CPU time to Xst completion: 31.49 secs
  
 --> 
 
-Total memory usage is 725740 kilobytes
+Total memory usage is 724332 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  168 (   0 filtered)

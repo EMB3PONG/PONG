@@ -25,19 +25,18 @@ Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
 Address Map for Processor microblaze_0
   (0000000000-0x00001fff) dlmb_cntlr	dlmb
   (0000000000-0x00001fff) ilmb_cntlr	ilmb
-  (0x81400000-0x8140ffff) Switches_8Bit	mb_plb
-  (0x81420000-0x8142ffff) Push_Buttons_3Bit	mb_plb
-  (0x81440000-0x8144ffff) LEDs_8Bit	mb_plb
+  (0x81400000-0x8140ffff) ball_color_o	mb_plb
+  (0x81420000-0x8142ffff) Switches_8Bit	mb_plb
+  (0x81440000-0x8144ffff) Push_Buttons_3Bit	mb_plb
+  (0x81460000-0x8146ffff) LEDs_8Bit	mb_plb
+  (0x81480000-0x8148ffff) BatPos_L_R	mb_plb
+  (0x814a0000-0x814affff) BallPos_XY	mb_plb
   (0x84000000-0x8400ffff) RS232_PORT	mb_plb
   (0x84400000-0x8440ffff) mdm_0	mb_plb
 INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
    C_PLBV46_NUM_MASTERS value to 2 -
    C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
    \plb_v46_v2_1_0.mpd line 79 
-INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
-   C_PLBV46_NUM_SLAVES value to 5 -
-   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
-   \plb_v46_v2_1_0.mpd line 80 
 INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
    C_PLBV46_MID_WIDTH value to 1 -
    C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
@@ -82,17 +81,60 @@ INFO:EDK:4130 - IPNAME: mdm, INSTANCE:mdm_0 - tool is overriding PARAMETER
    C_SPLB_NUM_MASTERS value to 2 -
    C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_10_a\data\mdm
    _v2_1_0.mpd line 119 
+INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:ball_color_o - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:BatPos_L_R - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:BallPos_XY - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 82 
 
 Checking platform address map ...
 
 Checking platform configuration ...
-IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 5 slave(s) 
+IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 8 slave(s) 
 IPNAME: lmb_v10, INSTANCE: ilmb - 1 master(s) : 1 slave(s) 
 IPNAME: lmb_v10, INSTANCE: dlmb - 1 master(s) : 1 slave(s) 
 
 Checking port drivers...
+WARNING:EDK:4180 - PORT: tdi_in, CONNECTOR: bscan_tdi - No driver found. Port
+   will be driven to GND -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 101 
+WARNING:EDK:4180 - PORT: reset_in, CONNECTOR: bscan_reset - No driver found.
+   Port will be driven to GND -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 102 
+WARNING:EDK:4180 - PORT: shift_in, CONNECTOR: bscan_shift - No driver found.
+   Port will be driven to GND -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 103 
+WARNING:EDK:4180 - PORT: update_in, CONNECTOR: bscan_update - No driver found.
+   Port will be driven to GND -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 104 
+WARNING:EDK:4180 - PORT: sel_in, CONNECTOR: bscan_sel1 - No driver found. Port
+   will be driven to GND -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 105 
+WARNING:EDK:4180 - PORT: drck_in, CONNECTOR: bscan_drck1 - No driver found. Port
+   will be driven to GND -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 106 
+WARNING:EDK:4180 - PORT: capture_in, CONNECTOR: bscan_capture - No driver found.
+   Port will be driven to GND -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 107 
 WARNING:EDK:4181 - PORT: Peripheral_Reset, CONNECTOR: sys_periph_reset -
-   floating connection - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 177 
+   floating connection - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 183 
+WARNING:EDK:4181 - PORT: tdo_out, CONNECTOR: bscan_tdo1 - floating connection -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 108 
 
 Performing Clock DRCs...
 
@@ -131,6 +173,10 @@ INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:ilmb_cntlr - tcl is
    overriding PARAMETER C_MASK value to 0x80000000 -
    C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3
    _10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: chipscope_icon, INSTANCE:chipscope_icon_0 - tcl is
+   overriding PARAMETER C_SYSTEM_CONTAINS_MDM value to 1 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 81 
 
 Running system level update procedures...
 
@@ -141,6 +187,7 @@ Running system level DRCs...
 Performing System level DRCs on properties...
 
 Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Chipscope Integrate Controller, instance 'chipscope_icon', exists in System 
 
 Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
 INFO: The microblaze_0 core has constraints automatically generated by XPS in
@@ -166,44 +213,143 @@ Completion time: 0.00 seconds
 Creating hardware output directories ...
 
 Managing hardware (BBD-specified) netlist files ...
+IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
+C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 196 - Copying (BBD-specified) netlist
+files.
+IPNAME:chipscope_ila INSTANCE:chipscope_ila_0 -
+C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 202 - Copying (BBD-specified) netlist
+files.
 
 Managing cache ...
-IPNAME:microblaze INSTANCE:microblaze_0 - C:\XilinxWorkSpace\PongV5\mb\mb.mhs
-line 27 - Copying cache implementation netlist
-IPNAME:plb_v46 INSTANCE:mb_plb - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 41 -
-Copying cache implementation netlist
-IPNAME:lmb_v10 INSTANCE:ilmb - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 48 -
-Copying cache implementation netlist
-IPNAME:lmb_v10 INSTANCE:dlmb - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 55 -
-Copying cache implementation netlist
-IPNAME:lmb_bram_if_cntlr INSTANCE:dlmb_cntlr -
-C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 62 - Copying cache implementation
-netlist
-IPNAME:lmb_bram_if_cntlr INSTANCE:ilmb_cntlr -
-C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 71 - Copying cache implementation
-netlist
-IPNAME:bram_block INSTANCE:lmb_bram - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line
-80 - Copying cache implementation netlist
-IPNAME:xps_gpio INSTANCE:leds_8bit - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 87
-- Copying cache implementation netlist
-IPNAME:xps_gpio INSTANCE:switches_8bit - C:\XilinxWorkSpace\PongV5\mb\mb.mhs
-line 113 - Copying cache implementation netlist
-IPNAME:xps_uartlite INSTANCE:rs232_port - C:\XilinxWorkSpace\PongV5\mb\mb.mhs
-line 126 - Copying cache implementation netlist
-IPNAME:mdm INSTANCE:mdm_0 - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 155 -
-Copying cache implementation netlist
-IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
-C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 167 - Copying cache implementation
-netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:lmb_bram - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line
-80 - elaborating IP
+86 - elaborating IP
 IPNAME:clock_generator INSTANCE:clock_generator_0 -
-C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 140 - elaborating IP
+C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 146 - elaborating IP
 ClkGen elaborate status: PASSED
 ----------------------------------------
 ----------------------------------------
+IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
+C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 196 - elaborating IP
+Created elaborate directory hdl/elaborate/chipscope_icon_0_v1_06_a/synhdl/vhdl/
+Generating ChipScope core: chipscope_icon_0 ...
+ChipScope Core Generator command: coregen.exe -b C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_icon_0.xco
+Release 14.4 - Xilinx CORE Generator P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+All runtime messages will be recorded in
+C:\XilinxWorkSpace\PongV5\mb\implementation\chipscope_icon_0_wrapper\coregen.log
+Updating project device from '3s500e' to 'xc3s500e'.
+Wrote CGP file for project 'coregen'.
+Resolving generic values...
+Finished resolving generic values.
+Generating IP...
+Configuring files for chipscope_icon_0 root...
+Gathering HDL files for chipscope_icon_0 root...
+Creating XST project for chipscope_icon_0...
+Creating XST script file for chipscope_icon_0...
+Creating XST instantiation file for chipscope_icon_0...
+Running XST for chipscope_icon_0...
+XST: HDL Compilation
+XST: Design Hierarchy Analysis
+XST: HDL Analysis
+XST: HDL Synthesis
+XST: Advanced HDL Synthesis
+XST: Low Level Synthesis
+Not generating VHDL wrapper
+Not generating Verilog wrapper
+Skipping VHDL instantiation template for chipscope_icon_0...
+Skipping Verilog instantiation template for chipscope_icon_0...
+Finished Generation.
+Generating IP instantiation template...
+Generating ASY schematic symbol...
+Generating metadata file...
+Generating ISE project...
+XCO file found: chipscope_icon_0.xco
+XMDF file found: chipscope_icon_0_xmdf.tcl
+Adding
+C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg/chi
+pscope_icon_0.asy -view all -origin_type imported
+Adding
+C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg/chi
+pscope_icon_0.ngc -view all -origin_type created
+Checking file
+"C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg/ch
+ipscope_icon_0.ngc" for project device match ...
+File
+"C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_icon_0_wrapper/tmp/_cg/ch
+ipscope_icon_0.ngc" device information matches project device.
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/chipscope_icon_0"
+Generating README file...
+Generating FLIST file...
+Moving files to output directory...
+Finished moving files to output directory
+Saved CGP file for project 'coregen'.
+*************************************************************
+IPNAME:chipscope_ila INSTANCE:chipscope_ila_0 -
+C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 202 - elaborating IP
+Created elaborate directory hdl/elaborate/chipscope_ila_0_v1_05_a/synhdl/vhdl/
+Generating ChipScope core: chipscope_ila_0 ...
+ChipScope Core Generator command: coregen.exe -b C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_ila_0.xco
+Release 14.4 - Xilinx CORE Generator P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+All runtime messages will be recorded in
+C:\XilinxWorkSpace\PongV5\mb\implementation\chipscope_ila_0_wrapper\coregen.log
+Updating project device from '3s500e' to 'xc3s500e'.
+Wrote CGP file for project 'coregen'.
+Resolving generic values...
+Finished resolving generic values.
+Generating IP...
+Configuring files for chipscope_ila_0 root...
+Gathering HDL files for chipscope_ila_0 root...
+Creating XST project for chipscope_ila_0...
+Creating XST script file for chipscope_ila_0...
+Creating XST instantiation file for chipscope_ila_0...
+Running XST for chipscope_ila_0...
+XST: HDL Compilation
+XST: Design Hierarchy Analysis
+XST: HDL Analysis
+XST: HDL Synthesis
+XST: Advanced HDL Synthesis
+XST: Low Level Synthesis
+Not generating VHDL wrapper
+Not generating Verilog wrapper
+Skipping VHDL instantiation template for chipscope_ila_0...
+Skipping Verilog instantiation template for chipscope_ila_0...
+Finished Generation.
+Generating IP instantiation template...
+Generating ASY schematic symbol...
+Generating metadata file...
+Generating ISE project...
+XCO file found: chipscope_ila_0.xco
+XMDF file found: chipscope_ila_0_xmdf.tcl
+Adding
+C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_ila_0_wrapper/tmp/_cg/chip
+scope_ila_0.asy -view all -origin_type imported
+Adding
+C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_ila_0_wrapper/tmp/_cg/chip
+scope_ila_0.ngc -view all -origin_type created
+Checking file
+"C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_ila_0_wrapper/tmp/_cg/chi
+pscope_ila_0.ngc" for project device match ...
+File
+"C:/XilinxWorkSpace/PongV5/mb/implementation/chipscope_ila_0_wrapper/tmp/_cg/chi
+pscope_ila_0.ngc" device information matches project device.
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/chipscope_ila_0"
+Generating README file...
+Generating FLIST file...
+Moving files to output directory...
+Finished moving files to output directory
+Saved CGP file for project 'coregen'.
+*************************************************************
 
 Writing HDL for elaborated instances ...
 
@@ -224,18 +370,62 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:push_buttons_3bit - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 100 -
+INSTANCE:microblaze_0 - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 33 - Running
+XST synthesis
+INSTANCE:mb_plb - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 47 - Running XST
+synthesis
+INSTANCE:ilmb - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 54 - Running XST
+synthesis
+INSTANCE:dlmb - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 61 - Running XST
+synthesis
+INSTANCE:dlmb_cntlr - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 68 - Running XST
+synthesis
+INSTANCE:ilmb_cntlr - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 77 - Running XST
+synthesis
+INSTANCE:lmb_bram - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 86 - Running XST
+synthesis
+INSTANCE:leds_8bit - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 93 - Running XST
+synthesis
+INSTANCE:push_buttons_3bit - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 106 -
 Running XST synthesis
-INSTANCE:clock_generator_0 - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 140 -
+INSTANCE:switches_8bit - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 119 - Running
+XST synthesis
+INSTANCE:rs232_port - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 132 - Running XST
+synthesis
+INSTANCE:clock_generator_0 - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 146 -
 Running XST synthesis
+INSTANCE:mdm_0 - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 161 - Running XST
+synthesis
+INSTANCE:proc_sys_reset_0 - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 173 -
+Running XST synthesis
+INSTANCE:ball_color_o - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 186 - Running
+XST synthesis
+INSTANCE:chipscope_icon_0 - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 196 -
+Running XST synthesis
+INSTANCE:chipscope_ila_0 - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 202 -
+Running XST synthesis
+INSTANCE:batpos_l_r - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 217 - Running XST
+synthesis
+INSTANCE:ballpos_xy - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 228 - Running XST
+synthesis
 
 Running NGCBUILD ...
+IPNAME:mb_microblaze_0_wrapper INSTANCE:microblaze_0 -
+C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 33 - Running NGCBUILD
+IPNAME:mb_ilmb_wrapper INSTANCE:ilmb - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line
+54 - Running NGCBUILD
+IPNAME:mb_dlmb_wrapper INSTANCE:dlmb - C:\XilinxWorkSpace\PongV5\mb\mb.mhs line
+61 - Running NGCBUILD
 IPNAME:mb_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
-C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 140 - Running NGCBUILD
+C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 146 - Running NGCBUILD
+IPNAME:mb_chipscope_icon_0_wrapper INSTANCE:chipscope_icon_0 -
+C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 196 - Running NGCBUILD
+IPNAME:mb_chipscope_ila_0_wrapper INSTANCE:chipscope_ila_0 -
+C:\XilinxWorkSpace\PongV5\mb\mb.mhs line 202 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/mb.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 56.00 seconds
+Total run time: 1022.00 seconds

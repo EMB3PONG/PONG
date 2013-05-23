@@ -75,7 +75,12 @@ implementation/mb_switches_8bit_wrapper.ngc \
 implementation/mb_rs232_port_wrapper.ngc \
 implementation/mb_clock_generator_0_wrapper.ngc \
 implementation/mb_mdm_0_wrapper.ngc \
-implementation/mb_proc_sys_reset_0_wrapper.ngc
+implementation/mb_proc_sys_reset_0_wrapper.ngc \
+implementation/mb_ball_color_o_wrapper.ngc \
+implementation/mb_chipscope_icon_0_wrapper.ngc \
+implementation/mb_chipscope_ila_0_wrapper.ngc \
+implementation/mb_batpos_l_r_wrapper.ngc \
+implementation/mb_ballpos_xy_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

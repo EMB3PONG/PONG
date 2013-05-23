@@ -5,9 +5,9 @@ C:\Xilinx\14.4\ISE_DS\ISE\.
    "TL" is an NCD, version 3.2, device xc3s500e, package fg320, speed -4
 Opened constraints file TL.pcf.
 
-Thu May 16 21:12:15 2013
+Thu May 23 14:39:43 2013
 
-C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:1 -g ProgPin:PullUp -g DonePin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g DCMShutdown:Disable -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:Yes -g DriveDone:No TL.ncd 
+C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:1 -g ProgPin:PullUp -g DonePin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g DCMShutdown:Disable -g StartUpClk:JtagClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:Yes -g DriveDone:No TL.ncd 
 
 Summary of Bitgen Options:
 +----------------------+----------------------+
@@ -23,7 +23,7 @@ Summary of Bitgen Options:
 +----------------------+----------------------+
 | ConfigRate           | 1**                  |
 +----------------------+----------------------+
-| StartupClk           | Cclk**               |
+| StartupClk           | JtagClk              |
 +----------------------+----------------------+
 | DCMShutdown          | Disable**            |
 +----------------------+----------------------+
@@ -90,14 +90,66 @@ There were 0 CONFIG constraint(s) processed from TL.pcf.
 
 
 Running DRC.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Inst_mb/chipscope_icon_0_control0<13> is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal
+   <Inst_mb/chipscope_icon_0/chipscope_icon_0/i_chipscope_icon_0/U0/U_ICON/iTDO_
+   VEC<15>> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U
+   _CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<5>> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U
+   _CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<4>> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U
+   _CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<3>> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U
+   _CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<2>> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U
+   _CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<1>> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U
+   _CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<0>> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/i
+   STAT_DOUT> is incomplete. The signal does not drive any load pins in the
+   design.
 WARNING:PhysDesignRules:367 - The signal <Inst_mb/dlmb_LMB_ABus<31>> is
    incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U
+   _CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/muxAddrFF<1>> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U
+   _CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/muxAddrFF<0>> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U
+   _CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/muxAddrFF<2>> is incomplete. The signal
+   does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <Inst_mb/dlmb_LMB_ABus<30>> is
    incomplete. The signal does not drive any load pins in the design.
 INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
    with the CLKFX and CLKFX180 outputs of the DCM comp Inst_dcm/DCM_SP_INST,
    consult the device Interactive Data Sheet.
-DRC detected 0 errors and 2 warnings.  Please see the previously displayed
+WARNING:PhysDesignRules:774 - Unexpected DCM configuration. CLKOUT_PHASE_SHIFT
+   is not configured VARIABLE for comp Inst_dcm/DCM_SP_INST. The PSEN pin is
+   connected to an active signal. The PSEN pin should be connected to GND to
+   guarantee the expected operation.
+DRC detected 0 errors and 15 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
 Creating bit map...
 Saving bit stream in "tl.bit".

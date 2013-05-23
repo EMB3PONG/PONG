@@ -17,6 +17,59 @@
 
 /******************************************************************/
 
+/* Definitions for driver GPIO */
+#define XPAR_XGPIO_NUM_INSTANCES 6
+
+/* Definitions for peripheral BALL_COLOR_O */
+#define XPAR_BALL_COLOR_O_BASEADDR 0x81400000
+#define XPAR_BALL_COLOR_O_HIGHADDR 0x8140FFFF
+#define XPAR_BALL_COLOR_O_DEVICE_ID 0
+#define XPAR_BALL_COLOR_O_INTERRUPT_PRESENT 0
+#define XPAR_BALL_COLOR_O_IS_DUAL 0
+
+
+/* Definitions for peripheral BALLPOS_XY */
+#define XPAR_BALLPOS_XY_BASEADDR 0x814A0000
+#define XPAR_BALLPOS_XY_HIGHADDR 0x814AFFFF
+#define XPAR_BALLPOS_XY_DEVICE_ID 1
+#define XPAR_BALLPOS_XY_INTERRUPT_PRESENT 0
+#define XPAR_BALLPOS_XY_IS_DUAL 0
+
+
+/* Definitions for peripheral BATPOS_L_R */
+#define XPAR_BATPOS_L_R_BASEADDR 0x81480000
+#define XPAR_BATPOS_L_R_HIGHADDR 0x8148FFFF
+#define XPAR_BATPOS_L_R_DEVICE_ID 2
+#define XPAR_BATPOS_L_R_INTERRUPT_PRESENT 0
+#define XPAR_BATPOS_L_R_IS_DUAL 0
+
+
+/* Definitions for peripheral LEDS_8BIT */
+#define XPAR_LEDS_8BIT_BASEADDR 0x81460000
+#define XPAR_LEDS_8BIT_HIGHADDR 0x8146FFFF
+#define XPAR_LEDS_8BIT_DEVICE_ID 3
+#define XPAR_LEDS_8BIT_INTERRUPT_PRESENT 0
+#define XPAR_LEDS_8BIT_IS_DUAL 0
+
+
+/* Definitions for peripheral PUSH_BUTTONS_3BIT */
+#define XPAR_PUSH_BUTTONS_3BIT_BASEADDR 0x81440000
+#define XPAR_PUSH_BUTTONS_3BIT_HIGHADDR 0x8144FFFF
+#define XPAR_PUSH_BUTTONS_3BIT_DEVICE_ID 4
+#define XPAR_PUSH_BUTTONS_3BIT_INTERRUPT_PRESENT 0
+#define XPAR_PUSH_BUTTONS_3BIT_IS_DUAL 0
+
+
+/* Definitions for peripheral SWITCHES_8BIT */
+#define XPAR_SWITCHES_8BIT_BASEADDR 0x81420000
+#define XPAR_SWITCHES_8BIT_HIGHADDR 0x8142FFFF
+#define XPAR_SWITCHES_8BIT_DEVICE_ID 5
+#define XPAR_SWITCHES_8BIT_INTERRUPT_PRESENT 0
+#define XPAR_SWITCHES_8BIT_IS_DUAL 0
+
+
+/******************************************************************/
+
 /* Definitions for driver BRAM */
 #define XPAR_XBRAM_NUM_INSTANCES 2
 
@@ -83,35 +136,6 @@
 #define XPAR_BRAM_1_WRITE_ACCESS 2
 #define XPAR_BRAM_1_BASEADDR 0x00000000
 #define XPAR_BRAM_1_HIGHADDR 0x00001FFF
-
-
-/******************************************************************/
-
-/* Definitions for driver GPIO */
-#define XPAR_XGPIO_NUM_INSTANCES 3
-
-/* Definitions for peripheral LEDS_8BIT */
-#define XPAR_LEDS_8BIT_BASEADDR 0x81440000
-#define XPAR_LEDS_8BIT_HIGHADDR 0x8144FFFF
-#define XPAR_LEDS_8BIT_DEVICE_ID 0
-#define XPAR_LEDS_8BIT_INTERRUPT_PRESENT 0
-#define XPAR_LEDS_8BIT_IS_DUAL 0
-
-
-/* Definitions for peripheral PUSH_BUTTONS_3BIT */
-#define XPAR_PUSH_BUTTONS_3BIT_BASEADDR 0x81420000
-#define XPAR_PUSH_BUTTONS_3BIT_HIGHADDR 0x8142FFFF
-#define XPAR_PUSH_BUTTONS_3BIT_DEVICE_ID 1
-#define XPAR_PUSH_BUTTONS_3BIT_INTERRUPT_PRESENT 0
-#define XPAR_PUSH_BUTTONS_3BIT_IS_DUAL 0
-
-
-/* Definitions for peripheral SWITCHES_8BIT */
-#define XPAR_SWITCHES_8BIT_BASEADDR 0x81400000
-#define XPAR_SWITCHES_8BIT_HIGHADDR 0x8140FFFF
-#define XPAR_SWITCHES_8BIT_DEVICE_ID 2
-#define XPAR_SWITCHES_8BIT_INTERRUPT_PRESENT 0
-#define XPAR_SWITCHES_8BIT_IS_DUAL 0
 
 
 /******************************************************************/

@@ -1,0 +1,2 @@
+vhdl work "pixel_pointer.vhd"
+vhdl work "re_color.vhd"

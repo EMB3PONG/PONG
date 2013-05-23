@@ -1,7 +1,7 @@
 Release 14.4 par P.49d (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-PALLI-XPS::  Thu May 16 21:11:15 2013
+PALLI-XPS::  Thu May 23 14:38:30 2013
 
 par -w -intstyle ise -ol high -t 1 TL_map.ncd TL.ncd TL.pcf 
 
@@ -37,12 +37,12 @@ Design Summary Report:
 
 
    Number of BSCANs                          1 out of 1     100%
-   Number of BUFGMUXs                        4 out of 24     16%
+   Number of BUFGMUXs                        5 out of 24     20%
    Number of DCMs                            2 out of 4      50%
    Number of MULT18X18SIOs                   3 out of 20     15%
-   Number of RAMB16s                         4 out of 20     20%
-   Number of Slices                       1788 out of 4656   38%
-      Number of SLICEMs                    314 out of 2328   13%
+   Number of RAMB16s                        10 out of 20     50%
+   Number of Slices                       2350 out of 4656   50%
+      Number of SLICEMs                    376 out of 2328   16%
 
 
 
@@ -51,53 +51,88 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 3 secs 
-Finished initial Timing Analysis.  REAL time: 4 secs 
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please
+   consult the Xilinx Command Line Tools User Guide for information on generating a TSI report.
+Starting initial Timing Analysis.  REAL time: 4 secs 
+Finished initial Timing Analysis.  REAL time: 5 secs 
 
+WARNING:Par:288 - The signal Inst_mb/chipscope_icon_0/chipscope_icon_0/i_chipscope_icon_0/U0/U_ICON/iTDO_VEC<15> has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/loca
+   lDOA<5> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/loca
+   lDOA<4> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/loca
+   lDOA<3> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/loca
+   lDOA<2> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/loca
+   lDOA<1> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/loca
+   lDOA<0> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/iSTAT_DOUT has
+   no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal Inst_mb/dlmb_LMB_ABus<31> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/muxA
+   ddrFF<1> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/muxA
+   ddrFF<0> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   Inst_mb/chipscope_ila_0/chipscope_ila_0/i_chipscope_ila_0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/muxA
+   ddrFF<2> has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal Inst_mb/dlmb_LMB_ABus<30> has no load.  PAR will not attempt to route this signal.
 
 Starting Placer
-Total REAL time at the beginning of Placer: 4 secs 
-Total CPU  time at the beginning of Placer: 4 secs 
+Total REAL time at the beginning of Placer: 5 secs 
+Total CPU  time at the beginning of Placer: 5 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:f2f405b2) REAL time: 5 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:e167972d) REAL time: 6 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:f2f405b2) REAL time: 5 secs 
+Phase 2.7  Design Feasibility Check (Checksum:e167972d) REAL time: 6 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:4994b256) REAL time: 5 secs 
+Phase 3.31  Local Placement Optimization (Checksum:4f7f0a2b) REAL time: 6 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:f2fc5243) REAL time: 6 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:3c66d4be) REAL time: 7 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:f2fc5243) REAL time: 6 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:3c66d4be) REAL time: 7 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:f2fc5243) REAL time: 6 secs 
+Phase 6.36  Local Placement Optimization (Checksum:3c66d4be) REAL time: 7 secs 
 
 Phase 7.8  Global Placement
-................................
-................................................
-.............................
-....................
-Phase 7.8  Global Placement (Checksum:ec892d99) REAL time: 17 secs 
+...............................
+.................................................................
+......................
+........................................................................
+........
+...............
+Phase 7.8  Global Placement (Checksum:4aab010a) REAL time: 27 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:ec892d99) REAL time: 18 secs 
+Phase 8.5  Local Placement Optimization (Checksum:4aab010a) REAL time: 27 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:beccbbdc) REAL time: 24 secs 
+Phase 9.18  Placement Optimization (Checksum:53b15385) REAL time: 32 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:beccbbdc) REAL time: 24 secs 
+Phase 10.5  Local Placement Optimization (Checksum:53b15385) REAL time: 32 secs 
 
-Total REAL time to Placer completion: 24 secs 
-Total CPU  time to Placer completion: 24 secs 
+Total REAL time to Placer completion: 33 secs 
+Total CPU  time to Placer completion: 32 secs 
 Writing design to file TL.ncd
 
 
@@ -105,30 +140,30 @@ Writing design to file TL.ncd
 Starting Router
 
 
-Phase  1  : 12582 unrouted;      REAL time: 31 secs 
+Phase  1  : 16383 unrouted;      REAL time: 40 secs 
 
-Phase  2  : 10923 unrouted;      REAL time: 32 secs 
+Phase  2  : 13864 unrouted;      REAL time: 41 secs 
 
-Phase  3  : 3300 unrouted;      REAL time: 34 secs 
+Phase  3  : 4369 unrouted;      REAL time: 43 secs 
 
-Phase  4  : 3300 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 35 secs 
+Phase  4  : 4369 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 44 secs 
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 39 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 49 secs 
 
 Updating file: TL.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 41 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 51 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 41 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 52 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 42 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 53 secs 
 WARNING:Route:455 - CLK Net:ADC_3_CLK_O_OBUF may have excessive skew because 
       0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
-WARNING:Route:455 - CLK Net:Inst_mb/mdm_0/Dbg_Update_1 may have excessive skew because 
-      3 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:Inst_mb/chipscope_icon_0_control0<13> may have excessive skew because 
+      1 CLK pins and 3 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 42 secs 
-Total CPU time to Router completion: 42 secs 
+Total REAL time to Router completion: 53 secs 
+Total CPU time to Router completion: 52 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -147,17 +182,25 @@ Generating Clock Report
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_mb/clk_50_0000M |              |      |      |            |             |
-|                  Hz |  BUFGMUX_X1Y0| No   |  943 |  0.081     |  0.198      |
+|                  Hz |  BUFGMUX_X1Y0| No   | 1251 |  0.082     |  0.199      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_mb/mdm_0/Dbg_Cl |              |      |      |            |             |
-|                 k_1 |  BUFGMUX_X2Y1| No   |  116 |  0.067     |  0.185      |
+|                 k_1 |  BUFGMUX_X2Y1| No   |  116 |  0.083     |  0.201      |
 +---------------------+--------------+------+------+------------+-------------+
-|    ADC_3_CLK_O_OBUF | BUFGMUX_X1Y10| No   |  130 |  0.044     |  0.174      |
+|         clk_dcm_50M | BUFGMUX_X2Y11| No   |  115 |  0.069     |  0.187      |
 +---------------------+--------------+------+------+------------+-------------+
-|         clk_dcm_50M | BUFGMUX_X2Y11| No   |    5 |  0.020     |  0.171      |
+|    ADC_3_CLK_O_OBUF | BUFGMUX_X1Y10| No   |  129 |  0.067     |  0.196      |
++---------------------+--------------+------+------+------------+-------------+
+|Inst_mb/chipscope_ic |              |      |      |            |             |
+|    on_0_control0<0> | BUFGMUX_X1Y11| No   |   82 |  0.068     |  0.186      |
++---------------------+--------------+------+------+------------+-------------+
+|                  N0 |         Local|      |   59 |  0.000     |  2.322      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_mb/mdm_0/Dbg_Up |              |      |      |            |             |
-|              date_1 |         Local|      |   27 |  1.730     |  3.671      |
+|              date_1 |         Local|      |   27 |  0.998     |  2.958      |
++---------------------+--------------+------+------+------------+-------------+
+|Inst_mb/chipscope_ic |              |      |      |            |             |
+|   on_0_control0<13> |         Local|      |    4 |  0.000     |  0.685      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -170,7 +213,7 @@ for example SLICE loads not FF loads.
 
 Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
 
-Number of Timing Constraints that were not applied: 1
+Number of Timing Constraints that were not applied: 3
 
 Asterisk (*) preceding a constraint indicates it was not met.
    This may be due to a setup or hold violation.
@@ -179,22 +222,35 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_Inst_mb_clock_generator_0_clock_genera | SETUP       |     4.326ns|    15.674ns|       0|           0
-  tor_0_SIG_DCM0_CLK0 = PERIOD TIMEGRP      | HOLD        |     0.704ns|            |       0|           0
+  TS_Inst_mb_clock_generator_0_clock_genera | SETUP       |     4.975ns|    15.025ns|       0|           0
+  tor_0_SIG_DCM0_CLK0 = PERIOD TIMEGRP      | HOLD        |     0.688ns|            |       0|           0
       "Inst_mb_clock_generator_0_clock_gene |             |            |            |        |            
   rator_0_SIG_DCM0_CLK0"         TS_Inst_dc |             |            |            |        |            
   m_CLK0_BUF HIGH 50%                       |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
+  TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" | SETUP       |     5.070ns|     9.930ns|       0|           0
+   TO TIMEGRP "U_CLK" 15 ns                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_Inst_dcm_CLK0_BUF = PERIOD TIMEGRP "In | SETUP       |    13.350ns|     6.650ns|       0|           0
+  st_dcm_CLK0_BUF" TS_CLK_50M_I HIGH        | HOLD        |     0.685ns|            |       0|           0
+    50%                                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
   TS_CLK_50M_I = PERIOD TIMEGRP "CLK_50M_I" | MINLOWPULSE |    14.000ns|     6.000ns|       0|           0
    20 ns HIGH 50%                           |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_Inst_dcm_CLK0_BUF = PERIOD TIMEGRP "In | SETUP       |    17.893ns|     2.107ns|       0|           0
-  st_dcm_CLK0_BUF" TS_CLK_50M_I HIGH        | HOLD        |     1.005ns|            |       0|           0
-    50%                                     | MINLOWPULSE |    14.000ns|     6.000ns|       0|           0
+  TS_J_CLK = PERIOD TIMEGRP "J_CLK" 30 ns H | MINLOWPULSE |    26.808ns|     3.192ns|       0|           0
+  IGH 50%                                   |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_Inst_dcm_CLKFX_BUF = PERIOD TIMEGRP "I | SETUP       |    34.056ns|     5.944ns|       0|           0
-  nst_dcm_CLKFX_BUF" TS_CLK_50M_I / 0.5     | HOLD        |     1.045ns|            |       0|           0
+  TS_Inst_dcm_CLKFX_BUF = PERIOD TIMEGRP "I | SETUP       |    33.620ns|     6.380ns|       0|           0
+  nst_dcm_CLKFX_BUF" TS_CLK_50M_I / 0.5     | HOLD        |     1.023ns|            |       0|           0
        HIGH 50%                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_U_TO_J = MAXDELAY FROM TIMEGRP "U_CLK" | N/A         |         N/A|         N/A|     N/A|         N/A
+   TO TIMEGRP "J_CLK" 15 ns                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_J_TO_D_path" TIG                 | SETUP       |         N/A|     6.969ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_D_TO_J_path" TIG                 | SETUP       |         N/A|     6.857ns|     N/A|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -208,35 +264,40 @@ Derived Constraints for TS_CLK_50M_I
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_CLK_50M_I                   |     20.000ns|      6.000ns|     15.674ns|            0|            0|            0|       146180|
-| TS_Inst_dcm_CLK0_BUF          |     20.000ns|      6.000ns|     15.674ns|            0|            0|            3|       145880|
-|  TS_Inst_mb_clock_generator_0_|     20.000ns|     15.674ns|          N/A|            0|            0|       145880|            0|
+|TS_CLK_50M_I                   |     20.000ns|      6.000ns|     15.025ns|            0|            0|            0|       153083|
+| TS_Inst_dcm_CLK0_BUF          |     20.000ns|      6.650ns|     15.025ns|            0|            0|         1112|       151656|
+|  TS_Inst_mb_clock_generator_0_|     20.000ns|     15.025ns|          N/A|            0|            0|       151656|            0|
 |  clock_generator_0_SIG_DCM0_CL|             |             |             |             |             |             |             |
 |  K0                           |             |             |             |             |             |             |             |
-| TS_Inst_dcm_CLKFX_BUF         |     40.000ns|      5.944ns|          N/A|            0|            0|          297|            0|
+| TS_Inst_dcm_CLKFX_BUF         |     40.000ns|      6.380ns|          N/A|            0|            0|          315|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
 
 
 Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+WARNING:Par:283 - There are 13 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 44 secs 
-Total CPU time to PAR completion: 43 secs 
+Total REAL time to PAR completion: 55 secs 
+Total CPU time to PAR completion: 54 secs 
 
-Peak Memory Usage:  344 MB
+Peak Memory Usage:  364 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
 Timing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 6
-Number of info messages: 0
+Number of warning messages: 17
+Number of info messages: 1
 
 Writing design to file TL.ncd
 

@@ -1,0 +1,5 @@
+set -tmpdir "C:/XilinxWorkSpace/PongV5/xst/projnav.tmp"
+set -xsthdpdir "C:/XilinxWorkSpace/PongV5/xst"
+elaborate
+-ifn re_color.prj
+-ifmt mixed

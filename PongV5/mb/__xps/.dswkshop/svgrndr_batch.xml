@@ -29,6 +29,16 @@
 
   <RENDERIMG RASNAME="C:\XilinxWorkSpace\PongV5\mb\SDK\SDK_Export\hw\imgs\proc_sys_reset_0.jpg" SVGNAME="C:\XilinxWorkSpace\PongV5\mb\SDK\SDK_Export\hw\imgs\proc_sys_reset_0.svg" TMPSVGFN="C:\XilinxWorkSpace\PongV5\mb\__xps\.dswkshop\proc_sys_reset_0.svg"/>
 
+  <RENDERIMG RASNAME="C:\XilinxWorkSpace\PongV5\mb\SDK\SDK_Export\hw\imgs\ball_color_o.jpg" SVGNAME="C:\XilinxWorkSpace\PongV5\mb\SDK\SDK_Export\hw\imgs\ball_color_o.svg" TMPSVGFN="C:\XilinxWorkSpace\PongV5\mb\__xps\.dswkshop\ball_color_o.svg"/>
+
+  <RENDERIMG RASNAME="C:\XilinxWorkSpace\PongV5\mb\SDK\SDK_Export\hw\imgs\chipscope_icon_0.jpg" SVGNAME="C:\XilinxWorkSpace\PongV5\mb\SDK\SDK_Export\hw\imgs\chipscope_icon_0.svg" TMPSVGFN="C:\XilinxWorkSpace\PongV5\mb\__xps\.dswkshop\chipscope_icon_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\XilinxWorkSpace\PongV5\mb\SDK\SDK_Export\hw\imgs\chipscope_ila_0.jpg" SVGNAME="C:\XilinxWorkSpace\PongV5\mb\SDK\SDK_Export\hw\imgs\chipscope_ila_0.svg" TMPSVGFN="C:\XilinxWorkSpace\PongV5\mb\__xps\.dswkshop\chipscope_ila_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\XilinxWorkSpace\PongV5\mb\SDK\SDK_Export\hw\imgs\BatPos_L_R.jpg" SVGNAME="C:\XilinxWorkSpace\PongV5\mb\SDK\SDK_Export\hw\imgs\BatPos_L_R.svg" TMPSVGFN="C:\XilinxWorkSpace\PongV5\mb\__xps\.dswkshop\BatPos_L_R.svg"/>
+
+  <RENDERIMG RASNAME="C:\XilinxWorkSpace\PongV5\mb\SDK\SDK_Export\hw\imgs\BallPos_XY.jpg" SVGNAME="C:\XilinxWorkSpace\PongV5\mb\SDK\SDK_Export\hw\imgs\BallPos_XY.svg" TMPSVGFN="C:\XilinxWorkSpace\PongV5\mb\__xps\.dswkshop\BallPos_XY.svg"/>
+
   <RENDERIMG RASNAME="C:\XilinxWorkSpace\PongV5\mb\SDK\SDK_Export\hw\imgs\mb_blkd.jpg" SVGNAME="C:\XilinxWorkSpace\PongV5\mb\SDK\SDK_Export\hw\imgs\mb_blkd.svg" TMPSVGFN="C:\XilinxWorkSpace\PongV5\mb\__xps\.dswkshop\mb_blkd.svg"/>
 
 </RENDERBATCH>

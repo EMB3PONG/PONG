@@ -1,0 +1,3 @@
+vhdl isim_temp "pixel_pointer.vhd"
+vhdl isim_temp "re_color.vhd"
+vhdl isim_temp "TB_reColor.vhd"
